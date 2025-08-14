@@ -88,7 +88,7 @@
 
     .hero{ position:relative; padding: 88px 0 34px; overflow:hidden; }
     .hero-grid{ display:grid; grid-template-columns: 1.22fr .78fr; gap: 28px; align-items:center; }
-    .eyebrow{ display:inline-flex; gap:10px; align-items:center; font-size:12px; font-weight:800; letter-spacing:.16em; text-transform:uppercase; color: var(--accent); background: rgba(134,166,139,.12); padding:6px 10px; border-radius:999px; border:1px solid color-mix(in oklab, var(--accent), transparent 60%); }
+    .eyebrow{ display:inline-flex; gap:10px; align-items:center; font-size:12px; font-weight:800; letter-spacing:.16em; text-transform:uppercase; color: var(--accent); background: rgba(134,166,139,.12); padding:6px 10px; border-radius:999px; border:1px solid color-mix(in oklab, var(--accent), transparent 60%);  margin-bottom: 12px;}
     .hero-cta{ display:flex; gap:10px; flex-wrap:wrap; margin-top: 14px; }
 
     /* HERO IMG */
@@ -219,12 +219,43 @@
 
     /* Адаптив */
     @media (max-width: 1040px){ .hero-grid{ grid-template-columns: 1fr; } .grid-3{ grid-template-columns: 1fr 1fr; } }
+
     @media (max-width: 680px){
+      /* что уже было */
       .grid-3, .grid-2{ grid-template-columns: 1fr; }
       :root{ --logo: 36px; }
       .visual{ min-height: 240px; }
       .carousel-btn{ display:none; }
+
+      /* НОВОЕ — компактная шапка */
+      .nav-inner{
+        display: grid;
+        grid-template-columns: auto 1fr auto; /* логотип | ссылки скроллятся | переключатель темы */
+        align-items: center;
+        gap: 10px;
+        padding: 10px 12px;
+      }
+      .brand span{ display:none; }           /* скрываем текст рядом с логотипом */
+      .nav-links{
+        display:flex;
+        flex-wrap: nowrap;                    /* в одну строку */
+        overflow-x: auto;                     /* горизонтальный скролл */
+        white-space: nowrap;
+        gap: 12px;
+      }
+      .nav-links .btn{ display:none; }        /* большой "Конфиденциальный бриф" убираем из шапки */
+      .theme{ width:36px; height:36px; }      /* чуть компактнее кнопка темы */
+
+      /* НОВОЕ — заголовок и описание секции в колонку */
+      .section-head{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+      .section-head .sub{ margin-top: 2px; }  /* небольшой отступ от заголовка */
     }
+
+
     @media (prefers-reduced-motion: reduce){
       *{ animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; }
     }
