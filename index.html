@@ -14,8 +14,8 @@
   <meta property="og:title" content="Dynamic Equilibrium — Executive-психотерапия 1-на-1 для лидеров"/>
   <meta property="og:description" content="Личное сопровождение лидеров и руководителей: сон, тревожность, выгорание, фокус. 360° методология, метрики, строгая конфиденциальность."/>
   <meta property="og:url" content="https://dynamicequilibrium.org/offers"/>
-  <meta property="og:image" content="/og/de-offers.jpg"/>
-  <meta name="twitter:card" content="summary_large_image"/>
+  <meta property="og:image" content="/og/dynamic-equilibrium.jpg"/>
+  <meta name="twitter:card" content="/og/dynamic-equilibrium.jpg"/>
 
   <!-- Favicons / PWA -->
   <link rel="icon" href="/favicon/favicon.ico" sizes="any">
@@ -126,11 +126,13 @@
 
     .drawer{ position:fixed; inset:0; display:none; z-index:1100; }
     .drawer.open{ display:block; }
-    .drawer-backdrop{ position:absolute; inset:0; background:rgba(0,0,0,.32); border:0; }
+    /* ↓↓↓ важный слой: панель выше подложки */
+    .drawer-backdrop{ position:absolute; inset:0; background:rgba(0,0,0,.32); border:0; z-index:1; }
     .drawer-panel{
       position:absolute; top:0; right:0; width:min(88vw, 420px); height:100%;
       padding: calc(16px + var(--safe)) 16px 16px; display:flex; flex-direction:column; gap:16px;
       background:var(--layer); border-left:1px solid var(--line); box-shadow: var(--shadow);
+      z-index:2;
     }
     .drawer-links{ display:grid; gap:8px; margin-top:8px; }
     .drawer-links a{ padding:12px 10px; border-radius:12px; border:1px solid var(--line); }
@@ -280,6 +282,7 @@
       <a href="#process">Процесс</a>
       <a href="#about">Об авторе</a>
       <a href="#publications">Наука</a>
+      <a href="#cases">Отзывы клиентов</a>
       <a href="#reviews">Отзывы коллег</a>
       <a href="#contact" class="btn btn-outline">Отправить конфиденциальный бриф</a>
     </nav>
@@ -312,14 +315,16 @@
       <h1>Динамическое равновесие для лидеров и предпринимателей</h1>
       <div class="divider" aria-hidden="true"></div>
       <p class="sub">
-        Работа <strong>1-на-1</strong> с MD PhD (врач-психотерапевт). 8–12 недель, пакет <strong>10–15k €</strong>. Лично, конфиденциально. RU / EN.<br/>
+        Работа <strong>1-на-1</strong> с MD PhD (врач-психотерапевт). 8–12 недель.<br/>
+        Лично, конфиденциально. RU / EN.<br/>
+
       </p>
       <div class="hero-cta">
         <a class="btn btn-primary" href="#elite">Начать 1–1</a>
         <a class="btn btn-ghost" href="#pains">Ваши запросы</a>
         <a class="btn btn-ghost" href="#spheres">Как это работает</a>
       </div>
-      <p class="note" style="margin-top:8px">MD, PhD • 19 лет практики • десятки научных работ в сфере ментального здоровья • руководящие позиции в ведущих университетах Европы • Полная приватность</p>
+      <p class="note" style="margin-top:8px">MD, PhD • 19 лет практики • 100+ научных работ в сфере ментального здоровья • руководящие позиции в ведущих университетах Европы • Полная приватность</p>
     </div>
 
     <aside class="visual" aria-label="Фото автора">
@@ -340,7 +345,7 @@
     </div>
     <div class="grid-3">
       <article class="card">
-        <h3>Основатели / Владельцы</h3>
+        <h3>Фаундеры / Инвесторы</h3>
         <ul class="check">
           <li>Выгорание, когнитивный шум (перегруз контекстами), прокрастинация в ключевых решениях</li>
           <li>Нарушенный сон, резкие пики тревожности</li>
@@ -367,65 +372,7 @@
   </div>
 </section>
 
-<section class="section" id="elite">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <h2>Индивидуальная программа 1–1</h2>
-        <div class="divider" aria-hidden="true"></div>
-      </div>
-      <p class="sub">Работаю лично. 360° диагностика и сопровождение с метриками и playbook. Одновременно — не более 3–5 клиентов.</p>
-    </div>
-    <div class="grid-2">
-      <article class="card tier">
-        <h3>Executive Core</h3>
-        <p class="price">10k € • 8–10 недель</p>
-        <ul class="check">
-          <li>Стартовая 360°-диагностика (90–120 мин) по Пяти сферам</li>
-          <li>Еженедельные сессии 75–90 мин (онлайн или очно)</li>
-          <li>Сон и стресс: протоколы + трекинг (по желанию — wearables)</li>
-          <li>Когнитивные модули: перфекционизм, импостер-мысли, руминации</li>
-          <li>Личный playbook «Операционный код», v1.0</li>
-        </ul>
-      </article>
-      <article class="card tier">
-        <h3>Executive Deep</h3>
-        <p class="price">15k € • 10–12 недель</p>
-        <ul class="check">
-          <li>Всё из Core + работа с образами/сновидениями</li>
-          <li>Подготовка к ключевым встречам/переговорам (до 2×/нед)</li>
-          <li>Короткие check-ins между сессиями (лично, по договорённости)</li>
-          <li>Семейный модуль: 1–2 сессии с партнёром</li>
-          <li>Кризис-протоколы: «красные кнопки», дебрифинг, интеграция опыта</li>
-          <li>Playbook v2.0 + план поддержания на 3 месяца</li>
-        </ul>
-      </article>
-    </div>
-    <div class="auto" style="margin-top:16px">
-      <div class="card">
-        <h3>Что стабилизируется за 8–12 недель</h3>
-        <ul class="check">
-          <li>Сон (длительность, глубина, минимум пробуждений)</li>
-          <li>Решения и переговоры — без эмоционального налога</li>
-          <li>Возвращение фокуса и «глубокой работы» в календарь</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Опции по запросу</h3>
-        <ul class="check">
-          <li>Персональные протоколы регуляции и восстановления</li>
-          <li>Стандарты совещаний и конструктивной обратной связи (готовые шаблоны для команды и семьи)</li>
-          <li>Эксклюзивный доступ к приложению для анализа сновидений <a href="https://dreamseer.app" target="_blank" rel="noopener">Dreamseer</a> с персональным онбордингом</li>
-          <li>Индивидуальный playbook «Операционный код»</li>
-        </ul>
-      </div>
-    </div>
-    <div style="margin-top:16px; display:flex; gap:10px; flex-wrap:wrap">
-      <a class="btn btn-primary" href="#contact">Отправить конфиденциальный бриф</a>
-      <a class="btn btn-ghost" href="#process">Посмотреть процесс</a>
-    </div>
-  </div>
-</section>
+<!-- УДАЛЁННЫЙ ИЗ ПЕРВОНАЧАЛЬНОЙ ПОЗИЦИИ БЛОК #elite ПЕРЕНЕСЁН НИЖЕ, ПОСЛЕ #about -->
 
 <section class="section" id="pains">
   <div class="container">
@@ -544,7 +491,7 @@
         <h2>Об авторе</h2>
         <div class="divider" aria-hidden="true"></div>
       </div>
-      <p class="sub">Я — Александр Лебедев, MD PhD. Врач, исследователь, предприниматель, специалист в области нейронаук и ментального здоровья. Соединяю частную практику и предпринимательство с передовыми научными исследованиями в области ментального здоровья и благополучия.</p>
+      <p class="sub">Я — Александр Лебедев, MD PhD. Врач, ученый-нейробиолог, предприниматель, специалист в области нейронаук и ментального здоровья. Соединяю частную практику и предпринимательство с передовыми научными исследованиями в области ментального здоровья и благополучия.</p>
     </div>
 
     <div class="auto">
@@ -585,6 +532,67 @@
           <li>Следую пути боевых искусств длиною жизнь. Коричневый пояс по бразильскому джиу-джитсу, <a href="https://smoothcomp.com/fr/profile/1863" target="_blank" rel="noopener">победитель Европейских чемпионатов</a>.</li>
         </ul>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ПЕРЕНЕСЁННЫЙ БЛОК: Индивидуальная программа 1–1 -->
+<section class="section" id="elite">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <h2>Индивидуальная программа 1–1</h2>
+        <div class="divider" aria-hidden="true"></div>
+      </div>
+      <p class="sub">Работаю лично. 360° диагностика и сопровождение с метриками и playbook. Одновременно — не более 3–5 клиентов.</p>
+    </div>
+    <div class="grid-2">
+      <article class="card tier">
+        <h3>Executive Core</h3>
+        <p class="price">10k € • 8–10 недель</p>
+        <ul class="check">
+          <li>Стартовая 360°-диагностика (90–120 мин) по Пяти сферам</li>
+          <li>Еженедельные сессии 75–90 мин (онлайн или очно)</li>
+          <li>Сон и стресс: протоколы + трекинг (по желанию — wearables)</li>
+          <li>Когнитивные модули: перфекционизм, импостер-мысли, руминации</li>
+          <li>Личный playbook «Операционный код», v1.0</li>
+        </ul>
+      </article>
+      <article class="card tier">
+        <h3>Executive Deep</h3>
+        <p class="price">15k € • 10–12 недель</p>
+        <ul class="check">
+          <li>Всё из Core + работа с образами/сновидениями</li>
+          <li>Подготовка к ключевым встречам/переговорам (до 2×/нед)</li>
+          <li>Короткие check-ins между сессиями (лично, по договорённости)</li>
+          <li>Семейный модуль: 1–2 сессии с партнёром</li>
+          <li>Кризис-протоколы: «красные кнопки», дебрифинг, интеграция опыта</li>
+          <li>Playbook v2.0 + план поддержания на 3 месяца</li>
+        </ul>
+      </article>
+    </div>
+    <div class="auto" style="margin-top:16px">
+      <div class="card">
+        <h3>Что стабилизируется за 8–12 недель</h3>
+        <ul class="check">
+          <li>Сон (длительность, глубина, минимум пробуждений)</li>
+          <li>Решения и переговоры — без эмоционального налога</li>
+          <li>Возвращение фокуса и «глубокой работы» в календарь</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Опции по запросу</h3>
+        <ul class="check">
+          <li>Персональные протоколы регуляции и восстановления</li>
+          <li>Стандарты совещаний и конструктивной обратной связи (готовые шаблоны для команды и семьи)</li>
+          <li>Эксклюзивный доступ к приложению для анализа сновидений <a href="https://dreamseer.app" target="_blank" rel="noopener">Dreamseer</a> с персональным онбордингом</li>
+          <li>Индивидуальный playbook «Операционный код»</li>
+        </ul>
+      </div>
+    </div>
+    <div style="margin-top:16px; display:flex; gap:10px; flex-wrap:wrap">
+      <a class="btn btn-primary" href="#contact">Отправить конфиденциальный бриф</a>
+      <a class="btn btn-ghost" href="#process">Посмотреть процесс</a>
     </div>
   </div>
 </section>
@@ -653,8 +661,8 @@
           <figcaption>Продвижение некомерческих организаций и публичные дискуссии с международными лидерами мнений в сферах ментального здоровья и благополучия (на фото - Майкл Поллан, на ивенте в Стокгольме). </figcaption>
         </figure>
         <figure class="slide">
-          <img src="images/gallery/with-dmitrii-shamenkov.jpg" alt="Совместная работа с Дмитрием Шаменковым в онлайн Школе Открытого Диалога и оффлайн проектах." loading="lazy" decoding="async" />
-          <figcaption>Совместная работа с Дмитрием Шаменковым в онлайн Школе Открытого Диалога и оффлайн проектах.</figcaption>
+          <img src="images/gallery/with-dmitrii-shamenkov.jpg" alt="Совместная работа с Дмитрием Шаменковым в онлайн Школе Открытого Диалога и офлайн проектах." loading="lazy" decoding="async" />
+          <figcaption>Совместная работа с Дмитрием Шаменковым в онлайн Школе Открытого Диалога и офлайн проектах.</figcaption>
         </figure>
       </div>
 
@@ -895,15 +903,27 @@
     });
   })();
 
-  // Smooth scroll for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(a=>{
-    a.addEventListener('click', e=>{
-      const id=a.getAttribute('href');
-      if (id.length>1){
-        const el=document.querySelector(id);
-        if (el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'}); }
+  // Smooth scroll for anchor links (delegated so it also works for cloned mobile links)
+  document.addEventListener('click', (e)=>{
+    const a = e.target.closest('a[href^="#"]');
+    if(!a) return;
+    const id = a.getAttribute('href');
+    if(id && id.length > 1){
+      const el = document.querySelector(id);
+      if(el){
+        e.preventDefault();
+        // If drawer is open, close it first so page can scroll
+        const drawer = document.getElementById('mobileDrawer');
+        const toggle = document.getElementById('menuToggle');
+        if(drawer?.classList.contains('open')){
+          drawer.classList.remove('open');
+          toggle?.setAttribute('aria-expanded','false');
+          document.documentElement.style.overflow = '';
+        }
+        el.scrollIntoView({behavior:'smooth', block:'start'});
+        history.replaceState(null, '', id);
       }
-    });
+    }
   });
 
   // Footer year
@@ -951,7 +971,13 @@
     toggle?.addEventListener('click', ()=> drawer.classList.contains('open') ? close() : open());
     backdrop?.addEventListener('click', close);
     drawer?.addEventListener('keydown', (e)=>{ if(e.key==='Escape') close(); });
-    drawer?.addEventListener('click', (e)=>{ const a = e.target.closest('a'); if(a) close(); });
+
+    // Close on any link click inside drawer (navigation handled by delegated smooth-scroll above)
+    drawer?.addEventListener('click', (e)=>{
+      const a = e.target.closest('a'); if(a) close();
+    });
+
+    // Theme switch inside drawer
     themeBtn?.addEventListener('click', ()=> themeToggle?.click());
   })();
 
