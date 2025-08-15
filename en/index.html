@@ -109,22 +109,39 @@
     .drawer.open{ display:block; }
     .drawer-backdrop{ position:absolute; inset:0; background:rgba(0,0,0,.32); border:0; z-index:1; }
     .drawer-panel{
-    overflow-y: auto;              
-    -webkit-overflow-scrolling: touch; 
-    padding-bottom: calc(16px + env(safe-area-inset-bottom, 0px)); 
-    max-height: 100svh;              
-    max-height: 100dvh;          
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: auto;
+      width: min(420px, 86vw);
+
+      z-index: 2;                       /* поверх подложки */
+      background: var(--layer);
+      border-left: 1px solid var(--line);
+      box-shadow: var(--shadow);
+
+      display: grid;                    /* контент + “липкий” футер */
+      grid-template-rows: 1fr auto;
+      gap: 12px;
+      padding: 16px;
+
+      overflow-y: auto;                 /* прокрутка внутри панели */
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior: contain;     /* не тянуть фон */
+
+      padding-bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+      max-height: 100svh;
+      max-height: 100dvh;
     }
+
     .drawer-links{ display:grid; gap:8px; margin-top:8px; }
     .drawer-links a{ padding:12px 10px; border-radius:12px; border:1px solid var(--line); }
     .drawer-links a.btn{ display:block; text-align:center; }
     .drawer-footer{
-      position: sticky;
-      bottom: 0;
-      background: var(--layer);
-      border-top: 1px solid var(--line);
-      padding-top: 12px;
-      padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+        position: sticky;
+        bottom: 0;
+        background: var(--layer);
+        border-top: 1px solid var(--line);
+        padding-top: 12px;
+        padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
     }
     .menu-toggle{ display:none; }
     @media (max-width: 860px){ .nav-links{ display:none; } .menu-toggle{ display:grid; } .theme{ width:36px; height:36px; } .brand span{ display:none; } }
@@ -1013,7 +1030,9 @@
         const drawer = document.getElementById('mobileDrawer');
         const toggle = document.getElementById('menuToggle');
         if(drawer?.classList.contains('open')){
-          drawer.classList.remove('open'); toggle?.setAttribute('aria-expanded','false'); document.documentElement.style.overflow = '';
+            drawer.classList.remove('open');
+            toggle?.setAttribute('aria-expanded','false');
+            document.body.style.overflow = '';           // ← тоже сюда
         }
         el.scrollIntoView({behavior:'smooth', block:'start'});
         history.replaceState(null, '', id);
@@ -1037,8 +1056,19 @@
     if (srcLinks && dst && !dst.children.length){
       [...srcLinks.querySelectorAll('a')].forEach(a => dst.appendChild(a.cloneNode(true)));
     }
-    function open(){ drawer.classList.add('open'); toggle.setAttribute('aria-expanded','true'); document.documentElement.style.overflow = 'hidden'; const first = dst.querySelector('a'); first && first.focus(); }
-    function close(){ drawer.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); document.documentElement.style.overflow = ''; toggle.focus(); }
+    function open(){
+      drawer.classList.add('open');
+      toggle.setAttribute('aria-expanded','true');
+      document.body.style.overflow = 'hidden';     // ← было document.documentElement
+      const first = dst.querySelector('a'); first && first.focus();
+    }
+
+    function close(){
+      drawer.classList.remove('open');
+      toggle.setAttribute('aria-expanded','false');
+      document.body.style.overflow = '';           // ← сброс
+      toggle.focus();
+    }
 
     toggle?.addEventListener('click', ()=> drawer.classList.contains('open') ? close() : open());
     backdrop?.addEventListener('click', close);
