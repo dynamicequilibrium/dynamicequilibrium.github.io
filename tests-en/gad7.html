@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>GAD-7 Anxiety Questionnaire | Dynamic Equilibrium</title>
+  <meta name="description" content="Take the GAD-7 anxiety screening questionnaire to assess your mental health. This confidential self-assessment tool helps identify anxiety symptoms."/>
+  <meta name="theme-color" content="#F5F4F0"/>
+  <meta name="color-scheme" content="light dark"/>
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="GAD-7 Anxiety Questionnaire | Dynamic Equilibrium"/>
+  <meta property="og:description" content="Take the GAD-7 anxiety screening questionnaire to assess your mental health. This confidential self-assessment tool helps identify anxiety symptoms."/>
+  <meta property="og:url" content="https://dynamicequilibrium.org/bds-en/gad7"/>
+  <meta property="og:image" content="/og/dynamic-equilibrium.jpg"/>
+  <meta name="twitter:card" content="/og/dynamic-equilibrium.jpg"/>
+  
+  <!-- Favicons / PWA -->
+  <link rel="icon" href="/favicon/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#F5F4F0">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,600;6..72,800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+  
+  <style>
+    :root{
+      --bg: #0C0F10;
+      --layer: #111517;
+      --ink: #EDEFE8;
+      --muted: #A7B0A8;
+      --line: #1A2122;
+      --accent: #86A68B;
+      --accent-2: #CBBBA0;
+      --danger: #E27C6C;
+      --ok: #8BC3A3;
+      --radius: 16px;
+      --radius-lg: 22px;
+      --shadow: 0 18px 56px rgba(0,0,0,.28);
+      --maxw: 1140px;
+      --speed: .28s;
+      --logo: 60px;
+    }
+    [data-theme="light"]{
+      --bg: #F5F4F0;
+      --layer: #FFFFFF;
+      --ink: #0E1314;
+      --muted: #5C6862;
+      --line: #E6E8E4;
+      --shadow: 0 20px 60px rgba(20,30,24,.08);
+    }
+    :root{ --safe: env(safe-area-inset-top, 0px); }
+    
+    *{ box-sizing: border-box; }
+    html, body{ width:100%; overflow-x:hidden; }
+    body{ 
+      margin:0; 
+      color:var(--ink); 
+      background:
+        radial-gradient(1100px 620px at 88% -10%, rgba(134,166,139,.14), transparent 50%),
+        linear-gradient(180deg, rgba(203,187,160,.06), transparent 22%),
+        var(--bg);
+      font: 400 16px/1.65 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased; 
+      -moz-osx-font-smoothing: grayscale;
+      letter-spacing:.2px;
+    }
+    h1,h2{ font-family:'Newsreader', serif; letter-spacing:.2px; margin:0 0 .5em; }
+    h1{ font-weight:800; font-size: clamp(34px, 4.6vw, 56px); line-height:1.06; }
+    h2{ font-weight:800; font-size: clamp(24px, 3vw, 36px); line-height:1.12; }
+    h3{ font: 700 18px/1.2 'Inter', sans-serif; margin:0 0 .5em; }
+    h4{ font:700 13px/1.1 'Inter', sans-serif; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin:.4em 0 .4em; }
+    p{ margin:0 0 1em; }
+    a{ color: var(--accent); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+    .container{
+      max-width: var(--maxw); 
+      margin:0 auto;
+      padding-left: max(22px, calc(16px + env(safe-area-inset-left,0)));
+      padding-right: max(22px, calc(16px + env(safe-area-inset-right,0)));
+    }
+    .sub{ color: var(--muted); max-width: 78ch; }
+    .page{ position:relative; isolation:isolate; }
+    .page::before{
+      content:""; 
+      position:absolute; 
+      inset:0; 
+      z-index:-1; 
+      opacity:.08;
+      background-image:
+        linear-gradient(to right, var(--line) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--line) 1px, transparent 1px);
+      background-size: 28px 28px;
+      mask-image: linear-gradient(180deg, #000 12%, transparent 80%);
+    }
+    
+    /* Header */
+    .nav{
+      position:sticky; 
+      top:0; 
+      z-index:1000;
+      backdrop-filter:saturate(160%) blur(10px);
+      background: color-mix(in oklab, var(--bg), transparent 10%);
+      border-bottom:1px solid color-mix(in oklab, var(--accent), transparent 82%);
+      transition: background var(--speed), border var(--speed), box-shadow var(--speed), transform var(--speed);
+    }
+    .nav.is-scrolled{
+      background: color-mix(in oklab, var(--bg), #000 8%);
+      border-bottom-color: color-mix(in oklab, var(--accent), transparent 70%);
+      box-shadow: 0 6px 32px rgba(0,0,0,.14);
+    }
+    .nav-inner{ 
+      display:flex; 
+      align-items:center; 
+      justify-content:space-between; 
+      gap:16px; 
+      padding: max(10px, calc(12px + var(--safe))) 22px 12px; 
+    }
+    .brand{ 
+      display:flex; 
+      align-items:center; 
+      gap:12px; 
+      font-weight:800; 
+      letter-spacing:.3px; 
+    }
+    .brand-logo{ 
+      width:var(--logo); 
+      height:var(--logo); 
+      display:block; 
+      object-fit:contain; 
+      transition: filter var(--speed); 
+    }
+    [data-theme="dark"] .brand-logo.is-filtered{ 
+      filter: brightness(0) invert(1) contrast(1.1); 
+    }
+    .logo{ 
+      width: 36px; 
+      height: 36px; 
+      border-radius: 50%; 
+      background:
+        radial-gradient(50% 50% at 50% 50%, var(--accent) 0 50%, transparent 52%) center/100% 100% no-repeat,
+        conic-gradient(from 180deg, var(--accent) 0 22%, var(--accent-2) 22% 45%, #88938B 45% 70%, #7E6E5A 70% 100%);
+      box-shadow: inset 0 0 0 2px color-mix(in oklab, var(--accent-2), transparent 70%); 
+    }
+    
+    .nav-links{ 
+      display:flex; 
+      align-items:center; 
+      gap:18px; 
+      flex-wrap:wrap; 
+    }
+    .nav-ctrls{ 
+      display:flex; 
+      gap:8px; 
+      align-items:center; 
+    }
+    
+    .btn{ 
+      display:inline-flex; 
+      align-items:center; 
+      justify-content:center; 
+      gap:10px; 
+      padding: 12px 18px; 
+      border-radius: 999px; 
+      border:1.4px solid transparent; 
+      font-weight:700; 
+      cursor:pointer; 
+      text-decoration:none !important; 
+      transition: transform var(--speed), background var(--speed), color var(--speed), border var(--speed), box-shadow var(--speed); 
+    }
+    .btn:hover{ 
+      transform: translateY(-1px); 
+      box-shadow: var(--shadow); 
+    }
+    .btn-ghost{ 
+      background: transparent; 
+      color: var(--ink); 
+      border-color: color-mix(in oklab, var(--accent), transparent 68%); 
+    }
+    .btn-primary{ 
+      background: var(--accent); 
+      color: #0C0F10; 
+      border-color: var(--accent); 
+    }
+    .btn-outline{ 
+      background: transparent; 
+      color: var(--accent); 
+      border-color: var(--accent); 
+    }
+    .theme{ 
+      width:42px; 
+      height:42px; 
+      display:grid; 
+      place-items:center; 
+      border-radius:12px; 
+      border:1.4px solid color-mix(in oklab, var(--accent), transparent 60%); 
+      background:transparent; 
+    }
+    
+    /* Hamburger & drawer */
+    .menu-toggle{ 
+      width:42px; 
+      height:42px; 
+      display:grid; 
+      place-items:center;
+      border-radius:12px; 
+      border:1.4px solid color-mix(in oklab, var(--accent), transparent 60%);
+      background:transparent; 
+      cursor:pointer; 
+    }
+    .menu-toggle:focus-visible{ 
+      outline: none; 
+      box-shadow: 0 0 0 4px color-mix(in oklab, var(--accent), transparent 82%); 
+    }
+    .burger, .burger::before, .burger::after{
+      content:""; 
+      display:block; 
+      width:20px; 
+      height:2px; 
+      border-radius:2px; 
+      background: currentColor; 
+      position:relative;
+    }
+    .burger::before{ 
+      position:absolute; 
+      top:-6px; 
+    }
+    .burger::after{ 
+      position:absolute; 
+      top:6px; 
+    }
+    
+    .drawer{ 
+      position:fixed; 
+      inset:0; 
+      display:none; 
+      z-index:1100; 
+    }
+    .drawer.open{ 
+      display:block; 
+    }
+    .drawer-backdrop{ 
+      position:absolute; 
+      inset:0; 
+      background:rgba(0,0,0,.32); 
+      border:0; 
+      z-index:1; 
+    }
+    .drawer-panel{
+      position:absolute; 
+      top:0; 
+      right:0; 
+      width:min(88vw, 420px); 
+      height:100%;
+      padding: calc(16px + var(--safe)) 16px 16px; 
+      display:flex; 
+      flex-direction:column; 
+      gap:16px;
+      background:var(--layer); 
+      border-left:1px solid var(--line); 
+      box-shadow: var(--shadow);
+      z-index:2;
+    }
+    .drawer-links{ 
+      display:grid; 
+      gap:8px; 
+      margin-top:8px; 
+    }
+    .drawer-links a{ 
+      padding:12px 10px; 
+      border-radius:12px; 
+      border:1px solid var(--line); 
+    }
+    .drawer-links a.btn{ 
+      display:block; 
+      text-align:center; 
+    }
+    .drawer-footer{ 
+      margin-top:auto; 
+      display:flex; 
+      justify-content:space-between; 
+      gap:8px; 
+    }
+    
+    /* Desktop default */
+    .menu-toggle{ 
+      display:none; 
+    }
+    @media (max-width: 860px){ 
+      .nav-links{ 
+        display:none; 
+      } 
+      .menu-toggle{ 
+        display:grid; 
+      } 
+      .theme{ 
+        width:36px; 
+        height:36px; 
+      } 
+      .brand span{ 
+        display:none; 
+      } 
+    }
+    
+    .hero{ 
+      position:relative; 
+      padding: 88px 0 34px; 
+      overflow:hidden; 
+    }
+    .hero-grid{ 
+      display:grid; 
+      grid-template-columns: 1.22fr .78fr; 
+      gap: 28px; 
+      align-items:center; 
+    }
+    .eyebrow{ 
+      display:inline-flex; 
+      gap:10px; 
+      align-items:center; 
+      font-size:12px; 
+      font-weight:800; 
+      letter-spacing:.16em; 
+      text-transform:uppercase; 
+      color: var(--accent); 
+      background: rgba(134,166,139,.12); 
+      padding:6px 10px; 
+      border-radius:999px; 
+      border:1px solid color-mix(in oklab, var(--accent), transparent 60%);  
+      margin-bottom: 12px;
+    }
+    .hero-cta{ 
+      display:flex; 
+      gap:10px; 
+      flex-wrap:wrap; 
+      margin-top: 14px; 
+    }
+    
+    .section{ 
+      padding: 58px 0; 
+    }
+    .section-head{ 
+      display:flex; 
+      align-items:flex-end; 
+      justify-content:space-between; 
+      gap:18px; 
+      margin-bottom: 18px; 
+    }
+    .divider{ 
+      height:1px; 
+      background: linear-gradient(90deg, transparent, color-mix(in oklab, var(--accent-2), transparent 40%), transparent); 
+      margin: 10px 0 0; 
+      width: 160px; 
+    }
+    .grid-3{ 
+      display:grid; 
+      grid-template-columns: repeat(3, 1fr); 
+      gap: 16px; 
+    }
+    .grid-2{ 
+      display:grid; 
+      grid-template-columns: repeat(2, 1fr); 
+      gap: 18px; 
+    }
+    .auto{ 
+      display:grid; 
+      grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); 
+      gap: 16px; 
+    }
+    .card{ 
+      background: var(--layer); 
+      border:1px solid var(--line); 
+      border-radius: var(--radius); 
+      padding:18px; 
+      transition: transform var(--speed), border var(--speed), box-shadow var(--speed); 
+    }
+    .card:hover{ 
+      transform: translateY(-2px); 
+      border-color: color-mix(in oklab, var(--accent), transparent 60%); 
+      box-shadow: var(--shadow); 
+    }
+    .check{ 
+      list-style:none; 
+      padding:0; 
+      margin:0; 
+      display:grid; 
+      gap:8px; 
+    }
+    .check li{ 
+      position:relative; 
+      padding-left:20px; 
+    }
+    .check li::before{ 
+      content:""; 
+      position:absolute; 
+      left:0; 
+      top:.48em; 
+      width:9px; 
+      height:9px; 
+      border-radius:50%; 
+      background: radial-gradient(circle at 30% 30%, var(--accent) 0 40%, transparent 42%), radial-gradient(circle at 70% 70%, var(--accent-2) 0 40%, transparent 42%); 
+      border: 1px solid color-mix(in oklab, var(--accent), transparent 40%); 
+    }
+    .tier{ 
+      border-left: 4px solid var(--accent); 
+    }
+    .price{ 
+      font-weight:700; 
+      color: var(--muted); 
+    }
+    
+    /* Form elements */
+    form{ 
+      display:grid; 
+      gap:12px; 
+    }
+    input,textarea,select, .radio-group{ 
+      font: inherit; 
+      color:var(--ink); 
+      background: var(--bg); 
+      border:1.6px solid color-mix(in oklab, var(--accent), transparent 58%); 
+      border-radius: 12px; 
+      transition: border var(--speed), box-shadow var(--speed), background var(--speed); 
+    }
+    input:focus,textarea:focus,select:focus{ 
+      outline:none; 
+      border-color: var(--accent); 
+      box-shadow: 0 0 0 4px color-mix(in oklab, var(--accent), transparent 80%); 
+    }
+    .note{ 
+      font-size:12px; 
+      color:var(--muted); 
+    }
+    .question {
+      margin-bottom: 24px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--layer);
+    }
+    .question-title {
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .radio-group {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      padding: 12px;
+      border-radius: 12px;
+    }
+    .radio-option {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 8px;
+      border-radius: 8px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all var(--speed);
+    }
+    .radio-option:hover {
+      background: color-mix(in oklab, var(--accent), transparent 90%);
+      border-color: color-mix(in oklab, var(--accent), transparent 60%);
+    }
+    .radio-option input {
+      margin-bottom: 4px;
+      width: 16px;
+      height: 16px;
+    }
+    .radio-option label {
+      font-size: 13px;
+      text-align: center;
+      cursor: pointer;
+    }
+    .radio-option input:checked + label {
+      font-weight: 700;
+    }
+    .radio-option input:checked {
+      accent-color: var(--accent);
+    }
+    .result {
+      padding: 20px;
+      border-radius: 16px;
+      margin: 20px 0;
+      text-align: center;
+      display: none;
+    }
+    .result.show {
+      display: block;
+    }
+    .result-minimal { background: rgba(139, 195, 163, 0.15); border: 1px solid var(--ok); }
+    .result-mild { background: rgba(203, 187, 160, 0.15); border: 1px solid var(--accent-2); }
+    .result-moderate { background: rgba(226, 124, 108, 0.15); border: 1px solid var(--danger); }
+    .result-moderately-severe { background: rgba(226, 124, 108, 0.25); border: 1px solid var(--danger); }
+    .result-severe { background: rgba(226, 124, 108, 0.35); border: 1px solid var(--danger); }
+    
+    .score-display {
+      font-size: 24px;
+      font-weight: 700;
+      margin: 10px 0;
+    }
+    
+    footer{ 
+      padding:36px 0; 
+      border-top:1px solid var(--line); 
+      color:var(--muted); 
+      font-size:14px; 
+    }
+    
+    /* Адаптив */
+    @media (max-width: 1040px){ 
+      .hero-grid{ 
+        grid-template-columns: 1fr; 
+      } 
+      .grid-3{ 
+        grid-template-columns: 1fr 1fr; 
+      } 
+    }
+    @media (max-width: 680px){
+      .grid-3, .grid-2{ 
+        grid-template-columns: 1fr; 
+      }
+      :root{ 
+        --logo: 36px; 
+      }
+      .radio-group {
+        grid-template-columns: 1fr 1fr;
+      }
+      .section-head{ 
+        flex-direction: column; 
+        align-items: flex-start; 
+        gap: 8px; 
+      }
+      .section-head .sub{ 
+        margin-top: 2px; 
+      }
+    }
+    
+    @media (prefers-reduced-motion: reduce){
+      *{ 
+        animation-duration:.001ms !important; 
+        animation-iteration-count:1 !important; 
+        transition-duration:.001ms !important; 
+      }
+    }
+  </style>
+</head>
+<body class="page" data-theme="light">
+<header class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner container">
+    <a class="brand" href="/" aria-label="Dynamic Equilibrium">
+      <div class="logo" aria-hidden="true"></div>
+      <span>Dynamic Equilibrium</span>
+    </a>
+    
+    <!-- Desktop links -->
+    <nav class="nav-links" aria-label="Sections">
+      <a href="/index.html">Home</a>
+      <a href="/index.html#about">About</a>
+      <a href="/index.html#contact">Contact</a>
+    </nav>
+    
+    <!-- Controls on the right -->
+    <div class="nav-ctrls">
+      <a href="/bds-ru/gad7.html" class="btn btn-ghost" aria-label="Русский язык" title="Русский язык">RU</a>
+      <button id="themeToggle" class="theme" aria-label="Toggle theme" title="Theme">🌓</button>
+      <button id="menuToggle" class="menu-toggle" aria-label="Menu" aria-controls="mobileDrawer" aria-expanded="false">
+        <span class="burger" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile drawer -->
+<aside id="mobileDrawer" class="drawer" role="dialog" aria-modal="true" aria-label="Mobile menu">
+  <div class="drawer-panel">
+    <nav class="drawer-links" aria-label="Sections (mobile)"><!-- links cloned via JS --></nav>
+    <div class="drawer-footer">
+      <a href="/bds-ru/gad7.html" class="btn btn-ghost" type="button">Русский язык</a>
+      <button id="drawerTheme" class="btn btn-ghost" type="button">Toggle theme</button>
+    </div>
+  </div>
+  <button class="drawer-backdrop" aria-label="Close menu"></button>
+</aside>
+
+<section class="hero">
+  <div class="container">
+    <div>
+      <span class="eyebrow">Mental Health Assessment</span>
+      <h1>GAD-7 Anxiety Questionnaire</h1>
+      <div class="divider" aria-hidden="true"></div>
+      <p class="sub">
+        This is a self-administered questionnaire used to screen for anxiety disorders and measure their severity. 
+        Please answer each question based on how you have been feeling over the past two weeks.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <h2>Instructions</h2>
+        <div class="divider" aria-hidden="true"></div>
+      </div>
+      <p class="sub">Over the last 2 weeks, how often have you been bothered by any of the following problems?</p>
+    </div>
+
+    <form id="gad7Form"
+          action="https://docs.google.com/forms/d/e/1FAIpQLSdhcn7clAeQJx7TqACbW7vbpLvsG01Y_ErUHBhvFL1SgwI_Ag/formResponse"
+          method="POST">
+      <input type="hidden" name="fvv" value="1">
+      <input type="hidden" name="pageHistory" value="0">
+      <input type="hidden" name="submit" value="Submit">
+      <input type="hidden" name="entry.203895359" id="totalField">     <!-- TOTAL_ID -->
+      <input type="hidden" name="entry.152127231" id="versionField" value="en"> <!-- VERSION_ID (для RU-страницы value="ru") -->
+
+
+      <!-- Email -->
+      <div class="question">
+        <div class="question-title">Email (optional)</div>
+        <input type="email" name="entry.835008330" placeholder="Your email (optional)"
+               style="width: 100%; padding: 12px; margin-bottom: 16px;">
+        <div class="note">Providing your email allows us to send you your results.</div>
+      </div>
+
+      <!-- 1 -->
+      <div class="question">
+        <div class="question-title">1. Feeling nervous, anxious, or on edge</div>
+        <div class="radio-group">
+          <div class="radio-option">
+            <input type="radio" id="q1-0" name="entry.862708836" value="0" data-score="0" required>
+            <label for="q1-0">Not at all</label>
+          </div>
+          <div class="radio-option">
+            <input type="radio" id="q1-1" name="entry.862708836" value="1" data-score="1">
+            <label for="q1-1">Several days</label>
+          </div>
+          <div class="radio-option">
+            <input type="radio" id="q1-2" name="entry.862708836" value="2" data-score="2">
+            <label for="q1-2">More than half the days</label>
+          </div>
+          <div class="radio-option">
+            <input type="radio" id="q1-3" name="entry.862708836" value="3" data-score="3">
+            <label for="q1-3">Nearly every day</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="question">
+        <div class="question-title">2. Not being able to stop or control worrying</div>
+        <div class="radio-group">
+          <div class="radio-option">
+            <input type="radio" id="q2-0" name="entry.603891035" value="0" data-score="0" required>
+            <label for="q2-0">Not at all</label>
+          </div>
+          <div class="radio-option">
+            <input type="radio" id="q2-1" name="entry.603891035" value="1" data-score="1">
+            <label for="q2-1">Several days</label>
+          </div>
+          <div class="radio-option">
+            <input type="radio" id="q2-2" name="entry.603891035" value="2" data-score="2">
+            <label for="q2-2">More than half the days</label>
+          </div>
+          <div class="radio-option">
+            <input type="radio" id="q2-3" name="entry.603891035" value="3" data-score="3">
+            <label for="q2-3">Nearly every day</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="question">
+        <div class="question-title">3. Worrying too much about different things</div>
+        <div class="radio-group">
+          <div class="radio-option">
+            <input type="radio" id="q3-0" name="entry.381494060" value="0" data-score="0" required>
+            <label for="q3-0">Not at all</label>
+          </div>
+          <div class="radio-option">
+            <input type="radio" id="q3-1" name="entry.381494060" value="1" data-score="1">
+            <label for="q3-1">Several days</label>
+          </div>
+          <div class="radio-option">
+            <input type="radio" id="q3-2" name="entry.381494060" value="2" data-score="2">
+            <label for="q3-2">More than half the days</label>
+          </div>
+          <div class="radio-option">
+            <input type="radio" id="q3-3" name="entry.381494060" value="3" data-score="3">
+            <label for="q3-3">Nearly every day</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="question">
+        <div class="question-title">4. Trouble relaxing</div>
+        <div class="radio-group">
+          <div class="radio-option">
+            <input type="radio" id="q4-0" name="entry.1619343286" value="0" data-score="0" required>
+            <label for="q4-0">Not at all</label>
+          </div>
+          <div class="radio-option">
+            <input type="radio" id="q4-1" name="entry.1619343286" value="1" data-score="1">
+            <label for="q4-1">Several days</label>
+          </div>
+          <div class="radio-option">
+            <input type="radio" id="q4-2" name="entry.1619343286" value="2" data-score="2">
+            <label for="q4-2">More than half the days</label>
+          </div>
+          <div class="radio-option">
+            <input type="radio" id="q4-3" name="entry.1619343286" value="3" data-score="3">
+            <label for="q4-3">Nearly every day</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="question">
+        <div class="question-title">5. Being so restless that it's hard to sit still</div>
+        <div class="radio-group">
+          <div class="radio-option">
+            <input type="radio" id="q5-0" name="entry.1443022719" value="0" data-score="0" required>
+            <label for="q5-0">Not at all</label>
+          </div>
+          <div class="radio-option">
+            <input type="radio" id="q5-1" name="entry.1443022719" value="1" data-score="1">
+            <label for="q5-1">Several days</label>
+          </div>
+          <div class="radio-option">
+            <input type="radio" id="q5-2" name="entry.1443022719" value="2" data-score="2">
+            <label for="q5-2">More than half the days</label>
+          </div>
+          <div class="radio-option">
+            <input type="radio" id="q5-3" name="entry.1443022719" value="3" data-score="3">
+            <label for="q5-3">Nearly every day</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="question">
+        <div class="question-title">6. Becoming easily annoyed or irritable</div>
+        <div class="radio-group">
+          <div class="radio-option">
+            <input type="radio" id="q6-0" name="entry.1952019994" value="0" data-score="0" required>
+            <label for="q6-0">Not at all</label>
+          </div>
+          <div class="radio-option">
+            <input type="radio" id="q6-1" name="entry.1952019994" value="1" data-score="1">
+            <label for="q6-1">Several days</label>
+          </div>
+          <div class="radio-option">
+            <input type="radio" id="q6-2" name="entry.1952019994" value="2" data-score="2">
+            <label for="q6-2">More than half the days</label>
+          </div>
+          <div class="radio-option">
+            <input type="radio" id="q6-3" name="entry.1952019994" value="3" data-score="3">
+            <label for="q6-3">Nearly every day</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="question">
+        <div class="question-title">7. Feeling afraid as if something awful might happen</div>
+        <div class="radio-group">
+          <div class="radio-option">
+            <input type="radio" id="q7-0" name="entry.212647603" value="0" data-score="0" required>
+            <label for="q7-0">Not at all</label>
+          </div>
+          <div class="radio-option">
+            <input type="radio" id="q7-1" name="entry.212647603" value="1" data-score="1">
+            <label for="q7-1">Several days</label>
+          </div>
+          <div class="radio-option">
+            <input type="radio" id="q7-2" name="entry.212647603" value="2" data-score="2">
+            <label for="q7-2">More than half the days</label>
+          </div>
+          <div class="radio-option">
+            <input type="radio" id="q7-3" name="entry.212647603" value="3" data-score="3">
+            <label for="q7-3">Nearly every day</label>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 20px;">
+        <button class="btn btn-primary" type="submit">Submit and Calculate Results</button>
+      </div>
+    </form>
+
+    <div id="result" class="result">
+      <h3>Your GAD-7 Results</h3>
+      <div class="score-display">Total Score: <span id="score">0</span>/21</div>
+      <div id="severity"></div>
+      <div id="interpretation"></div>
+      <div class="note" style="margin-top: 16px;">
+        <p><strong>Important:</strong> This screening tool is not a diagnosis. If you are experiencing severe anxiety or panic attacks, please contact a mental health professional immediately.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const form = document.getElementById('gad7Form');
+      const resultEl = document.getElementById('result');
+      const scoreEl = document.getElementById('score');
+      const sevEl = document.getElementById('severity');
+      const interpEl = document.getElementById('interpretation');
+
+      form.addEventListener('submit', function (e) {
+        if (typeof e.stopImmediatePropagation === 'function') e.stopImmediatePropagation();
+
+        // Sum selected data-score values
+        let total = 0;
+        form.querySelectorAll('input[type="radio"][data-score]:checked')
+            .forEach(r => total += parseInt(r.dataset.score, 10) || 0);
+
+        scoreEl.textContent = total;
+        document.getElementById('totalField').value = String(total);
+        // для EN-страницы:
+        document.getElementById('versionField').value = 'en';
+        // для RU-страницы поставь 'ru'
+
+        let sev = '', txt = '', cls = '';
+        if (total <= 4)      { sev = 'Minimal anxiety';          txt = 'Your responses suggest minimal anxiety symptoms.';          cls = 'result-minimal'; }
+        else if (total <= 9) { sev = 'Mild anxiety';             txt = 'Your responses suggest mild anxiety symptoms.';            cls = 'result-mild'; }
+        else if (total <=14) { sev = 'Moderate anxiety';         txt = 'Your responses suggest moderate anxiety symptoms.';        cls = 'result-moderate'; }
+        else                 { sev = 'Severe anxiety';           txt = 'Your responses suggest severe anxiety symptoms.';          cls = 'result-severe'; }
+
+        sevEl.innerHTML = '<h4>' + sev + '</h4>';
+        interpEl.innerHTML = '<p>' + txt + '</p>';
+        resultEl.className = 'result show ' + cls;
+
+        setTimeout(() => resultEl.scrollIntoView({ behavior: 'smooth' }), 200);
+        // allow submit to Google
+      });
+    })();
+  </script>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <h2>About the GAD-7</h2>
+        <div class="divider" aria-hidden="true"></div>
+      </div>
+    </div>
+    <div class="auto">
+      <div class="card">
+        <h3>What is the GAD-7?</h3>
+        <p>The GAD-7 (Generalized Anxiety Disorder 7-item scale) is a widely used screening tool for anxiety disorders. It consists of 7 questions that assess the frequency of anxiety symptoms over the past two weeks.</p>
+      </div>
+      <div class="card">
+        <h3>How is it scored?</h3>
+        <p>Each of the 7 items is scored from 0 to 3, with a total score ranging from 0 to 21. Higher scores indicate more severe anxiety.</p>
+        <ul class="check">
+          <li>0-4: Minimal anxiety</li>
+          <li>5-9: Mild anxiety</li>
+          <li>10-14: Moderate anxiety</li>
+          <li>15-21: Severe anxiety</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Next Steps</h3>
+        <p>If your score indicates moderate to severe anxiety, it's important to seek professional help. This tool is not a substitute for professional diagnosis or treatment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer role="contentinfo">
+  <div class="container" style="display:flex; flex-wrap:wrap; align-items:center; gap:12px; justify-content:space-between;">
+    <div style="display:flex; align-items:center; gap:10px;">
+      <div class="logo" aria-hidden="true" style="width:28px; height:28px;"></div>
+      <span>© <span id="y"></span> Dynamic Equilibrium</span>
+    </div>
+    <div class="note">Ethics and Privacy • This is not medical advice • In crisis situations, contact emergency services</div>
+  </div>
+</footer>
+
+<script>
+  // THEME (default = light)
+  (function(){
+    const btn = document.getElementById('themeToggle');
+    const root = document.body;
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const logo = document.querySelector('.logo');
+    
+    function set(mode){
+      root.setAttribute('data-theme', mode);
+      try{ localStorage.setItem('de_theme', mode); }catch(e){}
+      if (metaTheme) metaTheme.setAttribute('content', mode === 'dark' ? '#0C0F10' : '#F5F4F0');
+    }
+    try{
+      const saved = localStorage.getItem('de_theme');
+      const mode = saved || 'light';  // default light
+      set(mode);
+    }catch(e){ set('light'); }
+    
+    btn?.addEventListener('click', ()=>{
+      const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      set(next);
+    });
+  })();
+  
+  // Footer year
+  document.getElementById('y').textContent = new Date().getFullYear();
+  
+  // ===== Mobile drawer =====
+  (function(){
+    const toggle = document.getElementById('menuToggle');
+    const drawer = document.getElementById('mobileDrawer');
+    const backdrop = drawer?.querySelector('.drawer-backdrop');
+    const srcLinks = document.querySelector('.nav-links');
+    const dst = drawer?.querySelector('.drawer-links');
+    const themeBtn = document.getElementById('drawerTheme');
+    const themeToggle = document.getElementById('themeToggle');
+    
+    // clone links (desktop -> drawer)
+    if (srcLinks && dst && !dst.children.length){
+      [...srcLinks.querySelectorAll('a')].forEach(a => dst.appendChild(a.cloneNode(true)));
+    }
+    
+    function open(){
+      drawer.classList.add('open');
+      toggle.setAttribute('aria-expanded','true');
+      document.documentElement.style.overflow = 'hidden'; // lock
+      const first = dst.querySelector('a'); first && first.focus();
+    }
+    function close(){
+      drawer.classList.remove('open');
+      toggle.setAttribute('aria-expanded','false');
+      document.documentElement.style.overflow = '';
+      toggle.focus();
+    }
+    
+    toggle?.addEventListener('click', ()=> drawer.classList.contains('open') ? close() : open());
+    backdrop?.addEventListener('click', close);
+    drawer?.addEventListener('keydown', (e)=>{ if(e.key==='Escape') close(); });
+    
+    // Close on any link click inside drawer (navigation handled by delegated smooth-scroll above)
+    drawer?.addEventListener('click', (e)=>{
+      const a = e.target.closest('a'); if(a) close();
+    });
+    
+    // Theme switch inside drawer
+    themeBtn?.addEventListener('click', ()=> themeToggle?.click());
+  })();
+  
+(function () {
+  const form = document.getElementById('gad7Form');
+  const resultEl = document.getElementById('result');
+  const scoreEl = document.getElementById('score');
+  const sevEl = document.getElementById('severity');
+  const interpEl = document.getElementById('interpretation');
+
+  // Your real entry names (don't change unless you delete/recreate questions)
+  const entryNames = [
+    'entry.862708836','entry.603891035','entry.381494060',
+    'entry.1619343286','entry.1443022719','entry.1952019994',
+    'entry.212647603'
+  ];
+
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault(); // stay on your page (no Google draft popup)
+
+    // Ensure all required radios are answered
+    for (const name of entryNames) {
+      if (!form.querySelector(`input[name="${name}"]:checked`)) {
+        alert('Please answer all questions.');
+        return;
+      }
+    }
+
+    // Compute total from numeric values 0–3
+    let total = 0;
+    entryNames.forEach(name => {
+      total += parseInt(form.querySelector(`input[name="${name}"]:checked`).value, 10);
+    });
+
+    // Update UI
+    scoreEl.textContent = total;
+    let sev = '', txt = '', cls = '';
+    if (total <= 4)      { sev = 'Minimal anxiety';          txt = 'Your responses suggest minimal anxiety symptoms.';          cls = 'result-minimal'; }
+    else if (total <= 9) { sev = 'Mild anxiety';             txt = 'Your responses suggest mild anxiety symptoms.';            cls = 'result-mild'; }
+    else if (total <=14) { sev = 'Moderate anxiety';         txt = 'Your responses suggest moderate anxiety symptoms.';        cls = 'result-moderate'; }
+    else                 { sev = 'Severe anxiety';           txt = 'Your responses suggest severe anxiety symptoms.';          cls = 'result-severe'; }
+    sevEl.innerHTML = '<h4>' + sev + '</h4>';
+    interpEl.innerHTML = '<p>' + txt + '</p>';
+    resultEl.className = 'result show ' + cls;
+    setTimeout(() => resultEl.scrollIntoView({ behavior: 'smooth' }), 200);
+
+    // Submit to Google silently
+    const fd = new FormData(form);
+    try {
+      await fetch(form.action, { method: 'POST', mode: 'no-cors', body: fd });
+      // optionally: show a small "Submitted" toast here
+    } catch (err) {
+      console.error('Background submit failed', err);
+      // optional fallback:
+      // const win = window.open(form.action, '_blank');
+      // form.submit();
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
