@@ -7,23 +7,25 @@
   <meta name="description" content="Executive-психотерапия 1-на-1 с MD, PhD. За 10–12 недель стабилизируем сон, тревожность и фокус, вернём энергию и качество решений. 360° метод, метрики, полная конфиденциальность."/>
   <meta name="theme-color" content="#F5F4F0"/>
   <meta name="color-scheme" content="light dark"/>
-  <link rel="canonical" href="https://dynamicequilibrium.org/offers"/>
+  <link rel="canonical" href="https://dynamicequilibrium.org"/>
+
+  <!-- Language alternates -->
+  <link rel="alternate" hreflang="ru" href="https://dynamicequilibrium.org/"/>
+  <link rel="alternate" hreflang="en" href="https://dynamicequilibrium.org/en/"/>
+  <link rel="alternate" hreflang="x-default" href="https://dynamicequilibrium.org/"/>
 
   <!-- Open Graph -->
   <meta property="og:type" content="website"/>
+  <meta property="og:locale" content="ru_RU"/>
+  <meta property="og:locale:alternate" content="en_US"/>
   <meta property="og:title" content="Dynamic Equilibrium — Executive-психотерапия 1-на-1 для лидеров"/>
   <meta property="og:description" content="Личное сопровождение лидеров и руководителей: сон, тревожность, выгорание, фокус. 360° методология, метрики, строгая конфиденциальность."/>
-  <meta property="og:url" content="https://dynamicequilibrium.org/offers"/>
+  <meta property="og:url" content="https://dynamicequilibrium.org/"/>
   <meta property="og:image" content="/og/dynamic-equilibrium.jpg"/>
-  <meta name="twitter:card" content="/og/dynamic-equilibrium.jpg"/>
 
-  <!-- Favicons / PWA -->
-  <link rel="icon" href="/favicon/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-  <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
-  <link rel="manifest" href="/favicon/site.webmanifest">
-  <meta name="msapplication-TileColor" content="#F5F4F0">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:image" content="/og/dynamic-equilibrium.jpg"/>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -91,6 +93,10 @@
       mask-image: linear-gradient(180deg, #000 12%, transparent 80%);
     }
 
+    .lang-switch .is-active{ border-color: var(--accent); }
+    .lang-switch .btn{ padding: 8px 12px; }
+    @media (max-width: 860px){ .lang-switch{ display:none; } }
+
     /* Header */
     .nav{
       position:sticky; top:0; z-index:1000;
@@ -133,7 +139,7 @@
     }
     .burger::before{ position:absolute; top:-6px; }
     .burger::after{ position:absolute; top:6px; }
-
+    
     .drawer{ position:fixed; inset:0; display:none; z-index:1100; }
     .drawer.open{ display:block; }
     .drawer-backdrop{ position:absolute; inset:0; background:rgba(0,0,0,.32); border:0; z-index:1; }
@@ -360,6 +366,12 @@
         <span class="burger" aria-hidden="true"></span>
       </button>
     </div>
+
+    <div class="lang-switch" role="group" aria-label="Выбор языка">
+      <a class="btn btn-ghost is-active" href="/" hreflang="ru" lang="ru">RU</a>
+      <a class="btn btn-ghost" href="/en/" hreflang="en" lang="en">EN</a>
+    </div>
+
   </div>
 </header>
 
@@ -368,6 +380,10 @@
   <div class="drawer-panel">
     <nav class="drawer-links" aria-label="Разделы (моб.)"><!-- links cloned via JS --></nav>
     <div class="drawer-footer">
+      <div style="display:flex; gap:8px;">
+        <a class="btn btn-ghost is-active" href="/" hreflang="ru" lang="ru">RU</a>
+        <a class="btn btn-ghost" href="/en/" hreflang="en" lang="en">EN</a>
+      </div>
       <button id="drawerTheme" class="btn btn-ghost" type="button">Сменить тему</button>
     </div>
   </div>
@@ -731,7 +747,7 @@
         </figure>
         <figure class="slide">
           <img src="images/gallery/public-speaking.jpg" alt="Публичные лекции и конференции" loading="lazy" decoding="async" />
-          <figcaption>Публичные лекции и конференции в ведущих универистетах России и Европы.</figcaption>
+          <figcaption>Публичные лекции и конференции в ведущих университетах России и Европы.</figcaption>
         </figure>
         <figure class="slide">
           <img src="images/gallery/with-michael-pollan.jpg" alt="Публичная дискуссия с международным автором о науке и обществе." loading="lazy" decoding="async" />
