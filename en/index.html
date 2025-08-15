@@ -108,15 +108,24 @@
     .drawer{ position:fixed; inset:0; display:none; z-index:1100; }
     .drawer.open{ display:block; }
     .drawer-backdrop{ position:absolute; inset:0; background:rgba(0,0,0,.32); border:0; z-index:1; }
-    .drawer-panel{ position:absolute; top:0; right:0; width:min(88vw, 420px); height:100%;
-      padding: calc(16px + var(--safe)) 16px 16px; display:flex; flex-direction:column; gap:16px;
-      background:var(--layer); border-left:1px solid var(--line); box-shadow:var(--shadow); z-index:2;
+    .drawer-panel{
+    overflow-y: auto;              
+    -webkit-overflow-scrolling: touch; 
+    padding-bottom: calc(16px + env(safe-area-inset-bottom, 0px)); 
+    max-height: 100svh;              
+    max-height: 100dvh;          
     }
     .drawer-links{ display:grid; gap:8px; margin-top:8px; }
     .drawer-links a{ padding:12px 10px; border-radius:12px; border:1px solid var(--line); }
     .drawer-links a.btn{ display:block; text-align:center; }
-    .drawer-footer{ margin-top:auto; display:flex; justify-content:space-between; gap:8px; }
-
+    .drawer-footer{
+      position: sticky;
+      bottom: 0;
+      background: var(--layer);
+      border-top: 1px solid var(--line);
+      padding-top: 12px;
+      padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+    }
     .menu-toggle{ display:none; }
     @media (max-width: 860px){ .nav-links{ display:none; } .menu-toggle{ display:grid; } .theme{ width:36px; height:36px; } .brand span{ display:none; } }
 
