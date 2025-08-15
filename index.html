@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Динамическое Равновесие — 360° индивидуальное сопровождение для лидеров</title>
-  <meta name="description" content="Executive-психотерапия 1-на-1 с MD, PhD. За 8–12 недель стабилизируем сон, тревожность и фокус, вернём энергию и качество решений. 360° метод, метрики, полная конфиденциальность."/>
+  <meta name="description" content="Executive-психотерапия 1-на-1 с MD, PhD. За 10–12 недель стабилизируем сон, тревожность и фокус, вернём энергию и качество решений. 360° метод, метрики, полная конфиденциальность."/>
   <meta name="theme-color" content="#F5F4F0"/>
   <meta name="color-scheme" content="light dark"/>
   <link rel="canonical" href="https://dynamicequilibrium.org/offers"/>
@@ -71,6 +71,7 @@
     h1{ font-weight:800; font-size: clamp(34px, 4.6vw, 56px); line-height:1.06; }
     h2{ font-weight:800; font-size: clamp(24px, 3vw, 36px); line-height:1.12; }
     h3{ font: 700 18px/1.2 'Inter', sans-serif; margin:0 0 .5em; }
+    h4{ font:700 13px/1.1 'Inter', sans-serif; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin:.4em 0 .4em; }
     p{ margin:0 0 1em; }
     a{ color: var(--accent); text-decoration: none; }
     a:hover{ text-decoration: underline; }
@@ -91,9 +92,18 @@
     }
 
     /* Header */
-    .nav{ position:sticky; top:0; z-index:1000; backdrop-filter:saturate(160%) blur(10px);
+    .nav{
+      position:sticky; top:0; z-index:1000;
+      backdrop-filter:saturate(160%) blur(10px);
       background: color-mix(in oklab, var(--bg), transparent 10%);
-      border-bottom:1px solid color-mix(in oklab, var(--accent), transparent 82%); }
+      border-bottom:1px solid color-mix(in oklab, var(--accent), transparent 82%);
+      transition: background var(--speed), border var(--speed), box-shadow var(--speed), transform var(--speed);
+    }
+    .nav.is-scrolled{
+      background: color-mix(in oklab, var(--bg), #000 8%);
+      border-bottom-color: color-mix(in oklab, var(--accent), transparent 70%);
+      box-shadow: 0 6px 32px rgba(0,0,0,.14);
+    }
     .nav-inner{ display:flex; align-items:center; justify-content:space-between; gap:16px; padding: max(10px, calc(12px + var(--safe))) 22px 12px; }
     .brand{ display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.3px; }
     .brand-logo{ width:var(--logo); height:var(--logo); display:block; object-fit:contain; transition: filter var(--speed); }
@@ -126,7 +136,6 @@
 
     .drawer{ position:fixed; inset:0; display:none; z-index:1100; }
     .drawer.open{ display:block; }
-    /* ↓↓↓ важный слой: панель выше подложки */
     .drawer-backdrop{ position:absolute; inset:0; background:rgba(0,0,0,.32); border:0; z-index:1; }
     .drawer-panel{
       position:absolute; top:0; right:0; width:min(88vw, 420px); height:100%;
@@ -141,14 +150,7 @@
 
     /* Desktop default */
     .menu-toggle{ display:none; }
-
-    /* ≤ 860px: hamburger appears; desktop links hidden */
-    @media (max-width: 860px){
-      .nav-links{ display:none; }
-      .menu-toggle{ display:grid; }
-      .theme{ width:36px; height:36px; }
-      .brand span{ display:none; }
-    }
+    @media (max-width: 860px){ .nav-links{ display:none; } .menu-toggle{ display:grid; } .theme{ width:36px; height:36px; } .brand span{ display:none; } }
 
     .hero{ position:relative; padding: 88px 0 34px; overflow:hidden; }
     .hero-grid{ display:grid; grid-template-columns: 1.22fr .78fr; gap: 28px; align-items:center; }
@@ -180,19 +182,16 @@
     /* Пять сфер */
     .spheres{ display:grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 14px; }
     .sphere{ display:grid; grid-template-columns: 56px 1fr; gap:12px; align-items:start; padding: 16px; border:1px solid var(--line); background: var(--layer); border-radius: var(--radius); }
-    .ico{
-      width:56px; height:56px; border-radius:12px; display:grid; place-items:center;
-      background: color-mix(in oklab, var(--accent), transparent 86%);
-      border:1px solid color-mix(in oklab, var(--accent), transparent 58%);
-      font-size:28px; line-height:1; color:var(--accent);
-    }
+    .ico{ width:56px; height:56px; border-radius:12px; display:grid; place-items:center; background: color-mix(in oklab, var(--accent), transparent 86%); border:1px solid color-mix(in oklab, var(--accent), transparent 58%); font-size:28px; line-height:1; color:var(--accent); }
 
     .steps{ display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 12px; }
     .step{ padding:16px; border:1px solid var(--line); border-radius:14px; background: var(--layer); }
     .n{ display:inline-grid; place-items:center; width:28px; height:28px; border-radius:50%; background: var(--accent); color:#0c0f10; font-weight:900; margin-bottom:8px; }
+
     .quote{ padding:18px; border-radius:16px; border:1px solid var(--line); background: linear-gradient(180deg, rgba(134,166,139,.10), transparent 70%); }
     .quote strong{ display:block; margin-bottom:6px; }
     .delta{ font-weight:700; color: var(--ok); }
+
     form{ display:grid; gap:12px; }
     input,textarea,select{ font: inherit; padding:12px 14px; color:var(--ink); background: var(--bg); border:1.6px solid color-mix(in oklab, var(--accent), transparent 58%); border-radius: 12px; transition: border var(--speed), box-shadow var(--speed), background var(--speed); }
     input:focus,textarea:focus,select:focus{ outline:none; border-color: var(--accent); box-shadow: 0 0 0 4px color-mix(in oklab, var(--accent), transparent 80%); }
@@ -202,47 +201,112 @@
     /* === ОТЗЫВЫ КОЛЛЕГ === */
     .reviews{ display:grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap:12px; }
     .review{ position:relative; padding:18px; border:1px solid var(--line); border-radius:16px; background: var(--layer); }
-    .review::before{
-      content:"“"; position:absolute; left:12px; top:6px;
-      font:800 40px/1 'Newsreader', serif; color: color-mix(in oklab, var(--accent-2), transparent 40%); opacity:.4;
-    }
+    .review::before{ content:"“"; position:absolute; left:12px; top:6px; font:800 40px/1 'Newsreader', serif; color: color-mix(in oklab, var(--accent-2), transparent 40%); opacity:.4; }
     .review p{ margin:0 0 10px; }
     .review strong{ display:block; color:var(--muted); }
 
     /* КАРУСЕЛЬ */
     .carousel{ position:relative; }
     .carousel-viewport{
-      display:flex; gap:8px;
-      overflow-x:auto; scroll-snap-type:x mandatory;
+      display:flex; gap:8px; overflow-x:auto; scroll-snap-type:x mandatory;
       -webkit-overflow-scrolling: touch; scroll-behavior:smooth; padding-bottom: 6px;
     }
     .carousel-viewport::-webkit-scrollbar{ height:8px; }
     .carousel-viewport::-webkit-scrollbar-thumb{ background: color-mix(in oklab, var(--accent), transparent 70%); border-radius:999px; }
-
-    .slide{
-      flex: 0 0 auto; display:flex; flex-direction: column; align-items:center;
-      scroll-snap-align: center; border:0; background:transparent; border-radius:12px; overflow:visible; box-shadow:none;
-    }
+    .slide{ flex: 0 0 auto; display:flex; flex-direction: column; align-items:center; scroll-snap-align: center; border:0; background:transparent; border-radius:12px; overflow:visible; box-shadow:none; }
     .slide img{ display:block; width:auto; height:auto; max-height: min(72vh, 620px); object-fit: contain; }
-    .slide figcaption{
-      margin-top:8px; text-align:center; align-self:center; width:auto; max-width: min(92ch, 90vw);
-      padding:12px 14px; color:var(--muted); border-top:1px solid var(--line);
-      background: linear-gradient(180deg, rgba(134,166,139,.04), transparent 60%);
-    }
-
+    .slide figcaption{ margin-top:8px; text-align:center; align-self:center; width:auto; max-width: min(92ch, 90vw); padding:12px 14px; color:var(--muted); border-top:1px solid var(--line); background: linear-gradient(180deg, rgba(134,166,139,.04), transparent 60%); }
     .carousel-btn{
-      position:absolute; top:50%; transform:translateY(-50%); z-index:5;
-      width:42px; height:42px; border-radius:50%; border:1px solid color-mix(in oklab, var(--accent), transparent 60%);
-      background: rgba(0,0,0,.18); backdrop-filter: blur(6px); color:var(--ink); cursor:pointer;
-      display:grid; place-items:center;
+      position:absolute; top:50%; transform:translateY(-50%); z-index:5; width:42px; height:42px; border-radius:50%;
+      border:1px solid color-mix(in oklab, var(--accent), transparent 60%); background: rgba(0,0,0,.18); backdrop-filter: blur(6px);
+      color:var(--ink); cursor:pointer; display:grid; place-items:center;
     }
     .carousel-btn:hover{ box-shadow: var(--shadow); transform: translateY(-50%) scale(1.02); }
     .carousel-btn[disabled]{ opacity:.35; cursor:default; box-shadow:none; }
     .prev{ left: 6px; } .next{ right: 6px; }
-
     .dots{ display:flex; gap:8px; justify-content:center; margin-top:10px; }
     .dot{ width:8px; height:8px; border-radius:999px; background: color-mix(in oklab, var(--accent), transparent 80%); border:1px solid color-mix(in oklab, var(--accent), transparent 56%); }
     .dot[aria-current="true"]{ background: var(--accent); border-color: var(--accent); }
+
+  /* === Точка А → Точка Б — FIX === */
+  .ab{
+    display: grid;
+    grid-template-columns: minmax(0,1fr) 56px minmax(0,1fr);
+    gap: 12px;
+    align-items: start;
+  }
+  .ab-col{
+    min-width: 0;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 14px;
+    background: color-mix(in oklab, var(--layer), transparent 0%);
+    box-shadow: 0 1px 0 color-mix(in oklab, var(--accent), transparent 85%);
+  }
+  .ab-arrow{ display: grid; place-items: center; align-self: center; }
+  .ab-arrow .pill{
+    width: 46px; height: 46px; border-radius: 999px;
+    border: 1px solid color-mix(in oklab, var(--accent), transparent 40%);
+    background: linear-gradient(180deg, rgba(134,166,139,.10), transparent 70%);
+    display: grid; place-items: center; font-weight: 800;
+  }
+
+  .ab-col:first-of-type{ border-left: 3px solid color-mix(in oklab, var(--danger), transparent 50%); }
+  .ab-col:last-of-type{  border-left: 3px solid var(--accent); }
+
+  .auto > .card{ overflow: hidden; }
+
+  @media (max-width: 680px){
+    .ab{ grid-template-columns: 1fr; }
+    .ab-arrow{ display:none; }
+  }
+
+    /* === CASES (2×2) === */
+    .cases-grid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:16px;
+    }
+    @media (min-width:860px){
+      .cases-grid{ grid-template-columns:1fr 1fr; }
+    }
+    .cases-grid > .card{ height:100%; overflow:hidden; }
+
+    /* Скриншоты в кейсе пары */
+    .proof{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:8px;
+      margin-top:10px;
+    }
+    .proof img{
+      display:block; width:100%; height:auto;
+      border-radius:12px; border:1px solid var(--line); background:var(--layer);
+    }
+    @media (max-width:680px){ .proof{ grid-template-columns:1fr; } }
+
+    /* CTA banners */
+    .cta-banner{
+      display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px;
+      background: linear-gradient(90deg, rgba(134,166,139,.07), transparent 60%);
+      border:1px solid color-mix(in oklab, var(--accent), transparent 70%); border-radius:16px; padding:16px 18px; margin-top:16px;
+    }
+
+    /* Floating controls (mobile-first) */
+    .float-stack{
+      position:fixed; right:14px; bottom:16px; z-index:1200; display:grid; gap:10px;
+      pointer-events:none;
+    }
+    .fab{
+      pointer-events:auto;
+      width:48px; height:48px; border-radius:50%; border:1px solid color-mix(in oklab, var(--accent), transparent 50%);
+      background: var(--layer); color:var(--ink); display:grid; place-items:center; box-shadow: var(--shadow);
+      opacity:0; transform:translateY(8px); transition: opacity var(--speed), transform var(--speed);
+    }
+    .fab.show{ opacity:1; transform:translateY(0); }
+    .fab:hover{ transform: translateY(-2px); }
+    .fab-primary{ background: var(--accent); color:#0C0F10; border-color: var(--accent); }
+    @media (min-width: 861px){ .float-stack{ display:none; } }
 
     /* Адаптив */
     @media (max-width: 1040px){ .hero-grid{ grid-template-columns: 1fr; } .grid-3{ grid-template-columns: 1fr 1fr; } }
@@ -256,6 +320,8 @@
       .theme{ width:36px; height:36px; }
       .section-head{ flex-direction: column; align-items: flex-start; gap: 8px; }
       .section-head .sub{ margin-top: 2px; }
+      .ab{ grid-template-columns: 1fr; }
+      .ab-arrow{ display:none; }
     }
 
     @media (prefers-reduced-motion: reduce){
@@ -315,9 +381,8 @@
       <h1>Динамическое равновесие для лидеров и предпринимателей</h1>
       <div class="divider" aria-hidden="true"></div>
       <p class="sub">
-        Работа <strong>1-на-1</strong> с MD PhD (врач-психотерапевт). 8–12 недель.<br/>
+        Работа <strong>1-на-1</strong> с MD PhD (врач-психотерапевт). 10–12 недель.<br/>
         Лично, конфиденциально. RU / EN.<br/>
-
       </p>
       <div class="hero-cta">
         <a class="btn btn-primary" href="#elite">Начать 1–1</a>
@@ -372,7 +437,7 @@
   </div>
 </section>
 
-<!-- УДАЛЁННЫЙ ИЗ ПЕРВОНАЧАЛЬНОЙ ПОЗИЦИИ БЛОК #elite ПЕРЕНЕСЁН НИЖЕ, ПОСЛЕ #about -->
+<!-- Блок #elite перенесён ниже, после #about -->
 
 <section class="section" id="pains">
   <div class="container">
@@ -405,6 +470,12 @@
         <li><strong>Метаболические риски</strong> — набор веса, АД, воспалительный фон (стресс + перелёты + хаотичное питание).</li>
         <li><strong>Переизбыток ответственности/контроля</strong> — «всё на мне», страх отпускать рычаги → узкие места в орг-системе.</li>
       </ul></div>
+    </div>
+
+    <!-- CTA banner -->
+    <div class="cta-banner">
+      <p class="sub" style="margin:0">Если узнаёте себя — обсудим формат и цели в коротком звонке.</p>
+      <a class="btn btn-primary" href="#contact">Отправить конфиденциальный бриф</a>
     </div>
   </div>
 </section>
@@ -461,6 +532,12 @@
         <div><strong>Смыслы</strong><p class="note">Ценности и «зачем». Возвращаем чувство осмысленности.</p></div>
       </article>
     </div>
+
+    <!-- CTA banner -->
+    <div class="cta-banner">
+      <p class="sub" style="margin:0">Готовы к системной работе по пяти сферам?</p>
+      <a class="btn btn-primary" href="#contact">Отправить конфиденциальный бриф</a>
+    </div>
   </div>
 </section>
 
@@ -508,8 +585,8 @@
         <h3>Предпринимательство и продукты</h3>
         <ul class="check">
           <li>Автор и ведущий ретритов с медицинским сопровождением; программы вошли в списки лучших европейских трансформационных ретритов.</li>
-          <li>Соучредитель, Научный и Креативный директор <a href="https://dreamseer.app" target="_blank" rel="noopener">Dreamseer</a> — компания, переосмысляющая психологию сновидений с применением современных аналитических методов.</li>
-          <li>Автор канала <a href="https://www.youtube.com/@HouseOfOuroboros" target="_blank" rel="noopener">House Of Ouroboros</a>; соавтор подкаста <a href="https://open.spotify.com/show/11zWwtENtx96xQDrv57vzZ" target="_blank" rel="noopener">«Дыши»</a> (о взрослых детях алкоголиков).</li>
+          <li>Соучредитель, Научный и Креативный директор <a href="https://dreamseer.app" target="_blank" rel="noopener">Dreamseer</a>.</li>
+          <li>Автор канала <a href="https://www.youtube.com/@HouseOfOuroboros" target="_blank" rel="noopener">House Of Ouroboros</a>; соавтор подкаста <a href="https://open.spotify.com/show/11zWwtENtx96xQDrv57vzZ" target="_blank" rel="noopener">«Дыши»</a>.</li>
           <li><a href="https://lebedevlabs.com/" target="_blank" rel="noopener">Приглашенный консультант</a> и руководитель C-Level для компаний в сферах WellTech & FinTech.</li>
         </ul>
       </div>
@@ -536,7 +613,7 @@
   </div>
 </section>
 
-<!-- ПЕРЕНЕСЁННЫЙ БЛОК: Индивидуальная программа 1–1 -->
+<!-- Индивидуальная программа 1–1 -->
 <section class="section" id="elite">
   <div class="container">
     <div class="section-head">
@@ -549,10 +626,10 @@
     <div class="grid-2">
       <article class="card tier">
         <h3>Executive Core</h3>
-        <p class="price">10k € • 8–10 недель</p>
+        <p class="price">10k € • 10 недель</p>
         <ul class="check">
           <li>Стартовая 360°-диагностика (90–120 мин) по Пяти сферам</li>
-          <li>Еженедельные сессии 75–90 мин (онлайн или очно)</li>
+          <li>Еженедельные сессии 60 мин (онлайн или очно)</li>
           <li>Сон и стресс: протоколы + трекинг (по желанию — wearables)</li>
           <li>Когнитивные модули: перфекционизм, импостер-мысли, руминации</li>
           <li>Личный playbook «Операционный код», v1.0</li>
@@ -560,7 +637,7 @@
       </article>
       <article class="card tier">
         <h3>Executive Deep</h3>
-        <p class="price">15k € • 10–12 недель</p>
+        <p class="price">15k € • 12 недель</p>
         <ul class="check">
           <li>Всё из Core + работа с образами/сновидениями</li>
           <li>Подготовка к ключевым встречам/переговорам (до 2×/нед)</li>
@@ -573,11 +650,11 @@
     </div>
     <div class="auto" style="margin-top:16px">
       <div class="card">
-        <h3>Что стабилизируется за 8–12 недель</h3>
+        <h3>Что стабилизируется за 10–12 недель</h3>
         <ul class="check">
           <li>Сон (длительность, глубина, минимум пробуждений)</li>
           <li>Решения и переговоры — без эмоционального налога</li>
-          <li>Возвращение фокуса и «глубокой работы» в календарь</li>
+          <li>Возвращение фокуса и «глубокой работы» в жизнь</li>
         </ul>
       </div>
       <div class="card">
@@ -585,7 +662,7 @@
         <ul class="check">
           <li>Персональные протоколы регуляции и восстановления</li>
           <li>Стандарты совещаний и конструктивной обратной связи (готовые шаблоны для команды и семьи)</li>
-          <li>Эксклюзивный доступ к приложению для анализа сновидений <a href="https://dreamseer.app" target="_blank" rel="noopener">Dreamseer</a> с персональным онбордингом</li>
+          <li>Эксклюзивный доступ к <a href="https://dreamseer.app" target="_blank" rel="noopener">Dreamseer</a></li>
           <li>Индивидуальный playbook «Операционный код»</li>
         </ul>
       </div>
@@ -602,7 +679,7 @@
   <div class="container">
     <div class="section-head">
       <div>
-        <h2>Избранные публикации</h2>
+        <h2>Избранные научные публикации</h2>
         <div class="divider" aria-hidden="true"></div>
       </div>
       <p class="sub">Ключевые работы; все ссылки — на PubMed.</p>
@@ -654,15 +731,15 @@
         </figure>
         <figure class="slide">
           <img src="images/gallery/public-speaking.jpg" alt="Публичные лекции и конференции" loading="lazy" decoding="async" />
-          <figcaption>Публичные лекции и конференции в ведущих универистетах России и Европы (СПБГМУ им. акад. И.П. Павлова, ПетрГУ, Бергенский Университет, Карлинский Институт, Университетский Колледж Лондона и мн. др.).</figcaption>
+          <figcaption>Публичные лекции и конференции в ведущих универистетах России и Европы.</figcaption>
         </figure>
         <figure class="slide">
           <img src="images/gallery/with-michael-pollan.jpg" alt="Публичная дискуссия с международным автором о науке и обществе." loading="lazy" decoding="async" />
-          <figcaption>Продвижение некомерческих организаций и публичные дискуссии с международными лидерами мнений в сферах ментального здоровья и благополучия (на фото - Майкл Поллан, на ивенте в Стокгольме). </figcaption>
+          <figcaption>Публичные дискуссии с международными лидерами мнений (на фото — Майкл Поллан, Стокгольм).</figcaption>
         </figure>
         <figure class="slide">
           <img src="images/gallery/with-dmitrii-shamenkov.jpg" alt="Совместная работа с Дмитрием Шаменковым в онлайн Школе Открытого Диалога и офлайн проектах." loading="lazy" decoding="async" />
-          <figcaption>Совместная работа с Дмитрием Шаменковым в онлайн Школе Открытого Диалога и офлайн проектах.</figcaption>
+          <figcaption>Совместные образовательные и клинические проекты в рамках Школы Открытого Диалога.</figcaption>
         </figure>
       </div>
 
@@ -675,7 +752,7 @@
         <img src="images/gallery/emcdda-lisbon-2023.jpg" alt="" style="width:100%;border-radius:16px;border:1px solid var(--line)"/>
         <img src="images/gallery/bjj-nordic-open.jpg" alt="" style="width:100%;border-radius:16px;border:1px solid var(--line)"/>
         <img src="images/gallery/media-and-podcasts.jpg" alt="" style="width:100%;border-radius:16px;border:1px solid var(--line)"/>
-        <img src="images/gallery/public-speaking.jpg" alt="" style="width:100%;border-radius:16px;border:1px solid var(--line)"/>
+        <img src="images/gallery/public-speaking.jpg" alt="" style="width:100%;border-radius:16px;border:1px solid(var(--line))"/>
         <img src="images/gallery/with-michael-pollan.jpg" alt="" style="width:100%;border-radius:16px;border:1px solid var(--line)"/>
       </div>
     </noscript>
@@ -692,9 +769,9 @@
       <p class="sub">Прозрачно и персонально: вы работаете напрямую со мной, без посредников.</p>
     </div>
     <div class="steps">
-      <div class="step"><div class="n">1</div><h3>Диагностика</h3><p class="note">90–120 мин. Опросники, интервью, карта баланса. Формируем гипотезы и цели.</p></div>
+      <div class="step"><div class="n">1</div><h3>Диагностика</h3><p class="note">90–120 мин. Опросники, интервью, карта баланса. Оценка соматического состояния, диеты, лабораторные тесты. Формируем гипотезы и цели.</p></div>
       <div class="step"><div class="n">2</div><h3>Индивидуальный план</h3><p class="note">Комбинация модулей по 5 сферам, понятные метрики и правила.</p></div>
-      <div class="step"><div class="n">3</div><h3>Сессии 1-на-1</h3><p class="note">Еженедельно 75–90 мин. Онлайн или очно на Мадейре.</p></div>
+      <div class="step"><div class="n">3</div><h3>Сессии 1-на-1</h3><p class="note">Еженедельно 60 мин. Задания и упражнения с элементами игрофикации.</p></div>
       <div class="step"><div class="n">4</div><h3>Межсессионная поддержка</h3><p class="note">Короткие личные check-ins со мной (по договорённости) в защищённых каналах.</p></div>
       <div class="step"><div class="n">5</div><h3>Интеграция</h3><p class="note">Финальная сессия, закрепление навыков и план поддержания на 3 месяца.</p></div>
     </div>
@@ -708,12 +785,129 @@
         <h2>Результаты клиентов</h2>
         <div class="divider" aria-hidden="true"></div>
       </div>
-      <p class="sub">Реальные кейсы (анонимно):</p>
+      <p class="sub">Реальные кейсы, анонимно.</p>
     </div>
-    <div class="auto">
-      <div class="quote"><strong>Основатель IT-компании</strong> Xочу от всей души поблагодарить вас за проделанную работу. Я пришел в сильно разобранном состоянии, разочарованном в своей работе, семейной жизни, практически без сил и энергии, и даже догадываться не мог сколько внутренней силы может раскрыться в терапии. Вы - очень редкий специалист. Ваше глубокое понимание физиологии организма с чуткостью и вниманием к очень тонким процессам психики создают невероятную синергию.</div>
-      <div class="quote"><strong>Серийный предприниматель, фаундер</strong> Работа с Александром была действительно терапевтичной и максимально полезной. Под его руководством нам удалось решить важные для нашего будущего, глобальные вопросы нашей жизни. Мы получили больше уверенности в будущем и понимание, куда хотим идти. Александр невероятно профессиональный, ответственный, и надежный человек. В общем, всем близким теперь рекомендую Александра и работу с ним.</div>
-      <div class="quote"><strong>Предприниматель на пороге большого решения</strong> Когда я обратилась к Александру, я была в абсолютном тупике — стояла перед сложным выбором, но любое решение казалось неправильным. Ощущение полной растерянности, страх сделать ошибку, бесконечные размышления, которые ни к чему не приводят. Я застряла в этой точке и просто не могла двигаться дальше. Что оказалось самым ценным — Александр не просто слушает и поддерживает, а реально ведет к результату. Благодаря работе с ним я смогла осознать, что действительно важно, увидеть путь, который раньше казался невозможным, и сделать выбор, который был осознанным и правильным именно для меня.</div>
+
+    <div class="cases-grid">
+      <!-- Кейc 1 -->
+      <article class="card">
+        <h3>Основатель IT-компании, 40+</h3>
+        <div class="ab">
+          <div class="ab-col">
+            <h4>Точка А (до)</h4>
+            <ul class="check">
+              <li>«Разобранное» состояние, эмоциональное истощение.</li>
+              <li>Разочарование в работе и семейной жизни; нет опоры.</li>
+              <li>Низкая энергия, ощущение «ничего не радует».</li>
+            </ul>
+          </div>
+          <div class="ab-arrow"><div class="pill" aria-hidden="true">→</div></div>
+          <div class="ab-col">
+            <h4>Точка Б (после)</h4>
+            <ul class="check">
+              <li>Возврат жизненного тонуса; силы на ключевые решения.</li>
+              <li>Больше ясности и стабильности в отношениях дома.</li>
+              <li>Налажен режим сна/отдыха, меньше внутреннего шума.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="quote" style="margin-top:10px">
+          <strong>Цитата клиента</strong>
+          «Пришёл в сильно разобранном состоянии… практически без сил и энергии. Не подозревал, сколько внутренней силы может раскрыться в терапии. Ваше понимание физиологии и тонкая работа с психикой создают редкую синергию».
+        </div>
+      </article>
+
+      <!-- Кейc 2 -->
+      <article class="card">
+        <h3>Серийный предприниматель, фаундер, 32 года</h3>
+        <div class="ab">
+          <div class="ab-col">
+            <h4>Точка А (до)</h4>
+            <ul class="check">
+              <li>Неопределённость по будущему компании и семьи.</li>
+              <li>Много параллельных задач, нет фокуса на главном.</li>
+              <li>Решения даются тяжело, уверенности мало.</li>
+            </ul>
+          </div>
+          <div class="ab-arrow"><div class="pill" aria-hidden="true">→</div></div>
+          <div class="ab-col">
+            <h4>Точка Б (после)</h4>
+            <ul class="check">
+              <li>Приняты «большие» решения, выстроены шаги реализации.</li>
+              <li>Больше уверенности и согласованные приоритеты в паре.</li>
+              <li>Опора на ценности и длинный горизонт действий.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="quote" style="margin-top:10px">
+          <strong>Цитата клиента</strong>
+          «Под его руководством нам удалось решить важные для будущего вопросы. Мы получили больше уверенности и понимание, куда хотим идти. Александр — невероятно профессиональный и надёжный».
+        </div>
+      </article>
+
+      <!-- Кейc 3 -->
+      <article class="card">
+        <h3>Предприниматель на пороге большого решения, 30+</h3>
+        <div class="ab">
+          <div class="ab-col">
+            <h4>Точка А (до)</h4>
+            <ul class="check">
+              <li>«Тупик»: любое решение кажется неправильным.</li>
+              <li>Растерянность, страх ошибки, бесконечные «перемалывания» мыслей.</li>
+              <li>Застревание — нет движения вперёд.</li>
+            </ul>
+          </div>
+          <div class="ab-arrow"><div class="pill" aria-hidden="true">→</div></div>
+          <div class="ab-col">
+            <h4>Точка Б (после)</h4>
+            <ul class="check">
+              <li>Определены критерии «своего» решения и границы.</li>
+              <li>Появились ясность и внутренний ориентир; тревога снизилась.</li>
+              <li>Сделан осознанный выбор, ощущается правильным.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="quote" style="margin-top:10px">
+          <strong>Цитаты клиента</strong>
+          «Была в абсолютном тупике — любое решение казалось неправильным».<br/>
+          «С Александром я увидела путь, который раньше казался невозможным, и сделала осознанный, правильный для меня выбор».
+        </div>
+      </article>
+
+      <!-- Кейc 4: Пара предпринимателей -->
+      <article class="card">
+        <h3>Пара предпринимателей, 30+</h3>
+        <div class="ab">
+          <div class="ab-col">
+            <h4>Точка А (до)</h4>
+            <ul class="check">
+              <li>Эскалация конфликтов, «закольцованные» разговоры.</li>
+              <li>Потеря ощущения «мы», низкая близость.</li>
+              <li>Рассматривают расставание как реальный сценарий.</li>
+            </ul>
+          </div>
+          <div class="ab-arrow"><div class="pill" aria-hidden="true">→</div></div>
+          <div class="ab-col">
+            <h4>Точка Б (после)</h4>
+            <ul class="check">
+              <li>Восстановили коммуникацию и границы; договорились о правилах диалога.</li>
+              <li>Поняли глубинные причины конфликтов и шаги изменений.</li>
+              <li>Сохранили брак; появилась опора и общий план.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="quote" style="margin-top:10px">
+          <strong>Цитаты клиента</strong>
+            «Когда отношения зашли в тупик, работа с Александром стала переломным моментом. Он помог понять, что стоит за конфликтами и почему коммуникация перестаёт работать — и какие шаги действительно приводят к изменениям».<br/>
+            «Это не просто разговоры — реальный инструмент, который даёт результат. Очень благодарны за бережность, поддержку и точное направление туда, где действительно важно».
+        </div>
+      </article>
+    </div>
+
+    <!-- CTA banner -->
+    <div class="cta-banner">
+      <p class="sub" style="margin:0">Похожая ситуация? Расскажите контекст — вернусь с предложением формата работы.</p>
+      <a class="btn btn-primary" href="#contact">Отправить конфиденциальный бриф</a>
     </div>
   </div>
 </section>
@@ -842,6 +1036,13 @@
   </div>
 </footer>
 
+<!-- Floating controls (mobile): Menu / Top / Brief -->
+<div class="float-stack" aria-hidden="true">
+  <button id="fabMenu" class="fab" title="Меню" aria-label="Открыть меню">≡</button>
+  <button id="fabTop" class="fab" title="Наверх" aria-label="Вернуться наверх">↑</button>
+  <a id="fabBrief" class="fab fab-primary" href="#contact" title="Конфиденциальный бриф" aria-label="Отправить конфиденциальный бриф">✉︎</a>
+</div>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -864,7 +1065,7 @@
 }
 </script>
 
-<!-- === JS (theme, smooth scroll, mobile drawer, carousel) === -->
+<!-- === JS (theme, smooth scroll, mobile drawer, carousel, floating controls) === -->
 <script>
   // THEME (default = light)
   (function(){
@@ -929,17 +1130,6 @@
   // Footer year
   document.getElementById('y').textContent = new Date().getFullYear();
 
-  // (Optional) form toast
-  (function(){
-    const f = document.getElementById('leadForm');
-    const msg = document.getElementById('formMsg');
-    f?.addEventListener('submit', ()=>{
-      if(!msg) return;
-      msg.textContent = 'Отправляем…';
-      setTimeout(()=>{ msg.textContent = 'Готово! Мы получили ваш бриф и скоро свяжемся.'; msg.style.color = getComputedStyle(document.documentElement).getPropertyValue('--ok'); }, 700);
-    });
-  })();
-
   // ===== Mobile drawer =====
   (function(){
     const toggle = document.getElementById('menuToggle');
@@ -979,6 +1169,9 @@
 
     // Theme switch inside drawer
     themeBtn?.addEventListener('click', ()=> themeToggle?.click());
+
+    // expose for floating menu button
+    window._openDrawer = open;
   })();
 
   // ===== Carousel =====
@@ -1036,6 +1229,27 @@
     });
 
     update();
+  })();
+
+  // ===== Header scroll state & Floating controls =====
+  (function(){
+    const nav = document.querySelector('.nav');
+    const fabMenu = document.getElementById('fabMenu');
+    const fabTop  = document.getElementById('fabTop');
+    const fabBrief= document.getElementById('fabBrief');
+
+    function onScroll(){
+      const y = window.scrollY || document.documentElement.scrollTop;
+      if (y > 6){ nav.classList.add('is-scrolled'); } else { nav.classList.remove('is-scrolled'); }
+      const show = y > 320;
+      [fabMenu, fabTop, fabBrief].forEach(b => { if(!b) return; b.classList.toggle('show', show); });
+    }
+    onScroll();
+    window.addEventListener('scroll', onScroll, {passive:true});
+
+    // actions
+    fabTop?.addEventListener('click', (e)=>{ e.preventDefault(); document.querySelector('#top')?.scrollIntoView({behavior:'smooth', block:'start'}); });
+    fabMenu?.addEventListener('click', (e)=>{ e.preventDefault(); if (window._openDrawer) window._openDrawer(); else document.getElementById('menuToggle')?.click(); });
   })();
 </script>
 </body>
