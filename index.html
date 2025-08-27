@@ -364,6 +364,111 @@
     @media (prefers-reduced-motion: reduce){
       *{ animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; }
     }
+
+    /* === MOBILE POLISH PACK (drop-in) === */
+
+    /* 1) Центровка ключевых блоков на мобилках */
+    @media (max-width: 680px){
+      /* HERO */
+      .hero{ padding: 64px 0 24px; }
+      .hero .container > div:first-child{ text-align: center; }
+      .hero .eyebrow{ margin-inline: auto; }
+      .hero .divider{ margin-inline: auto; }
+      .hero .sub{ margin: 8px auto 0; }
+      .hero-cta{ justify-content: center; }
+
+      /* Заголовки секций и описания */
+      .section-head{ 
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
+        gap: 8px; 
+      }
+      .section-head .divider{ margin-inline: auto; }
+      .section-head .sub{ margin: 0 auto; }
+
+      /* CTA-баннеры: текст и кнопка по центру */
+      .cta-banner{
+        justify-content: center;
+        text-align: center;
+        gap: 10px;
+      }
+    }
+
+    /* 2) «Конфиденциальный бриф» — самая желанная кнопка
+      (ловим все ссылки-кнопки, ведущие к #contact, на RU и EN) */
+    a.btn[href*="#contact"]{
+      background: linear-gradient(180deg, color-mix(in oklab, var(--accent), white 6%) 0%, var(--accent) 100%);
+      color: #0C0F10;
+      border-color: transparent;
+      box-shadow:
+        0 12px 28px color-mix(in oklab, var(--accent), transparent 70%),
+        0 0 0 6px color-mix(in oklab, var(--accent), transparent 88%);
+      transform: translateY(0);
+      will-change: transform, box-shadow;
+      transition: transform var(--speed), box-shadow var(--speed), filter var(--speed);
+      /* мягкое «дыхание» внимания */
+      animation: brief-breathe 4.6s ease-in-out infinite;
+    }
+    a.btn[href*="#contact"]:hover{
+      transform: translateY(-2px) scale(1.015);
+      box-shadow:
+        0 16px 34px color-mix(in oklab, var(--accent), transparent 64%),
+        0 0 0 8px color-mix(in oklab, var(--accent), transparent 86%);
+      text-decoration: none;
+    }
+    a.btn[href*="#contact"]:active{
+      transform: translateY(0);
+      box-shadow:
+        0 8px 18px color-mix(in oklab, var(--accent), transparent 74%),
+        0 0 0 6px color-mix(in oklab, var(--accent), transparent 88%);
+    }
+    a.btn[href*="#contact"]:focus-visible{
+      outline: none;
+      box-shadow:
+        0 0 0 0 color-mix(in oklab, var(--accent), transparent 80%),
+        0 0 0 10px color-mix(in oklab, var(--accent), transparent 78%);
+    }
+
+    /* На мобиле — крупная, на всю ширину, удобно нажимать большим пальцем */
+    @media (max-width: 680px){
+      a.btn[href*="#contact"]{
+        width: 100%;
+        min-height: 56px;
+        font-size: 17px;
+        padding: 14px 20px;
+      }
+      /* внутри CTA-баннера кнопку опускаем на новую строку */
+      .cta-banner a.btn[href*="#contact"]{ flex: 1 1 100%; }
+    }
+
+    /* Плавное дыхание подсветки (очень деликатно) */
+    @keyframes brief-breathe{
+      0%, 100%{
+        box-shadow:
+          0 12px 28px color-mix(in oklab, var(--accent), transparent 72%),
+          0 0 0 6px color-mix(in oklab, var(--accent), transparent 90%);
+        filter: saturate(1);
+      }
+      50%{
+        box-shadow:
+          0 14px 32px color-mix(in oklab, var(--accent), transparent 66%),
+          0 0 0 8px color-mix(in oklab, var(--accent), transparent 86%);
+        filter: saturate(1.05);
+      }
+    }
+
+    /* 3) Чуть компактнее списки на телефоне (меньше «ступенчатости») */
+    @media (max-width: 680px){
+      .check{ gap: 6px; }
+      .card{ padding: 16px; }
+    }
+
+    /* 4) Если у пользователя стоит «уменьшить анимацию» — убираем дыхание */
+    @media (prefers-reduced-motion: reduce){
+      a.btn[href*="#contact"]{ animation: none !important; }
+    }
+
   </style>
 </head>
 <body class="page" data-theme="light">
