@@ -469,6 +469,31 @@
       a.btn[href*="#contact"]{ animation: none !important; }
     }
 
+    @media (max-width: 680px){
+      /* целим финальную flex-строку внутри #elite,
+        не меняя остальную верстку */
+      #elite .container > div[style*="display:flex"][style*="flex-wrap:wrap"]{
+        justify-content: center !important;
+        align-items: stretch;
+        gap: 10px;
+      }
+      #elite .container > div[style*="display:flex"][style*="flex-wrap:wrap"] a.btn{
+        flex: 1 1 100%;
+        width: 100%;
+        min-height: 56px;
+        text-align: center;
+      }
+      /* чуть деликатнее вторичная кнопка */
+      #elite .container > div[style*="display:flex"][style*="flex-wrap:wrap"] a.btn.btn-ghost{
+        border-color: color-mix(in oklab, var(--accent), transparent 65%);
+      }
+    }
+
+    @media (max-width: 680px){
+      #elite .cta-row{ justify-content:center !important; }
+      #elite .cta-row .btn{ flex:1 1 100%; width:100%; min-height:56px; }
+    }
+
   </style>
 </head>
 <body class="page" data-theme="light">
@@ -819,7 +844,7 @@
         </ul>
       </div>
     </div>
-    <div style="margin-top:16px; display:flex; gap:10px; flex-wrap:wrap">
+    <div class="cta-row" style="margin-top:16px; display:flex; gap:10px; flex-wrap:wrap">
       <a class="btn btn-primary" href="#contact">Отправить конфиденциальный бриф</a>
       <a class="btn btn-ghost" href="#process">Посмотреть процесс</a>
     </div>
