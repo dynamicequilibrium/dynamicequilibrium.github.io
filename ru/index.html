@@ -493,6 +493,11 @@
       #elite .cta-row .btn{ flex:1 1 100%; width:100%; min-height:56px; }
     }
 
+    .only-mobile{ display:none; }
+    @media (max-width:680px){
+      .only-mobile{ display:block; }
+    }
+    
   </style>
 </head>
 <body class="page" data-theme="light">
@@ -541,9 +546,10 @@
     <nav class="drawer-links" aria-label="Разделы (моб.)"><!-- links cloned via JS --></nav>
     <div class="drawer-footer">
       <div style="display:flex; gap:8px;">
-        <a class="btn btn-ghost is-active" href="/" hreflang="ru" lang="ru">RU</a>
-        <a class="btn btn-ghost" href="/en/" hreflang="en" lang="en">EN</a>
+        <a class="btn btn-ghost is-active" href="/ru/" hreflang="ru" lang="ru">RU</a>
+        <a class="btn btn-ghost" href="/" hreflang="en" lang="en">EN</a>
       </div>
+
       <button id="drawerTheme" class="btn btn-ghost" type="button">Сменить тему</button>
     </div>
   </div>
@@ -553,7 +559,11 @@
 <section id="top" class="hero">
   <div class="container hero-grid">
     <div>
-      <span class="eyebrow">Executive-психотерапия • 1-на-1 • 360° метод</span>
+      <span class="eyebrow">
+        Executive-психотерапия
+        <br class="only-mobile"/>
+        1-на-1 • 360° метод
+      </span>
       <h1>Динамическое равновесие для лидеров и предпринимателей</h1>
       <div class="divider" aria-hidden="true"></div>
       <p class="sub">
