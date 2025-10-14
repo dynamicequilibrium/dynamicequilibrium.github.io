@@ -20,9 +20,14 @@
   <meta property="og:locale:alternate" content="ru_RU"/>
   <meta property="og:title" content="Dynamic Equilibrium — Executive Psychotherapy 1-1 for Leaders"/>
   <meta property="og:description" content="Personal support for leaders and executives: sleep, anxiety, burnout, focus. 360° methodology, metrics, strict confidentiality."/>
-  <meta property="og:url" content="https://dynamicequilibrium.org/en/"/>
+  <meta property="og:url" content="https://dynamicequilibrium.org/">
   <meta property="og:image" content="https://dynamicequilibrium.org/og/dynamic-equilibrium-en.jpg">
+  <meta property="og:image:alt" content="Dynamic Equilibrium — executive psychotherapy for leaders">
   <meta name="twitter:image" content="https://dynamicequilibrium.org/og/dynamic-equilibrium-en.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dynamic Equilibrium — 360° Individual Support for Leaders">
+  <meta name="twitter:description" content="Executive psychotherapy 1-1 with an MD, PhD. In 10–12 weeks we stabilize sleep, anxiety and focus, and restore energy and decision quality.">
+  <meta name="robots" content="index,follow">
 
   <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
@@ -35,6 +40,9 @@
   <link rel="manifest" href="/site.webmanifest">
 
   <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,600;6..72,800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
 
@@ -673,7 +681,7 @@
           <li>19 years of therapeutic practice — individual and group work.</li>
           <li>Certifications: existential-humanistic (2007), Ericksonian hypnosis (2007–2008), integration of non-ordinary states (Fluence, 2019).</li>
           <li>Personal therapy & supervision (CBT, hypnotherapy, psychodynamic); leadership roles at leading European universities.</li>
-          <li><a href="https://bora.uib.no/bora-xmlui/handle/1956/8473" target="_blank" rel="noopener">PhD</a> in psychiatry & data science (University of Bergen, Norway).</li>
+          <li>PhD in psychiatry & data science (University of Bergen, Norway).</li>
         </ul>
       </div>
 
@@ -821,12 +829,12 @@
 
     <noscript>
       <div class="auto" style="margin-top:14px">
-        <img src="/images/gallery/brain-scanning.jpg" alt="" style="width:100%;border-radius:16px;border:1px solid var(--line)"/>
-        <img src="/images/gallery/emcdda-lisbon-2023.jpg" alt="" style="width:100%;border-radius:16px;border:1px solid var(--line)"/>
-        <img src="/images/gallery/bjj-nordic-open.jpg" alt="" style="width:100%;border-radius:16px;border:1px solid var(--line)"/>
-        <img src="/images/gallery/media-and-podcasts.jpg" alt="" style="width:100%;border-radius:16px;border:1px solid var(--line)"/>
-        <img src="/images/gallery/public-speaking.jpg" alt="" style="width:100%;border-radius:16px;border:1px solid(var(--line))"/>
-        <img src="/images/gallery/with-michael-pollan.jpg" alt="" style="width:100%;border-radius:16px;border:1px solid var(--line)"/>
+        <img src="/images/gallery/brain-scanning.jpg" alt="fMRI laboratory" style="width:100%;border-radius:16px;border:1px solid var(--line)"/>
+        <img src="/images/gallery/emcdda-lisbon-2023.jpg" alt="EMCDDA, Lisbon (2023): talks and policy discussion" style="width:100%;border-radius:16px;border:1px solid var(--line)"/>
+        <img src="/images/gallery/bjj-nordic-open.jpg" alt="Martial arts since childhood; active competitor" style="width:100%;border-radius:16px;border:1px solid var(--line)"/>
+        <img src="/images/gallery/media-and-podcasts.jpg" alt="TV and podcasts appearances" style="width:100%;border-radius:16px;border:1px solid var(--line)"/>
+        <img src="/images/gallery/public-speaking.jpg" alt="Public lectures and conferences" style="width:100%;border-radius:16px;border:1px solid var(--line)"/>
+        <img src="/images/gallery/with-michael-pollan.jpg" alt="Public discussion with an international author on science and society" style="width:100%;border-radius:16px;border:1px solid var(--line)"/>
       </div>
     </noscript>
   </div>
@@ -1114,22 +1122,43 @@
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
-  "@type":"ProfessionalService",
-  "name":"Dynamic Equilibrium — Executive Psychotherapy 1–1",
-  "url":"https://dynamicequilibrium.org/en/",
-  "areaServed":"Global",
-  "availableLanguage":["en","ru"],
-  "offers":[
+  "@graph":[
     {
-      "@type":"Offer",
-      "name":"Executive 1–1 Program",
-      "priceCurrency":"EUR",
-      "priceSpecification":{"@type":"PriceSpecification","minPrice":10000,"maxPrice":15000,"priceCurrency":"EUR","unitText":"package"},
-      "description":"2–3 months: diagnostics across five domains, weekly sessions, personal guidance, metrics, playbook",
-      "url":"https://dynamicequilibrium.org/en/#elite"
+      "@type":"Organization",
+      "name":"Dynamic Equilibrium",
+      "url":"https://dynamicequilibrium.org/",
+      "logo":"https://dynamicequilibrium.org/images/logo-black.svg",
+      "sameAs":[
+        "https://www.instagram.com/dr_alexander_lebedev"
+      ]
+    },
+    {
+      "@type":"Person",
+      "name":"Alexander Lebedev, MD PhD",
+      "url":"https://dynamicequilibrium.org/",
+      "jobTitle":"Psychiatrist & Neurobiologist",
+      "affiliation":{"@type":"Organization","name":"Dynamic Equilibrium"},
+      "image":"https://dynamicequilibrium.org/images/Alexander.jpg"
+    },
+    {
+      "@type":"WebSite",
+      "url":"https://dynamicequilibrium.org/",
+      "name":"Dynamic Equilibrium",
+      "inLanguage":"en",
+      "potentialAction":{
+        "@type":"SearchAction",
+        "target":"https://dynamicequilibrium.org/?q={search_term_string}",
+        "query-input":"required name=search_term_string"
+      }
+    },
+    {
+      "@type":"WebPage",
+      "url":"https://dynamicequilibrium.org/",
+      "name":"Dynamic Equilibrium — 360° Individual Support for Leaders",
+      "isPartOf":{"@id":"https://dynamicequilibrium.org/#website"},
+      "inLanguage":"en"
     }
-  ],
-  "founder":{"@type":"Person","name":"Alexander Lebedev, MD PhD","jobTitle":"Psychiatrist, Neuroscientist"}
+  ]
 }
 </script>
 
