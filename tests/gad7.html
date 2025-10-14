@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Опросник GAD-7 | Dynamic Equilibrium</title>
-  <meta name="description" content="Пройдите опросник GAD-7 для скрининга тревожных расстройств и оценки тяжести состояния. Этот конфиденциальный инструмент самодиагностики поможет выявить симптомы тревожности."/>
+  <title>GAD-7 Anxiety Questionnaire | Dynamic Equilibrium</title>
+  <meta name="description" content="Take the GAD-7 anxiety screening questionnaire to assess your mental health. This confidential self-assessment tool helps identify anxiety symptoms."/>
   <meta name="theme-color" content="#F5F4F0"/>
   <meta name="color-scheme" content="light dark"/>
   
   <!-- Open Graph -->
   <meta property="og:type" content="website"/>
-  <meta property="og:title" content="Опросник GAD-7 | Dynamic Equilibrium"/>
-  <meta property="og:description" content="Пройдите опросник GAD-7 для скрининга тревожных расстройств и оценки тяжести состояния. Этот конфиденциальный инструмент самодиагностики поможет выявить симптомы тревожности."/>
-  <meta property="og:url" content="https://dynamicequilibrium.org/tests/gad7"/>
+  <meta property="og:title" content="GAD-7 Anxiety Questionnaire | Dynamic Equilibrium"/>
+  <meta property="og:description" content="Take the GAD-7 anxiety screening questionnaire to assess your mental health. This confidential self-assessment tool helps identify anxiety symptoms."/>
+  <meta property="og:url" content="https://dynamicequilibrium.org/en/tests/gad7"/>
   <meta property="og:image" content="/og/dynamic-equilibrium.jpg"/>
   <meta name="twitter:card" content="/og/dynamic-equilibrium.jpg"/>
   
@@ -551,7 +551,7 @@
   </style>
 </head>
 <body class="page" data-theme="light">
-<header class="nav" role="navigation" aria-label="Главная навигация">
+<header class="nav" role="navigation" aria-label="Main navigation">
   <div class="nav-inner container">
     <a class="brand" href="/" aria-label="Dynamic Equilibrium">
       <div class="logo" aria-hidden="true"></div>
@@ -559,17 +559,17 @@
     </a>
     
     <!-- Desktop links -->
-    <nav class="nav-links" aria-label="Разделы">
-    <a href="/index.html">Главная</a>
-    <a href="/index.html#about">Об авторе</a>
-    <a href="/index.html#contact">Контакты</a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="/en/index.html">Home</a>
+      <a href="/en/index.html#about">About</a>
+      <a href="/en/index.html#contact">Contact</a>
     </nav>
     
     <!-- Controls on the right -->
     <div class="nav-ctrls">
-      <a href="/en/tests/gad7.html" class="btn btn-ghost" aria-label="English language" title="English language">EN</a>
-      <button id="themeToggle" class="theme" aria-label="Сменить тему" title="Тема">🌓</button>
-      <button id="menuToggle" class="menu-toggle" aria-label="Меню" aria-controls="mobileDrawer" aria-expanded="false">
+      <a href="/tests/gad7.html" class="btn btn-ghost" aria-label="Русский язык" title="Русский язык">RU</a>
+      <button id="themeToggle" class="theme" aria-label="Toggle theme" title="Theme">🌓</button>
+      <button id="menuToggle" class="menu-toggle" aria-label="Menu" aria-controls="mobileDrawer" aria-expanded="false">
         <span class="burger" aria-hidden="true"></span>
       </button>
     </div>
@@ -577,26 +577,26 @@
 </header>
 
 <!-- Mobile drawer -->
-<aside id="mobileDrawer" class="drawer" role="dialog" aria-modal="true" aria-label="Мобильное меню">
+<aside id="mobileDrawer" class="drawer" role="dialog" aria-modal="true" aria-label="Mobile menu">
   <div class="drawer-panel">
-    <nav class="drawer-links" aria-label="Разделы (моб.)"><!-- links cloned via JS --></nav>
+    <nav class="drawer-links" aria-label="Sections (mobile)"><!-- links cloned via JS --></nav>
     <div class="drawer-footer">
-      <a href="/en/tests/gad7.html" class="btn btn-ghost" type="button">English language</a>
-      <button id="drawerTheme" class="btn btn-ghost" type="button">Сменить тему</button>
+      <a href="/tests/gad7.html" class="btn btn-ghost" type="button">Русский язык</a>
+      <button id="drawerTheme" class="btn btn-ghost" type="button">Toggle theme</button>
     </div>
   </div>
-  <button class="drawer-backdrop" aria-label="Закрыть меню"></button>
+  <button class="drawer-backdrop" aria-label="Close menu"></button>
 </aside>
 
 <section class="hero">
   <div class="container">
     <div>
-      <span class="eyebrow">Оценка психического здоровья</span>
-      <h1>Опросник GAD-7</h1>
+      <span class="eyebrow">Mental Health Assessment</span>
+      <h1>GAD-7 Anxiety Questionnaire</h1>
       <div class="divider" aria-hidden="true"></div>
       <p class="sub">
-        Это самоадминистрируемый опросник, используемый для скрининга тревожных расстройств и измерения их тяжести. 
-        Пожалуйста, ответьте на каждый вопрос, основываясь на том, как вы себя чувствовали за последние две недели.
+        This is a self-administered questionnaire used to screen for anxiety disorders and measure their severity. 
+        Please answer each question based on how you have been feeling over the past two weeks.
       </p>
     </div>
   </div>
@@ -606,10 +606,10 @@
   <div class="container">
     <div class="section-head">
       <div>
-        <h2>Инструкции</h2>
+        <h2>Instructions</h2>
         <div class="divider" aria-hidden="true"></div>
       </div>
-      <p class="sub">За последние 2 недели, как часто вас беспокоили следующие проблемы?</p>
+      <p class="sub">Over the last 2 weeks, how often have you been bothered by any of the following problems?</p>
     </div>
 
     <form id="gad7Form"
@@ -619,189 +619,190 @@
       <input type="hidden" name="pageHistory" value="0">
       <input type="hidden" name="submit" value="Submit">
       <input type="hidden" name="entry.203895359" id="totalField">     <!-- TOTAL_ID -->
-      <input type="hidden" name="entry.152127231" id="versionField" value="ru"> <!-- VERSION_ID (для RU-страницы value="ru") -->
+      <input type="hidden" name="entry.152127231" id="versionField" value="en"> <!-- VERSION_ID (для RU-страницы value="ru") -->
+
 
       <!-- Email -->
       <div class="question">
-        <div class="question-title">Email (необязательно)</div>
-        <input type="email" name="entry.835008330" placeholder="Ваш email (необязательно)"
+        <div class="question-title">Email (optional)</div>
+        <input type="email" name="entry.835008330" placeholder="Your email (optional)"
                style="width: 100%; padding: 12px; margin-bottom: 16px;">
-        <div class="note">Предоставление вашего email позволит нам отправить вам результаты.</div>
+        <div class="note">Providing your email allows us to send you your results.</div>
       </div>
 
       <!-- 1 -->
       <div class="question">
-        <div class="question-title">1. Чувство нервозности, тревоги или напряжения</div>
+        <div class="question-title">1. Feeling nervous, anxious, or on edge</div>
         <div class="radio-group">
           <div class="radio-option">
             <input type="radio" id="q1-0" name="entry.862708836" value="0" data-score="0" required>
-            <label for="q1-0">Совсем нет</label>
+            <label for="q1-0">Not at all</label>
           </div>
           <div class="radio-option">
             <input type="radio" id="q1-1" name="entry.862708836" value="1" data-score="1">
-            <label for="q1-1">Несколько дней</label>
+            <label for="q1-1">Several days</label>
           </div>
           <div class="radio-option">
             <input type="radio" id="q1-2" name="entry.862708836" value="2" data-score="2">
-            <label for="q1-2">Больше половины дней</label>
+            <label for="q1-2">More than half the days</label>
           </div>
           <div class="radio-option">
             <input type="radio" id="q1-3" name="entry.862708836" value="3" data-score="3">
-            <label for="q1-3">Почти каждый день</label>
+            <label for="q1-3">Nearly every day</label>
           </div>
         </div>
       </div>
 
       <!-- 2 -->
       <div class="question">
-        <div class="question-title">2. Неспособность остановить или контролировать беспокойство</div>
+        <div class="question-title">2. Not being able to stop or control worrying</div>
         <div class="radio-group">
           <div class="radio-option">
             <input type="radio" id="q2-0" name="entry.603891035" value="0" data-score="0" required>
-            <label for="q2-0">Совсем нет</label>
+            <label for="q2-0">Not at all</label>
           </div>
           <div class="radio-option">
             <input type="radio" id="q2-1" name="entry.603891035" value="1" data-score="1">
-            <label for="q2-1">Несколько дней</label>
+            <label for="q2-1">Several days</label>
           </div>
           <div class="radio-option">
             <input type="radio" id="q2-2" name="entry.603891035" value="2" data-score="2">
-            <label for="q2-2">Больше половины дней</label>
+            <label for="q2-2">More than half the days</label>
           </div>
           <div class="radio-option">
             <input type="radio" id="q2-3" name="entry.603891035" value="3" data-score="3">
-            <label for="q2-3">Почти каждый день</label>
+            <label for="q2-3">Nearly every day</label>
           </div>
         </div>
       </div>
 
       <!-- 3 -->
       <div class="question">
-        <div class="question-title">3. Чрезмерное беспокойство по поводу разных вещей</div>
+        <div class="question-title">3. Worrying too much about different things</div>
         <div class="radio-group">
           <div class="radio-option">
             <input type="radio" id="q3-0" name="entry.381494060" value="0" data-score="0" required>
-            <label for="q3-0">Совсем нет</label>
+            <label for="q3-0">Not at all</label>
           </div>
           <div class="radio-option">
             <input type="radio" id="q3-1" name="entry.381494060" value="1" data-score="1">
-            <label for="q3-1">Несколько дней</label>
+            <label for="q3-1">Several days</label>
           </div>
           <div class="radio-option">
             <input type="radio" id="q3-2" name="entry.381494060" value="2" data-score="2">
-            <label for="q3-2">Больше половины дней</label>
+            <label for="q3-2">More than half the days</label>
           </div>
           <div class="radio-option">
             <input type="radio" id="q3-3" name="entry.381494060" value="3" data-score="3">
-            <label for="q3-3">Почти каждый день</label>
+            <label for="q3-3">Nearly every day</label>
           </div>
         </div>
       </div>
 
       <!-- 4 -->
       <div class="question">
-        <div class="question-title">4. Затруднения с расслаблением</div>
+        <div class="question-title">4. Trouble relaxing</div>
         <div class="radio-group">
           <div class="radio-option">
             <input type="radio" id="q4-0" name="entry.1619343286" value="0" data-score="0" required>
-            <label for="q4-0">Совсем нет</label>
+            <label for="q4-0">Not at all</label>
           </div>
           <div class="radio-option">
             <input type="radio" id="q4-1" name="entry.1619343286" value="1" data-score="1">
-            <label for="q4-1">Несколько дней</label>
+            <label for="q4-1">Several days</label>
           </div>
           <div class="radio-option">
             <input type="radio" id="q4-2" name="entry.1619343286" value="2" data-score="2">
-            <label for="q4-2">Больше половины дней</label>
+            <label for="q4-2">More than half the days</label>
           </div>
           <div class="radio-option">
             <input type="radio" id="q4-3" name="entry.1619343286" value="3" data-score="3">
-            <label for="q4-3">Почти каждый день</label>
+            <label for="q4-3">Nearly every day</label>
           </div>
         </div>
       </div>
 
       <!-- 5 -->
       <div class="question">
-        <div class="question-title">5. Чувство беспокойства, из-за которого трудно усидеть на месте</div>
+        <div class="question-title">5. Being so restless that it's hard to sit still</div>
         <div class="radio-group">
           <div class="radio-option">
             <input type="radio" id="q5-0" name="entry.1443022719" value="0" data-score="0" required>
-            <label for="q5-0">Совсем нет</label>
+            <label for="q5-0">Not at all</label>
           </div>
           <div class="radio-option">
             <input type="radio" id="q5-1" name="entry.1443022719" value="1" data-score="1">
-            <label for="q5-1">Несколько дней</label>
+            <label for="q5-1">Several days</label>
           </div>
           <div class="radio-option">
             <input type="radio" id="q5-2" name="entry.1443022719" value="2" data-score="2">
-            <label for="q5-2">Больше половины дней</label>
+            <label for="q5-2">More than half the days</label>
           </div>
           <div class="radio-option">
             <input type="radio" id="q5-3" name="entry.1443022719" value="3" data-score="3">
-            <label for="q5-3">Почти каждый день</label>
+            <label for="q5-3">Nearly every day</label>
           </div>
         </div>
       </div>
 
       <!-- 6 -->
       <div class="question">
-        <div class="question-title">6. Быстрая раздражительность</div>
+        <div class="question-title">6. Becoming easily annoyed or irritable</div>
         <div class="radio-group">
           <div class="radio-option">
             <input type="radio" id="q6-0" name="entry.1952019994" value="0" data-score="0" required>
-            <label for="q6-0">Совсем нет</label>
+            <label for="q6-0">Not at all</label>
           </div>
           <div class="radio-option">
             <input type="radio" id="q6-1" name="entry.1952019994" value="1" data-score="1">
-            <label for="q6-1">Несколько дней</label>
+            <label for="q6-1">Several days</label>
           </div>
           <div class="radio-option">
             <input type="radio" id="q6-2" name="entry.1952019994" value="2" data-score="2">
-            <label for="q6-2">Больше половины дней</label>
+            <label for="q6-2">More than half the days</label>
           </div>
           <div class="radio-option">
             <input type="radio" id="q6-3" name="entry.1952019994" value="3" data-score="3">
-            <label for="q6-3">Почти каждый день</label>
+            <label for="q6-3">Nearly every day</label>
           </div>
         </div>
       </div>
 
       <!-- 7 -->
       <div class="question">
-        <div class="question-title">7. Чувство страха, как будто что-то ужасное может случиться</div>
+        <div class="question-title">7. Feeling afraid as if something awful might happen</div>
         <div class="radio-group">
           <div class="radio-option">
             <input type="radio" id="q7-0" name="entry.212647603" value="0" data-score="0" required>
-            <label for="q7-0">Совсем нет</label>
+            <label for="q7-0">Not at all</label>
           </div>
           <div class="radio-option">
             <input type="radio" id="q7-1" name="entry.212647603" value="1" data-score="1">
-            <label for="q7-1">Несколько дней</label>
+            <label for="q7-1">Several days</label>
           </div>
           <div class="radio-option">
             <input type="radio" id="q7-2" name="entry.212647603" value="2" data-score="2">
-            <label for="q7-2">Больше половины дней</label>
+            <label for="q7-2">More than half the days</label>
           </div>
           <div class="radio-option">
             <input type="radio" id="q7-3" name="entry.212647603" value="3" data-score="3">
-            <label for="q7-3">Почти каждый день</label>
+            <label for="q7-3">Nearly every day</label>
           </div>
         </div>
       </div>
 
       <div style="margin-top: 20px;">
-        <button class="btn btn-primary" type="submit">Отправить и рассчитать результаты</button>
+        <button class="btn btn-primary" type="submit">Submit and Calculate Results</button>
       </div>
     </form>
 
     <div id="result" class="result">
-      <h3>Ваши результаты GAD-7</h3>
-      <div class="score-display">Общий балл: <span id="score">0</span>/21</div>
+      <h3>Your GAD-7 Results</h3>
+      <div class="score-display">Total Score: <span id="score">0</span>/21</div>
       <div id="severity"></div>
       <div id="interpretation"></div>
       <div class="note" style="margin-top: 16px;">
-        <p><strong>Важно:</strong> Этот инструмент скрининга не является диагнозом. Если у вас сильная тревожность или панические атаки, немедленно обратитесь к специалисту по психическому здоровью.</p>
+        <p><strong>Important:</strong> This screening tool is not a diagnosis. If you are experiencing severe anxiety or panic attacks, please contact a mental health professional immediately.</p>
       </div>
     </div>
   </div>
@@ -825,14 +826,14 @@
         scoreEl.textContent = total;
         document.getElementById('totalField').value = String(total);
         // для EN-страницы:
-        document.getElementById('versionField').value = 'ru';
+        document.getElementById('versionField').value = 'en';
         // для RU-страницы поставь 'ru'
 
         let sev = '', txt = '', cls = '';
-        if (total <= 4)      { sev = 'Минимальная тревожность';          txt = 'Ваши ответы указывают на минимальные симптомы тревожности.';          cls = 'result-minimal'; }
-        else if (total <= 9) { sev = 'Легкая тревожность';             txt = 'Ваши ответы указывают на легкие симптомы тревожности.';            cls = 'result-mild'; }
-        else if (total <=14) { sev = 'Умеренная тревожность';         txt = 'Ваши ответы указывают на умеренные симптомы тревожности.';        cls = 'result-moderate'; }
-        else                 { sev = 'Тяжелая тревожность';           txt = 'Ваши ответы указывают на тяжелые симптомы тревожности.';          cls = 'result-severe'; }
+        if (total <= 4)      { sev = 'Minimal anxiety';          txt = 'Your responses suggest minimal anxiety symptoms.';          cls = 'result-minimal'; }
+        else if (total <= 9) { sev = 'Mild anxiety';             txt = 'Your responses suggest mild anxiety symptoms.';            cls = 'result-mild'; }
+        else if (total <=14) { sev = 'Moderate anxiety';         txt = 'Your responses suggest moderate anxiety symptoms.';        cls = 'result-moderate'; }
+        else                 { sev = 'Severe anxiety';           txt = 'Your responses suggest severe anxiety symptoms.';          cls = 'result-severe'; }
 
         sevEl.innerHTML = '<h4>' + sev + '</h4>';
         interpEl.innerHTML = '<p>' + txt + '</p>';
@@ -849,28 +850,28 @@
   <div class="container">
     <div class="section-head">
       <div>
-        <h2>О GAD-7</h2>
+        <h2>About the GAD-7</h2>
         <div class="divider" aria-hidden="true"></div>
       </div>
     </div>
     <div class="auto">
       <div class="card">
-        <h3>Что такое GAD-7?</h3>
-        <p>GAD-7 (шкала генерализованного тревожного расстройства из 7 пунктов) - это широко используемый инструмент скрининга тревожных расстройств. Он состоит из 7 вопросов, оценивающих частоту тревожных симптомов за последние две недели.</p>
+        <h3>What is the GAD-7?</h3>
+        <p>The GAD-7 (Generalized Anxiety Disorder 7-item scale) is a widely used screening tool for anxiety disorders. It consists of 7 questions that assess the frequency of anxiety symptoms over the past two weeks.</p>
       </div>
       <div class="card">
-        <h3>Как производится оценка?</h3>
-        <p>Каждый из 7 пунктов оценивается по шкале от 0 до 3, общий балл варьируется от 0 до 21. Более высокие баллы указывают на более тяжелую тревожность.</p>
+        <h3>How is it scored?</h3>
+        <p>Each of the 7 items is scored from 0 to 3, with a total score ranging from 0 to 21. Higher scores indicate more severe anxiety.</p>
         <ul class="check">
-          <li>0-4: Минимальная тревожность</li>
-          <li>5-9: Легкая тревожность</li>
-          <li>10-14: Умеренная тревожность</li>
-          <li>15-21: Тяжелая тревожность</li>
+          <li>0-4: Minimal anxiety</li>
+          <li>5-9: Mild anxiety</li>
+          <li>10-14: Moderate anxiety</li>
+          <li>15-21: Severe anxiety</li>
         </ul>
       </div>
       <div class="card">
-        <h3>Следующие шаги</h3>
-        <p>Если ваш балл указывает на умеренную или тяжелую тревожность, важно обратиться за профессиональной помощью. Этот инструмент не заменяет профессиональную диагностику или лечение.</p>
+        <h3>Next Steps</h3>
+        <p>If your score indicates moderate to severe anxiety, it's important to seek professional help. This tool is not a substitute for professional diagnosis or treatment.</p>
       </div>
     </div>
   </div>
@@ -882,7 +883,7 @@
       <div class="logo" aria-hidden="true" style="width:28px; height:28px;"></div>
       <span>© <span id="y"></span> Dynamic Equilibrium</span>
     </div>
-    <div class="note">Этика и конфиденциальность • Это не медицинская рекомендация • В кризисных ситуациях обращайтесь в службы экстренной помощи</div>
+    <div class="note">Ethics and Privacy • This is not medical advice • In crisis situations, contact emergency services</div>
   </div>
 </footer>
 
@@ -969,13 +970,14 @@
     'entry.212647603'
   ];
 
+
   form.addEventListener('submit', async function (e) {
     e.preventDefault(); // stay on your page (no Google draft popup)
 
     // Ensure all required radios are answered
     for (const name of entryNames) {
       if (!form.querySelector(`input[name="${name}"]:checked`)) {
-        alert('Пожалуйста, ответьте на все вопросы.');
+        alert('Please answer all questions.');
         return;
       }
     }
@@ -989,10 +991,10 @@
     // Update UI
     scoreEl.textContent = total;
     let sev = '', txt = '', cls = '';
-    if (total <= 4)      { sev = 'Минимальная тревожность';          txt = 'Ваши ответы указывают на минимальные симптомы тревожности.';          cls = 'result-minimal'; }
-    else if (total <= 9) { sev = 'Легкая тревожность';             txt = 'Ваши ответы указывают на легкие симптомы тревожности.';            cls = 'result-mild'; }
-    else if (total <=14) { sev = 'Умеренная тревожность';         txt = 'Ваши ответы указывают на умеренные симптомы тревожности.';        cls = 'result-moderate'; }
-    else                 { sev = 'Тяжелая тревожность';           txt = 'Ваши ответы указывают на тяжелые симптомы тревожности.';          cls = 'result-severe'; }
+    if (total <= 4)      { sev = 'Minimal anxiety';          txt = 'Your responses suggest minimal anxiety symptoms.';          cls = 'result-minimal'; }
+    else if (total <= 9) { sev = 'Mild anxiety';             txt = 'Your responses suggest mild anxiety symptoms.';            cls = 'result-mild'; }
+    else if (total <=14) { sev = 'Moderate anxiety';         txt = 'Your responses suggest moderate anxiety symptoms.';        cls = 'result-moderate'; }
+    else                 { sev = 'Severe anxiety';           txt = 'Your responses suggest severe anxiety symptoms.';          cls = 'result-severe'; }
     sevEl.innerHTML = '<h4>' + sev + '</h4>';
     interpEl.innerHTML = '<p>' + txt + '</p>';
     resultEl.className = 'result show ' + cls;
