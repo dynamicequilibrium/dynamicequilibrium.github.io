@@ -172,6 +172,45 @@
     .auto{ display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap:16px; }
     .card{ background:var(--layer); border:1px solid var(--line); border-radius:var(--radius); padding:18px; transition: transform var(--speed), border var(--speed), box-shadow var(--speed); }
     .card:hover{ transform:translateY(-2px); border-color:color-mix(in oklab, var(--accent), transparent 60%); box-shadow:var(--shadow); }
+    
+    /* Flagship offer styling */
+    .flagship-offer{
+      position:relative;
+      background: linear-gradient(135deg,
+        color-mix(in oklab, var(--accent), var(--layer) 94%) 0%,
+        var(--layer) 100%);
+      border:2px solid color-mix(in oklab, var(--accent), transparent 50%);
+      box-shadow: 0 8px 32px color-mix(in oklab, var(--accent), transparent 80%),
+                  0 0 0 1px color-mix(in oklab, var(--accent), transparent 85%);
+      transform:translateY(-4px);
+    }
+    .flagship-offer:hover{
+      transform:translateY(-6px);
+      border-color:color-mix(in oklab, var(--accent), transparent 40%);
+      box-shadow: 0 12px 40px color-mix(in oklab, var(--accent), transparent 70%),
+                  0 0 0 1px color-mix(in oklab, var(--accent), transparent 75%);
+    }
+    .flagship-badge{
+      display:inline-block;
+      font-size:11px;
+      font-weight:800;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      color:var(--accent);
+      background:color-mix(in oklab, var(--accent), transparent 88%);
+      border:1px solid color-mix(in oklab, var(--accent), transparent 60%);
+      padding:4px 10px;
+      border-radius:999px;
+      margin-bottom:12px;
+    }
+    
+    /* Center Stripe Buy Buttons */
+    stripe-buy-button{
+      display:block;
+      width:100%;
+      max-width:400px;
+      margin:0 auto;
+    }
     .check{ list-style:none; padding:0; margin:0; display:grid; gap:8px; }
     .check li{ position:relative; padding-left:20px; }
     .check li::before{ content:""; position:absolute; left:0; top:.48em; width:9px; height:9px; border-radius:50%; background:radial-gradient(circle at 30% 30%, var(--accent) 0 40%, transparent 42%), radial-gradient(circle at 70% 70%, var(--accent-2) 0 40%, transparent 42%); border:1px solid color-mix(in oklab, var(--accent), transparent 40%); }
@@ -712,58 +751,59 @@
   <div class="container">
     <div class="section-head">
       <div>
-        <h2>1-1 Individual Program</h2>
+        <h2>Pricing & Offers</h2>
         <div class="divider" aria-hidden="true"></div>
       </div>
-      <p class="sub">I work personally. 360° assessment and guidance with metrics and a playbook. No more than 3–5 clients at a time.</p>
+      <p class="sub">Two pathways to transformation. Executive Deep is the flagship, white-glove program with priority access. Sessions package offers focused work with significant savings.</p>
     </div>
     <div class="grid-2">
-      <article class="card tier">
-        <h3>Executive Core</h3>
-        <p class="price">€10k • 10 weeks</p>
-        <ul class="check">
-          <li>Kick-off 360° diagnostics (90–120 min) across the five domains</li>
-          <li>Weekly 60-min sessions (online or in-person)</li>
-          <li>Sleep & stress: protocols + tracking (optional wearables)</li>
-          <li>Cognitive modules: perfectionism, impostor thoughts, rumination</li>
-          <li>Personal playbook “Operating Code”, v1.0</li>
-        </ul>
-      </article>
-      <article class="card tier">
+      <article class="card tier flagship-offer">
+        <div class="flagship-badge">Flagship • Most Comprehensive</div>
         <h3>Executive Deep</h3>
-        <p class="price">€15k • 12 weeks</p>
+        <p class="sub" style="margin-bottom:12px">Premium 1:1 for Leaders</p>
+        <p style="font-size:14px; margin-bottom:16px">Practically your personal integrative physician (MD/PhD) and psychotherapist on call.</p>
         <ul class="check">
-          <li>Everything in Core + imagery and dream work</li>
-          <li>Prep for key meetings/negotiations (up to 2×/week)</li>
-          <li>Short check-ins between sessions (as agreed)</li>
-          <li>Family module: 1–2 sessions with your partner</li>
-          <li>Crisis protocols (emergency "red-button"), debriefs, and integration</li>
-          <li>Playbook v2.0 + 3-month maintenance plan</li>
+          <li>Priority access & rapid response (rapid chat, direct calls)</li>
+          <li>Family/partner sessions included when beneficial</li>
+          <li>360° intake: medical history, IFM Timeline & Matrix, five-domain audit</li>
+          <li>Personalized labs & interpretation (metabolic, thyroid, hormones, inflammation, microbiome - ordered as indicated)</li>
+          <li>Evidence-based protocols for sleep, stress, nutrition, movement, and supplements</li>
+          <li>Wearable-guided monitoring (sleep/HRV, dashboards, progress checkpoints)</li>
+          <li>Care coordination with your local providers and services</li>
+          <li>Operating Code v1.5 (living action plan with milestones)</li>
+          <li>Limited availability (flagship, by application)</li>
         </ul>
+        <div style="margin-top:16px; display:flex; flex-direction:column; gap:10px; align-items:center">
+          <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+          <stripe-buy-button
+            buy-button-id="buy_btn_1SOgFdLn5kad5UesYqmNL1hK"
+            publishable-key="pk_live_51Q1Q6xLn5kad5Uesy2Ir9KJYnGpZ2lDKpSi9TZKMyq2BsrtizwzvC2m8Vn1ROPeqD1f5LWQbo3YAhta5ajMvWFM600RC9MN0cq">
+          </stripe-buy-button>
+          <p class="note" style="text-align:center; margin:4px 0 0">Prefer to talk first? <a href="#contact" style="text-decoration:underline">Book a call</a></p>
+        </div>
       </article>
-    </div>
-    <div class="auto" style="margin-top:16px">
-      <div class="card">
-        <h3>What stabilizes in 10–12 weeks</h3>
-        <ul class="check">
-          <li>Sleep (duration, depth, minimal awakenings)</li>
-          <li>Decisions and negotiations — without the emotional toll</li>
-          <li>Return of focus and “deep work” to your life</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Options on request</h3>
-        <ul class="check">
-          <li>Personal regulation and recovery protocols</li>
-          <li>Standards for meetings and constructive feedback (ready-made templates for team and family)</li>
-          <li>Exclusive access to <a href="https://dreamseer.app" target="_blank" rel="noopener">Dreamseer</a></li>
-          <li>Individual “Operating Code” playbook</li>
-        </ul>
-      </div>
-    </div>
-    <div class="cta-row" style="margin-top:16px; display:flex; gap:10px; flex-wrap:wrap">
-      <a class="btn btn-primary" href="#contact">Book a call</a>
-      <a class="btn btn-ghost" href="#process">See the process</a>
+      <article class="card tier" style="position:relative; display:flex; flex-direction:column">
+        <div style="flex:1">
+          <h3>10 Dynamic Equilibrium Sessions</h3>
+          <p class="sub" style="margin-bottom:12px">Save 10%</p>
+          <p style="font-size:14px; margin-bottom:16px">Focused 1:1 work to build calm, clarity, and consistent performance.</p>
+          <ul class="check">
+            <li>Ten × 60-min sessions (online or in person)</li>
+            <li>Personalized focus areas; optional wearable guidance</li>
+            <li>Sleep/stress protocols as needed</li>
+            <li>Light version of your Operating Code</li>
+          </ul>
+        </div>
+        <div style="margin-top:16px; display:flex; flex-direction:column; gap:10px; align-items:center">
+          <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+          <stripe-buy-button
+            buy-button-id="buy_btn_1SOghZLn5kad5UesYHRFWrn2"
+            publishable-key="pk_live_51Q1Q6xLn5kad5Uesy2Ir9KJYnGpZ2lDKpSi9TZKMyq2BsrtizwzvC2m8Vn1ROPeqD1f5LWQbo3YAhta5ajMvWFM600RC9MN0cq">
+          </stripe-buy-button>
+          <p class="note" style="text-align:center; margin:4px 0 0">Prefer to talk first? <a href="#contact" style="text-decoration:underline">Book a call</a></p>
+        </div>
+        <div class="logo" aria-hidden="true" style="width:42px; height:42px; opacity:0.06; position:absolute; bottom:16px; right:16px; pointer-events:none"></div>
+      </article>
     </div>
   </div>
 </section>

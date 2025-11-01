@@ -219,6 +219,45 @@
     .auto{ display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 16px; }
     .card{ background: var(--layer); border:1px solid var(--line); border-radius: var(--radius); padding:18px; transition: transform var(--speed), border var(--speed), box-shadow var(--speed); }
     .card:hover{ transform: translateY(-2px); border-color: color-mix(in oklab, var(--accent), transparent 60%); box-shadow: var(--shadow); }
+    
+    /* Flagship offer styling */
+    .flagship-offer{
+      position:relative;
+      background: linear-gradient(135deg,
+        color-mix(in oklab, var(--accent), var(--layer) 94%) 0%,
+        var(--layer) 100%);
+      border:2px solid color-mix(in oklab, var(--accent), transparent 50%);
+      box-shadow: 0 8px 32px color-mix(in oklab, var(--accent), transparent 80%),
+                  0 0 0 1px color-mix(in oklab, var(--accent), transparent 85%);
+      transform:translateY(-4px);
+    }
+    .flagship-offer:hover{
+      transform:translateY(-6px);
+      border-color:color-mix(in oklab, var(--accent), transparent 40%);
+      box-shadow: 0 12px 40px color-mix(in oklab, var(--accent), transparent 70%),
+                  0 0 0 1px color-mix(in oklab, var(--accent), transparent 75%);
+    }
+    .flagship-badge{
+      display:inline-block;
+      font-size:11px;
+      font-weight:800;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      color:var(--accent);
+      background:color-mix(in oklab, var(--accent), transparent 88%);
+      border:1px solid color-mix(in oklab, var(--accent), transparent 60%);
+      padding:4px 10px;
+      border-radius:999px;
+      margin-bottom:12px;
+    }
+    
+    /* Center Stripe Buy Buttons */
+    stripe-buy-button{
+      display:block;
+      width:100%;
+      max-width:400px;
+      margin:0 auto;
+    }
     .check{ list-style:none; padding:0; margin:0; display:grid; gap:8px; }
     .check li{ position:relative; padding-left:20px; }
     .check li::before{ content:""; position:absolute; left:0; top:.48em; width:9px; height:9px; border-radius:50%; background: radial-gradient(circle at 30% 30%, var(--accent) 0 40%, transparent 42%), radial-gradient(circle at 70% 70%, var(--accent-2) 0 40%, transparent 42%); border: 1px solid color-mix(in oklab, var(--accent), transparent 40%); }
@@ -824,58 +863,59 @@
   <div class="container">
     <div class="section-head">
       <div>
-        <h2>Индивидуальная программа 1–1</h2>
+        <h2>Цены и офферы</h2>
         <div class="divider" aria-hidden="true"></div>
       </div>
-      <p class="sub">Работаю лично. 360° диагностика и сопровождение с метриками и playbook. Одновременно — не более 3–5 клиентов.</p>
+      <p class="sub">Два пути к трансформации. Executive Deep — флагманская программа класса «белые перчатки» с приоритетным доступом. Пакет сессий предлагает концентрированную работу со значительной экономией.</p>
     </div>
     <div class="grid-2">
-      <article class="card tier">
-        <h3>Executive Core</h3>
-        <p class="price">10k € • 10 недель</p>
-        <ul class="check">
-          <li>Стартовая 360°-диагностика (90–120 мин) по Пяти сферам</li>
-          <li>Еженедельные сессии 60 мин (онлайн или очно)</li>
-          <li>Сон и стресс: протоколы + трекинг (по желанию — wearables)</li>
-          <li>Когнитивные модули: перфекционизм, импостер-мысли, руминации</li>
-          <li>Личный playbook «Операционный код», v1.0</li>
-        </ul>
-      </article>
-      <article class="card tier">
+      <article class="card tier flagship-offer">
+        <div class="flagship-badge">Флагман • Наиболее полная</div>
         <h3>Executive Deep</h3>
-        <p class="price">15k € • 12 недель</p>
+        <p class="sub" style="margin-bottom:12px">флагманская интегративная 1:1-программа для лидеров</p>
+        <p style="font-size:14px; margin-bottom:16px">Практически ваш личный интегративный врач (MD/PhD) и психотерапевт «на связи».</p>
         <ul class="check">
-          <li>Всё из Core + работа с образами/сновидениями</li>
-          <li>Подготовка к ключевым встречам/переговорам (до 2×/нед)</li>
-          <li>Короткие check-ins между сессиями (лично, по договорённости)</li>
-          <li>Семейный модуль: 1–2 сессии с партнёром</li>
-          <li>Кризис-протоколы: «красные кнопки», дебрифинг, интеграция опыта</li>
-          <li>Playbook v2.0 + план поддержания на 3 месяца</li>
+          <li>Приоритетный доступ и быстрые ответы (консьерж-чат, обычно в течение 6–12 ч*)</li>
+          <li>Сессии с партнёром/семьёй при необходимости</li>
+          <li>360°-вводный блок: медицинский анамнез, IFM Timeline & Matrix, аудит пяти доменов</li>
+          <li>Индивидуальный план анализов и разбор (метаболизм, щитовидная железа, гормоны, воспаление, микробиом — по показаниям)</li>
+          <li>Доказательные протоколы сна, стресса, питания, движения и добавок</li>
+          <li>Мониторинг по носимым устройствам (сон/HRV, дашборды, контрольные точки)</li>
+          <li>Координация помощи с вашими специалистами и сервисами</li>
+          <li>Operating Code v1.5 (живой план действий с вехами)</li>
+          <li>Консьерж-формат, ограниченные места (по заявке)</li>
         </ul>
+        <div style="margin-top:16px; display:flex; flex-direction:column; gap:10px; align-items:center">
+          <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+          <stripe-buy-button
+            buy-button-id="buy_btn_1SOgFdLn5kad5UesYqmNL1hK"
+            publishable-key="pk_live_51Q1Q6xLn5kad5Uesy2Ir9KJYnGpZ2lDKpSi9TZKMyq2BsrtizwzvC2m8Vn1ROPeqD1f5LWQbo3YAhta5ajMvWFM600RC9MN0cq">
+          </stripe-buy-button>
+          <p class="note" style="text-align:center; margin:4px 0 0">Предпочитаете обсудить? <a href="#contact" style="text-decoration:underline">Записаться на звонок</a></p>
+        </div>
       </article>
-    </div>
-    <div class="auto" style="margin-top:16px">
-      <div class="card">
-        <h3>Что стабилизируется за 10–12 недель</h3>
-        <ul class="check">
-          <li>Сон (длительность, глубина, минимум пробуждений)</li>
-          <li>Решения и переговоры — без эмоционального налога</li>
-          <li>Возвращение фокуса и «глубокой работы» в жизнь</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Опции по запросу</h3>
-        <ul class="check">
-          <li>Персональные протоколы регуляции и восстановления</li>
-          <li>Стандарты совещаний и конструктивной обратной связи (готовые шаблоны для команды и семьи)</li>
-          <li>Эксклюзивный доступ к <a href="https://dreamseer.app" target="_blank" rel="noopener">Dreamseer</a></li>
-          <li>Индивидуальный playbook «Операционный код»</li>
-        </ul>
-      </div>
-    </div>
-    <div class="cta-row" style="margin-top:16px; display:flex; gap:10px; flex-wrap:wrap">
-      <a class="btn btn-primary" href="#contact">Отправить запрос</a>
-      <a class="btn btn-ghost" href="#process">Посмотреть процесс</a>
+      <article class="card tier" style="position:relative; display:flex; flex-direction:column">
+        <div style="flex:1">
+          <h3>Пакет из 10 сессий Dynamic Equilibrium</h3>
+          <p class="sub" style="margin-bottom:12px">десятая сессия - бонус</p>
+          <p style="font-size:14px; margin-bottom:16px">Прицельная 1:1-работа для устойчивого спокойствия и ясности.</p>
+          <ul class="check">
+            <li>Десять × 60-мин сессий</li>
+            <li>Индивидуальные фокусы; опциональная работа с wearables</li>
+            <li>Протоколы по сну/стрессу по необходимости</li>
+            <li>Лайт-версия Operating Code</li>
+          </ul>
+        </div>
+        <div style="margin-top:16px; display:flex; flex-direction:column; gap:10px; align-items:center">
+          <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+          <stripe-buy-button
+            buy-button-id="buy_btn_1SOghZLn5kad5UesYHRFWrn2"
+            publishable-key="pk_live_51Q1Q6xLn5kad5Uesy2Ir9KJYnGpZ2lDKpSi9TZKMyq2BsrtizwzvC2m8Vn1ROPeqD1f5LWQbo3YAhta5ajMvWFM600RC9MN0cq">
+          </stripe-buy-button>
+          <p class="note" style="text-align:center; margin:4px 0 0">Предпочитаете обсудить? <a href="#contact" style="text-decoration:underline">Записаться на звонок</a></p>
+        </div>
+        <div class="logo" aria-hidden="true" style="width:42px; height:42px; opacity:0.06; position:absolute; bottom:16px; right:16px; pointer-events:none"></div>
+      </article>
     </div>
   </div>
 </section>
