@@ -36,4 +36,16 @@
     <priority>0.5</priority>
     <lastmod>2025-01-16</lastmod>
   </url>
+  <url>
+    <loc>https://dynamicequilibrium.org/manifesto/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2025-01-16</lastmod>
+  </url>
+  <url>
+    <loc>https://dynamicequilibrium.org/ru/manifesto/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2025-01-16</lastmod>
+  </url>
 </urlset>
