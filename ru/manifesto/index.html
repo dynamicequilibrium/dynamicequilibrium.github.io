@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Dynamic Equilibrium — Манифест методологии</title>
+  <meta name="description" content="Dynamic Equilibrium — научно обоснованная методология адаптивной устойчивости. Этот манифест описывает принципы, модель, процесс, этику и типичный график изменений."/>
+  <meta name="theme-color" content="#F5F4F0"/>
+  <meta name="color-scheme" content="light dark"/>
+  <link rel="canonical" href="https://dynamicequilibrium.org/ru/manifesto/"/>
+
+  <!-- Fonts (match main site) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,600;6..72,800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'; this.onload=null;">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,600;6..72,800&family=Inter:wght@400;600;700&display=swap"></noscript>
+
+  <style>
+    :root{
+      --bg:#0C0F10; --layer:#111517; --ink:#EDEFE8; --muted:#A7B0A8; --line:#1A2122;
+      --accent:#86A68B; --accent-2:#CBBBA0; --danger:#E27C6C; --ok:#8BC3A3;
+      --radius:16px; --radius-lg:22px; --shadow:0 18px 56px rgba(0,0,0,.28);
+      --maxw:1100px; --speed:.28s;
+    }
+    [data-theme="light"]{ --bg:#F5F4F0; --layer:#FFFFFF; --ink:#0E1314; --muted:#5C6862; --line:#E6E8E4; --shadow:0 20px 60px rgba(20,30,24,.08); }
+    :root{ --safe: env(safe-area-inset-top, 0px); }
+
+    *{ box-sizing:border-box; }
+    html, body{ width:100%; overflow-x:hidden; }
+    body{
+      margin:0; color:var(--ink);
+      background:
+        radial-gradient(1100px 620px at 88% -10%, rgba(134,166,139,.12), transparent 52%),
+        linear-gradient(180deg, rgba(203,187,160,.06), transparent 22%),
+        var(--bg);
+      font:400 16px/1.65 'Inter', sans-serif; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; letter-spacing:.2px;
+    }
+    h1,h2{ font-family:'Newsreader', serif; letter-spacing:.2px; margin:0 0 .5em; }
+    h1{ font-weight:800; font-size:clamp(34px, 4.6vw, 56px); line-height:1.06; }
+    h2{ font-weight:800; font-size:clamp(24px, 3vw, 36px); line-height:1.12; }
+    h3{ font:700 18px/1.2 'Inter', sans-serif; margin:0 0 .5em; }
+    h4{ font:700 13px/1.1 'Inter', sans-serif; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin:.4em 0 .4em; }
+    p{ margin:0 0 1em; }
+    a{ color:var(--accent); text-decoration:none; } a:hover{ text-decoration:underline; }
+    .container{ max-width:var(--maxw); margin:0 auto; padding-left:max(22px, calc(16px + env(safe-area-inset-left,0))); padding-right:max(22px, calc(16px + env(safe-area-inset-right,0))); }
+    .sub{ color:var(--muted); max-width:78ch; }
+    .page{ position:relative; isolation:isolate; }
+    .page::before{
+      content:""; position:absolute; inset:0; z-index:-1; opacity:.08;
+      background-image:linear-gradient(to right, var(--line) 1px, transparent 1px), linear-gradient(to bottom, var(--line) 1px, transparent 1px);
+      background-size:28px 28px; mask-image: linear-gradient(180deg, #000 12%, transparent 80%);
+    }
+
+    /* Header */
+    .nav{ position:sticky; top:0; z-index:1000; backdrop-filter:saturate(160%) blur(10px);
+      background: color-mix(in oklab, var(--bg), transparent 10%);
+      border-bottom:1px solid color-mix(in oklab, var(--accent), transparent 82%);
+    }
+    .nav-inner{ display:flex; align-items:center; justify-content:space-between; gap:16px; padding:max(10px, calc(12px + var(--safe))) 22px 12px; }
+    .brand{ display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.3px; }
+    .brand .logo{ width:36px; height:36px; border-radius:50%; background:
+      radial-gradient(50% 50% at 50% 50%, var(--accent) 0 50%, transparent 52%) center/100% 100% no-repeat,
+      conic-gradient(from 180deg, var(--accent) 0 22%, var(--accent-2) 22% 45%, #88938B 45% 70%, #7E6E5A 70% 100%);
+      box-shadow: inset 0 0 0 2px color-mix(in oklab, var(--accent-2), transparent 70%);
+    }
+    .nav-ctrls{ display:flex; gap:8px; align-items:center; }
+    .btn{ display:inline-flex; align-items:center; justify-content:center; gap:10px; padding:10px 16px; border-radius:999px; border:1.4px solid transparent; font-weight:700; cursor:pointer; text-decoration:none !important; transition: transform var(--speed), background var(--speed), color var(--speed), border var(--speed), box-shadow var(--speed); }
+    .btn-ghost{ background:transparent; color:var(--ink); border-color: color-mix(in oklab, var(--accent), transparent 68%); }
+    .btn-primary{ background:var(--accent); color:#0C0F10; border-color:var(--accent); }
+    .theme{ width:42px; height:42px; display:grid; place-items:center; border-radius:12px; border:1.4px solid color-mix(in oklab, var(--accent), transparent 60%); background:transparent; }
+    .hero{ position:relative; padding:88px 0 34px; overflow:hidden; }
+    .divider{ height:1px; background:linear-gradient(90deg, transparent, color-mix(in oklab, var(--accent-2), transparent 40%), transparent); margin:10px 0 0; width:160px; }
+
+    .section{ padding:58px 0; }
+    .section-head{ display:flex; align-items:flex-end; justify-content:space-between; gap:18px; margin-bottom:18px; }
+    .grid-3{ display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; }
+    .grid-2{ display:grid; grid-template-columns:repeat(2, 1fr); gap:18px; }
+    .auto{ display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap:16px; }
+    .card{ background:var(--layer); border:1px solid var(--line); border-radius:16px; padding:18px; transition: transform var(--speed), border var(--speed), box-shadow var(--speed); }
+    .card:hover{ transform:translateY(-2px); border-color:color-mix(in oklab, var(--accent), transparent 60%); box-shadow:var(--shadow); }
+    .check{ list-style:none; padding:0; margin:0; display:grid; gap:8px; }
+    .check li{ position:relative; padding-left:20px; }
+    .check li::before{ content:""; position:absolute; left:0; top:.55em; width:9px; height:9px; border-radius:50%; background:radial-gradient(circle at 30% 30%, var(--accent) 0 40%, transparent 42%), radial-gradient(circle at 70% 70%, var(--accent-2) 0 40%, transparent 42%); border:1px solid color-mix(in oklab, var(--accent), transparent 40%); }
+
+    /* Illustrations */
+    .figure{ border:1px solid var(--line); background:var(--layer); border-radius:16px; padding:20px; box-shadow:var(--shadow); }
+    .figure svg{ display:block; margin:0 auto; max-width:100%; height:auto; }
+    .figure figcaption{ color:var(--muted); margin-top:12px; font-size:14px; text-align:center; }
+
+    /* Timeline */
+    .timeline{ display:grid; grid-template-columns:1fr; gap:12px; }
+    .milestone{ display:grid; grid-template-columns:110px 1fr; gap:12px; align-items:start; padding:14px; border:1px solid var(--line); border-radius:14px; background:var(--layer); }
+    .milestone > div:first-child{ display:flex; align-items:center; gap:8px; white-space:nowrap; }
+    .dot{ width:18px; height:18px; border-radius:50%; background:var(--accent); box-shadow:0 0 0 4px color-mix(in oklab, var(--accent), transparent 85%); flex-shrink:0; }
+
+    /* Mobile */
+    @media (max-width:1040px){ .grid-3{ grid-template-columns:1fr 1fr; } }
+    @media (max-width:680px){
+      .grid-3, .grid-2{ grid-template-columns:1fr; }
+      .hero{ padding:64px 0 24px; }
+      .section-head{ flex-direction:column; align-items:flex-start; gap:8px; }
+    }
+    @media (prefers-reduced-motion: reduce){
+      *{ animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; }
+    }
+  </style>
+</head>
+<body class="page" data-theme="light">
+  <header class="nav" role="navigation" aria-label="Основная навигация">
+    <div class="nav-inner container">
+      <a class="brand" href="/ru/" aria-label="Вернуться на главную">
+        <span class="logo" aria-hidden="true"></span>
+        <span>Dynamic Equilibrium</span>
+      </a>
+      <div class="nav-ctrls">
+        <a class="btn btn-ghost" href="/ru/">Главная</a>
+        <button id="themeToggle" class="theme" aria-label="Переключить тему" title="Тема">🌓</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="content">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <h1>Манифест методологии</h1>
+        <div class="divider" aria-hidden="true"></div>
+        <p class="sub" style="margin-top:10px; max-width:80ch">
+          <em>Динамическое равновесие</em> — это естественное состояние живой системы: стабильность через непрерывные изменения.
+          Оно интегрирует физиологию, поведение и среду в единую саморегулирующуюся петлю:
+          осознание → регуляция → ясность → баланс. Устойчивость здесь — это не сопротивление, а разумный отклик.
+        </p>
+      </div>
+    </section>
+
+    <!-- For Whom -->
+    <section class="section" id="for-whom">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Для кого</h2>
+            <div class="divider" aria-hidden="true"></div>
+          </div>
+          <p class="sub">Фаундеры, инвесторы, топ-менеджеры, несущие высокую ответственность, хроническую нагрузку и растущую тревожность.</p>
+        </div>
+        <div class="auto">
+          <article class="card">
+            <h3>Моменты обращения</h3>
+            <ul class="check">
+              <li>Тело говорит «нет», а мир говорит «продолжай».</li>
+              <li>Ломается сон; притупляется фокус; отношения становятся транзакционными; радость уходит.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Язык клиентов</h3>
+            <ul class="check">
+              <li>«Я могу нести многое, но это начинает дорого обходиться».</li>
+              <li>«Мне нужно спокойствие, не теряя остроты».</li>
+              <li>«Хочу снова чувствовать себя живым — не просто эффективным».</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- One sentence -->
+    <section class="section" id="one-line">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>В одном предложении</h2>
+            <div class="divider" aria-hidden="true"></div>
+          </div>
+          <p class="sub">От работы на пределе к движению в ритме — устойчивое тело, ясный ум и работа без разрушения.</p>
+        </div>
+        <div class="card">
+          <p><strong>Через систему, которая уважает человеческие пределы, восстанавливает ритм и переводит науку в гуманную практику.</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Principles -->
+    <section class="section" id="principles">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Принципы</h2>
+            <div class="divider" aria-hidden="true"></div>
+          </div>
+          <p class="sub">Оценка → Регуляция → Переориентация → Интеграция</p>
+        </div>
+
+        <div class="grid-2">
+          <article class="card">
+            <ul class="check">
+              <li><strong>Регуляция до решения.</strong> Сначала успокойте систему — затем решайте.</li>
+              <li><strong>Меньше силы, больше выравнивания.</strong> Выравнивание превосходит усиленный контроль.</li>
+              <li><strong>Организм ведёт.</strong> Сигналы тела — это первичные данные, а не шум.</li>
+              <li><strong>Ритм вместо всплеска.</strong> Малые ежедневные практики &gt; эпизодические крайности.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <ul class="check">
+              <li><strong>Смысл организует.</strong> Цель проясняет выборы и снижает шум.</li>
+              <li><strong>Среда формирует поведение.</strong> Проектируйте окружение, которое стабилизирует вас.</li>
+              <li><strong>Честные пределы.</strong> Ясная этика, никаких чудесных обещаний, своевременные направления к специалистам.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Model / Map with visual schema (inline SVG) -->
+    <section class="section" id="model">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Модель / Карта</h2>
+            <div class="divider" aria-hidden="true"></div>
+          </div>
+          <p class="sub">Четыре слоя живой системы; для каждого определяем цель → инструменты → измеримые признаки прогресса.</p>
+        </div>
+
+        <figure class="figure">
+          <svg viewBox="0 0 800 450" role="img" aria-label="Четырёхслойная модель Динамического равновесия" style="width:100%; height:auto; display:block;">
+            <defs>
+              <linearGradient id="g1" x1="0" x2="1">
+                <stop offset="0" stop-color="currentColor" stop-opacity=".10"/>
+                <stop offset="1" stop-color="currentColor" stop-opacity=".02"/>
+              </linearGradient>
+            </defs>
+
+            <!-- Four concentric circles centered -->
+            <g transform="translate(400,225)" fill="none" stroke="currentColor" stroke-opacity=".22">
+              <circle r="160" fill="url(#g1)" stroke-width="2"/>
+              <circle r="115" fill="url(#g1)" stroke-width="2"/>
+              <circle r="72"  fill="url(#g1)" stroke-width="2"/>
+              <circle r="32"  fill="url(#g1)" stroke-width="2"/>
+            </g>
+
+            <!-- Layer labels positioned around the circles -->
+            <g font-family="Inter" fill="currentColor" text-anchor="middle">
+              <!-- Layer 4 - Top (outermost) -->
+              <text x="400" y="45" font-weight="700" font-size="15">Среда (Контекст)</text>
+              <text x="400" y="65" fill-opacity=".7" font-size="12">Команда, семья, сообщество, информ. диета</text>
+
+              <!-- Layer 3 - Right -->
+              <text x="600" y="220" font-weight="700" font-size="15">Смыслы (ПО)</text>
+              <text x="600" y="238" fill-opacity=".7" font-size="12">Ценности, намерения, отношения, цели</text>
+
+              <!-- Layer 2 - Bottom -->
+              <text x="400" y="405" font-weight="700" font-size="15">Ритм (Прошивка)</text>
+              <text x="400" y="423" fill-opacity=".7" font-size="12">Дневная структура, питание, свет, отдых</text>
+
+              <!-- Layer 1 - Left (innermost) -->
+              <text x="200" y="220" font-weight="700" font-size="15">Организм (Аппаратура)</text>
+              <text x="200" y="238" fill-opacity=".7" font-size="12">Нервная система, сон, дыхание, движение</text>
+            </g>
+
+            <!-- Center core -->
+            <g>
+              <circle cx="400" cy="225" r="26" fill="currentColor" fill-opacity=".08" stroke="currentColor" stroke-opacity=".26" stroke-width="2"/>
+              <text x="400" y="222" text-anchor="middle" font-family="Inter" font-weight="700" font-size="11" fill="currentColor">О↔Р↔Я</text>
+              <text x="400" y="235" text-anchor="middle" font-family="Inter" font-size="8.5" fill="currentColor" fill-opacity=".7">Осознание–Регуляция–Ясность</text>
+            </g>
+          </svg>
+          <figcaption>Четыре концентрических слоя с принципом интеграции в центре.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Process with flow illustration -->
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Процесс</h2>
+            <div class="divider" aria-hidden="true"></div>
+          </div>
+          <p class="sub">Четырёхэтапный протокол (6–12 недель за цикл). Формат: еженедельные/раз в две недели сессии + ежедневные микропрактики (10–20 мин).</p>
+        </div>
+
+        <figure class="figure">
+          <svg viewBox="0 0 960 140" role="img" aria-label="Поток четырёхэтапного протокола" style="width:100%; height:auto; display:block;">
+            <defs>
+              <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                <polygon points="0 0, 10 3.5, 0 7" fill="currentColor" fill-opacity=".5"/>
+              </marker>
+            </defs>
+            
+            <!-- Step boxes -->
+            <g font-family="Inter" font-size="12" fill="currentColor">
+              <rect x="20"  y="35" width="210" height="70" rx="14" fill="var(--layer)" stroke="currentColor" stroke-opacity=".18" stroke-width="1.5"/>
+              <rect x="250" y="35" width="210" height="70" rx="14" fill="var(--layer)" stroke="currentColor" stroke-opacity=".18" stroke-width="1.5"/>
+              <rect x="480" y="35" width="210" height="70" rx="14" fill="var(--layer)" stroke="currentColor" stroke-opacity=".18" stroke-width="1.5"/>
+              <rect x="710" y="35" width="210" height="70" rx="14" fill="var(--layer)" stroke="currentColor" stroke-opacity=".18" stroke-width="1.5"/>
+
+              <!-- Text content - more compact -->
+              <text x="40"  y="60"><tspan font-weight="700" font-size="13">1. Оценка</tspan></text>
+              <text x="40"  y="78" fill-opacity=".75">Карта симптомов, нагрузок,</text>
+              <text x="40"  y="93" fill-opacity=".75">анализов, сна, триггеров</text>
+
+              <text x="270" y="60"><tspan font-weight="700" font-size="13">2. Регуляция</tspan></text>
+              <text x="270" y="78" fill-opacity=".75">Восстановление базовой</text>
+              <text x="270" y="93" fill-opacity=".75">линии: сон, дыхание, свет</text>
+
+              <text x="500" y="60"><tspan font-weight="700" font-size="13">3. Переориентация</tspan></text>
+              <text x="500" y="78" fill-opacity=".75">Прояснение смыслов и</text>
+              <text x="500" y="93" fill-opacity=".75">приоритетов; дневной ритм</text>
+
+              <text x="730" y="60"><tspan font-weight="700" font-size="13">4. Интеграция</tspan></text>
+              <text x="730" y="78" fill-opacity=".75">Установка практик,</text>
+              <text x="730" y="93" fill-opacity=".75">коррекция контекста</text>
+            </g>
+            
+            <!-- Arrows -->
+            <g stroke="currentColor" stroke-opacity=".35" stroke-width="2" fill="none">
+              <line x1="230" y1="70" x2="250" y2="70" marker-end="url(#arrow)"/>
+              <line x1="460" y1="70" x2="480" y2="70" marker-end="url(#arrow)"/>
+              <line x1="690" y1="70" x2="710" y2="70" marker-end="url(#arrow)"/>
+            </g>
+          </svg>
+          <figcaption>Четырёхэтапный протокол с повтором в циклах 6–12 недель.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Scientific Foundation -->
+    <section class="section" id="science">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Научная основа</h2>
+            <div class="divider" aria-hidden="true"></div>
+          </div>
+          <p class="sub">Нейронауки, физиология, теория систем: аллостаз, гормезис, адаптивные циклы и гибкость, индексированная по ВСР.</p>
+        </div>
+
+        <div class="auto">
+          <article class="card">
+            <h3>Аллостаз и нагрузка</h3>
+            <p>Устойчивость зависит от гибкой адаптации к стрессорам, а не подавления. Хроническая активация → метаболический, сердечно-сосудистый и когнитивный износ; тренировка снижает нагрузку.</p>
+          </article>
+          <article class="card">
+            <h3>Гормезис</h3>
+            <p>Малые, хорошо дозированные стрессоры укрепляют регуляцию; хроническая перегрузка её разрушает. Мы держим клиентов в адаптивной зоне.</p>
+          </article>
+          <article class="card">
+            <h3>Системы и разнообразие</h3>
+            <p>Адаптивные циклы Холлинга и необходимое разнообразие Эшби: множественные пути регуляции (физический, эмоциональный, когнитивный, социальный) предотвращают коллапс.</p>
+          </article>
+          <article class="card">
+            <h3>Измерение</h3>
+            <p>Валидированные маркеры: ВСР, сон/энергия/фокус и кривые восстановления (скорость возврата к базовой линии) отслеживают прогресс.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline of change -->
+    <section class="section" id="timeline">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Типичный график изменений</h2>
+            <div class="divider" aria-hidden="true"></div>
+          </div>
+          <p class="sub">Вехи отражают, когда большинство клиентов начинают замечать измеримые улучшения.</p>
+        </div>
+
+        <figure class="figure">
+          <svg viewBox="0 0 1000 200" role="img" aria-label="График изменений" style="width:100%; height:auto; display:block;">
+            <defs>
+              <linearGradient id="grad" x1="0" x2="1">
+                <stop offset="0" stop-color="currentColor" stop-opacity=".12"/>
+                <stop offset="1" stop-color="currentColor" stop-opacity=".04"/>
+              </linearGradient>
+            </defs>
+            
+            <!-- Timeline bar -->
+            <g fill="none" stroke="currentColor" stroke-opacity=".22">
+              <rect x="40" y="60" width="920" height="50" rx="12" fill="url(#grad)" stroke-width="1.5"/>
+              <line x1="40" y1="85" x2="960" y2="85" stroke-width="2"/>
+            </g>
+            
+            <!-- Milestone dots -->
+            <g>
+              <circle cx="180" cy="85" r="9" fill="currentColor" fill-opacity=".85" stroke="currentColor" stroke-width="2"/>
+              <circle cx="500" cy="85" r="9" fill="currentColor" fill-opacity=".85" stroke="currentColor" stroke-width="2"/>
+              <circle cx="820" cy="85" r="9" fill="currentColor" fill-opacity=".85" stroke="currentColor" stroke-width="2"/>
+            </g>
+            
+            <!-- Labels -->
+            <g font-family="Inter" font-size="13" fill="currentColor">
+              <!-- Week 1 -->
+              <text x="180" y="40" text-anchor="middle" font-weight="700" font-size="14">Неделя 1</text>
+              <text x="180" y="135" text-anchor="middle" font-size="12" fill-opacity=".8">Лучшее засыпание, меньше</text>
+              <text x="180" y="151" text-anchor="middle" font-size="12" fill-opacity=".8">мент. спиралей, 1–2 практики</text>
+
+              <!-- Month 1 -->
+              <text x="500" y="40" text-anchor="middle" font-weight="700" font-size="14">Месяц 1</text>
+              <text x="500" y="135" text-anchor="middle" font-size="12" fill-opacity=".8">Стабильнее энергия, спокойнее</text>
+              <text x="500" y="151" text-anchor="middle" font-size="12" fill-opacity=".8">тело, яснее приоритеты</text>
+
+              <!-- Month 3 -->
+              <text x="820" y="40" text-anchor="middle" font-weight="700" font-size="14">Месяц 3</text>
+              <text x="820" y="135" text-anchor="middle" font-size="12" fill-opacity=".8">Устойчивый ритм; прочная</text>
+              <text x="820" y="151" text-anchor="middle" font-size="12" fill-opacity=".8">ясность; решения без паники</text>
+            </g>
+          </svg>
+          <figcaption>Отслеживание: еженедельные шкалы спокойствия/энергии/ясности, метрики сна, серии практик, часы сфокусированной работы.</figcaption>
+        </figure>
+
+        <div class="timeline" aria-label="Список вех">
+          <div class="milestone"><div><span class="dot"></span><strong>Неделя 1</strong></div><div>Лучшее засыпание, меньше мыслительных спиралей, первое облегчение; установлены 1–2 микропрактики.</div></div>
+          <div class="milestone"><div><span class="dot"></span><strong>Месяц 1</strong></div><div>Стабильнее энергия; спокойнее тело; яснее приоритеты; снижена реактивность в отношениях.</div></div>
+          <div class="milestone"><div><span class="dot"></span><strong>Месяц 3</strong></div><div>Устойчивый ритм; прочная ясность под давлением; решения без паники/перемалывания; измеримый прогресс по сну, ВСР и самооценке спокойствия/фокуса.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Boundaries & Ethics -->
+    <section class="section" id="ethics">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Границы и этика</h2>
+            <div class="divider" aria-hidden="true"></div>
+          </div>
+          <p class="sub">Безопасность на первом месте, доказательства над идеологией, прозрачность ограничений; направление к специалистам при необходимости.</p>
+        </div>
+        <div class="card">
+          <p><strong>Примечание:</strong> Динамическое равновесие не является заменой медицинскому лечению или психотерапии при тяжёлых состояниях. Клиенты с медицинскими или психиатрическими потребностями направляются к соответствующей помощи.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section" id="cta">
+      <div class="container">
+        <div class="card" style="display:flex; flex-wrap:wrap; align-items:center; gap:12px; justify-content:space-between">
+          <div>
+            <h3 style="margin:0 0 6px">Готовы восстановить баланс без потери остроты?</h3>
+            <p class="sub" style="margin:0">Начните с оценки — один разговор определит вашу базовую линию, паттерны стресса и следующие шаги.</p>
+          </div>
+          <a class="btn btn-primary" href="/ru/#contact">Записаться на консультацию</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- R&D -->
+    <section class="section" id="rnd">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Эволюция и R&amp;D</h2>
+            <div class="divider" aria-hidden="true"></div>
+          </div>
+          <p class="sub">Принципы пересматриваются ежегодно на основе анонимизированных метрик клиентов, обновлённых обзоров доказательств и консультаций с коллегами.</p>
+        </div>
+        <div class="card">
+          <p>Мы операционализируем устойчивость как <em>адаптивную вариативность + быстрое восстановление + осмысленную интеграцию</em> и переводим это в ежедневную человеческую практику.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container" style="padding:36px 0; border-top:1px solid var(--line); color:var(--muted); font-size:14px;">
+    © Dynamic Equilibrium — Научно обоснованная методология адаптивной устойчивости.
+  </footer>
+
+  <script>
+    // Simple theme toggle matching main site
+    (function(){
+      const root = document.body;
+      const btns = [document.getElementById('themeToggle')].filter(Boolean);
+      const preferred = localStorage.getItem('de-theme') || 'light';
+      root.setAttribute('data-theme', preferred);
+      btns.forEach(b => b.addEventListener('click', () => {
+        const next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+        root.setAttribute('data-theme', next);
+        localStorage.setItem('de-theme', next);
+      }));
+    })();
+  </script>
+</body>
+</html>

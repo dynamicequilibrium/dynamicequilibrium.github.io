@@ -546,6 +546,14 @@
     @media (max-width:680px){
       .only-mobile{ display:block; }
     }
+
+    /* FAQ Collapsible */
+    .faq-item{ cursor:pointer; transition: all var(--speed); }
+    .faq-item h3{ display:flex; align-items:center; justify-content:space-between; margin:0; padding:4px 0; }
+    .faq-item h3::after{ content:'▼'; font-size:14px; transition: transform var(--speed); color:var(--accent); margin-left:10px; }
+    .faq-item.collapsed h3::after{ transform:rotate(-90deg); }
+    .faq-answer{ max-height:500px; overflow:hidden; transition: max-height var(--speed) ease, opacity var(--speed) ease, margin var(--speed) ease; opacity:1; margin-top:8px; }
+    .faq-item.collapsed .faq-answer{ max-height:0; opacity:0; margin-top:0; }
     
   </style>
 
@@ -576,6 +584,7 @@
       <a href="#markers">Самодиагностика</a>
       <a href="#spheres">Метод</a>
       <a href="#about">Об авторе</a>
+      <a href="/ru/manifesto/">Манифест</a>
       <a href="#faq">FAQ</a>
       <a href="#contact" class="btn btn-outline">Отправить запрос</a>
     </nav>
@@ -632,6 +641,11 @@
         <a class="btn btn-ghost" href="#spheres">Как это работает</a>
       </div>
       <p class="note" style="margin-top:8px">MD, PhD • 20 лет практики • 100+ научных работ в сфере ментального здоровья • руководящие позиции в ведущих университетах Европы • Полная приватность</p>
+      
+      <div class="card" style="margin-top:16px; background: linear-gradient(135deg, rgba(134,166,139,.08), transparent 60%); border-color: color-mix(in oklab, var(--accent), transparent 50%);">
+        <h4 style="color:var(--accent); margin-bottom:10px">Видение</h4>
+        <p style="margin:0; font-size:15px; line-height:1.6">Создаём культуру осознанных, целостных лидеров — тех, кто видит ясно, но действует с состраданием, владеет силой без высокомерия и сохраняет ясность разума, оставаясь в глубинном, собранном присутствии. Современные хранители равновесия в мире перемен.</p>
+      </div>
     </div>
 
     <aside class="visual" aria-label="Фото автора">
@@ -863,91 +877,51 @@
   <div class="container">
     <div class="section-head">
       <div>
-        <h2>Цены и офферы</h2>
+        <h2>Программы и цены</h2>
         <div class="divider" aria-hidden="true"></div>
       </div>
-      <p class="sub">Два пути к трансформации: начните с Интегративного перезапуска для быстрой ясности, затем перейдите к Executive Deep для устойчивой поддержки класса «белые перчатки».</p>
+      <p class="sub">Два пути в зависимости от ваших задач. Прозрачно, измеримо, конфиденциально.</p>
     </div>
     
     <!-- Entry Offer -->
     <article class="card tier" style="margin-bottom:24px">
-      <h4 style="color:var(--accent); margin-bottom:8px">Точка входа</h4>
-      <h3>Интегративный перезапуск: 3 сессии + Operating Code v1.5</h3>
-      <p class="price" style="font-size:18px; margin-bottom:12px">€1 000</p>
-      <p class="sub" style="margin-bottom:16px">Трёхсессионная 360°-работа и индивидуализированный план. Для лидеров, которым нужна быстрая клиническая оценка и план действий.</p>
+      <h4 style="color:var(--accent); margin-bottom:8px">1) Интегративный перезапуск — 3 сессии + Operating Code v1.5</h4>
+      <p class="price" style="font-size:18px; margin-bottom:12px">€1 000 • ~3 недели</p>
+      <p class="sub" style="margin-bottom:16px">Быстрый, полный 360° аудит с конкретным планом действий.</p>
       <ul class="check">
-        <li>360°-сбор анамнеза: медицинская история, индивидуализированная матрица состояния, аудит пяти доменов, цели</li>
-        <li>Индивидуальный план анализов и интерпретация (по показаниям)</li>
-        <li>Доказательные протоколы сна, стресса, питания, движения и добавок (методология включает принципы CBT-I / CBT тревожности)</li>
-        <li>Мониторинг по носимым устройствам (сон/HRV) + мини-дашборд check-ins</li>
-        <li>Operating Code v1.5 — живой план действий с вехами</li>
-        <li>Координация помощи с вашими местными специалистами</li>
+        <li>Полный сбор информации по пяти сферам</li>
+        <li>При необходимости: целевые рекомендации по анализам и интерпретация</li>
+        <li>Протоколы, основанные на доказательствах (напр., CBT‑I для сна, регуляция тревожности)</li>
+        <li>Интеграция данных с носимых устройств (опционально)</li>
+        <li>Персональный «рабочий код» Operating Code v1.5</li>
       </ul>
-      <p class="note" style="margin-top:12px"><strong>Обещание результата:</strong> Ясность по корневым причинам, медицински обоснованный план и 2–3 быстрых победы (обычно сон, стресс-возбуждение или энергия), подкреплённые еженедельными метриками.</p>
-      <p class="note"><strong>Объём:</strong> 3×60–90-мин сессии за ~3 недели, защищённый чат для логистики между сессиями.</p>
-      <div style="margin-top:16px; display:flex; flex-direction:column; gap:10px; align-items:center; text-align:center">
-        <script async src="https://js.stripe.com/v3/buy-button.js"></script>
-        <stripe-buy-button
-          buy-button-id="buy_btn_1SOkcNLn5kad5Ues7sEXDtBC"
-          publishable-key="pk_live_51Q1Q6xLn5kad5Uesy2Ir9KJYnGpZ2lDKpSi9TZKMyq2BsrtizwzvC2m8Vn1ROPeqD1f5LWQbo3YAhta5ajMvWFM600RC9MN0cq">
-        </stripe-buy-button>
-        <p class="note" style="margin:4px 0 0">Предпочитаете обсудить? <a href="#contact" style="text-decoration:underline">Записаться на звонок</a></p>
+      <p class="note" style="margin-top:12px"><strong>Результат:</strong> ясность по корневым причинам + 2–3 быстрых победы в первые недели.</p>
+      <div style="margin-top:16px; display:flex; flex-wrap:wrap; gap:10px; justify-content:center">
+        <a href="#contact" class="btn btn-primary">Записаться — Интегративный перезапуск</a>
+        <a href="#contact" class="btn btn-outline">Созвон 20 минут</a>
       </div>
     </article>
 
     <!-- Flagship Offers Grid -->
-    <div class="grid-2" style="align-items:stretch">
+    <div style="display:grid; grid-template-columns:1fr; gap:18px; margin-top:0px">
       <article class="card tier flagship-offer" style="display:flex; flex-direction:column">
         <div style="flex:1">
-          <div class="flagship-badge">Флагман • Наиболее полная</div>
-          <h3>Executive Deep: ежемесячно</h3>
-          <p class="price" style="font-size:18px; margin-bottom:12px">€5 000/мес • Отмена в любой момент</p>
-          <p class="sub" style="margin-bottom:16px">Премиальное сопровождение (white-glove) по подписке: практически ваш личный интегративный врач (MD/PhD) и психотерапевт «на связи».</p>
+          <h4 style="color:var(--accent); margin-bottom:8px">2) Executive Deep — флагманская программа с постоянной поддержкой</h4>
+          <p class="price" style="font-size:18px; margin-bottom:12px">€5 000 / месяц или €12 000 / 3 месяца (предоплата)</p>
+          <p class="sub" style="margin-bottom:16px">Премиальная программа под руководством врача для устойчивой трансформации.</p>
           <ul class="check">
-            <li>Приоритетный доступ и быстрый отклик</li>
-            <li>360°-диагностика: медицинская история, индивидуализированная матрица состояния, аудит пяти доменов</li>
-            <li>Показанные расширенные анализы + интерпретация</li>
-            <li>Персонализированные протоколы</li>
-            <li>Дашборды сна и ВСР (HRV)</li>
-            <li>Координация лечения</li>
+            <li>Приоритетный доступ; ограниченное количество клиентов одновременно</li>
+            <li>Все функции Перезапуска, плюс расширенные лабораторные панели (по необходимости)</li>
+            <li>Еженедельные 60‑мин сессии + структурированная межсессионная поддержка</li>
             <li>Семейные/партнёрские сессии при необходимости</li>
+            <li>Кризисные протоколы; подготовка к ключевым переговорам/решениям</li>
+            <li>Operating Code v2.0 + план поддержания на 3 месяца</li>
           </ul>
-          <p class="note" style="margin-top:12px"><strong>Обещание результата:</strong> Измеримое облегчение проблем со сном/тревожностью и устойчиво высокое качество решений; видимая дельта по валидированным шкалам + дашбордам носимых устройств.</p>
+          <p class="note" style="margin-top:12px"><strong>Результат (типичный):</strong> сон стабилизируется к неделям 2–3; тревожность и ясность решений улучшаются к неделям 4–6; устойчивая новая базовая линия к неделям 10–12.</p>
         </div>
-        <div style="margin-top:auto; padding-top:16px; display:flex; flex-direction:column; gap:10px; align-items:center; text-align:center">
-          <script async src="https://js.stripe.com/v3/buy-button.js"></script>
-          <stripe-buy-button
-            buy-button-id="buy_btn_1SOkegLn5kad5UesO0nx0LC6"
-            publishable-key="pk_live_51Q1Q6xLn5kad5Uesy2Ir9KJYnGpZ2lDKpSi9TZKMyq2BsrtizwzvC2m8Vn1ROPeqD1f5LWQbo3YAhta5ajMvWFM600RC9MN0cq">
-          </stripe-buy-button>
-          <p class="note" style="margin:4px 0 0">Предпочитаете обсудить? <a href="#contact" style="text-decoration:underline">Записаться на звонок</a></p>
-        </div>
-      </article>
-      
-      <article class="card tier flagship-offer" style="display:flex; flex-direction:column">
-        <div style="flex:1">
-          <div class="flagship-badge">Лучшая цена • Экономия €3 000</div>
-          <h3>Executive Deep: предоплата за 3 месяца</h3>
-          <p class="price" style="font-size:18px; margin-bottom:12px">€12 000 за 3 месяца</p>
-          <p class="sub" style="margin-bottom:16px">Полный доступ к Executive Deep на 3 месяца. Идеально для интенсивной трансформации.</p>
-          <ul class="check">
-            <li>Приоритетный чат/звонки</li>
-            <li>360°-сбор анамнеза</li>
-            <li>Показанные расширенные анализы с интерпретацией</li>
-            <li>Протоколы</li>
-            <li>Дашборды сна и ВСР (HRV)</li>
-            <li>Координация лечения</li>
-            <li>Семейные сессии по мере необходимости</li>
-          </ul>
-          <p class="note" style="margin-top:12px"><strong>Ограниченная доступность (по заявке, максимум 5 клиентов одновременно).</strong></p>
-        </div>
-        <div style="margin-top:auto; padding-top:16px; display:flex; flex-direction:column; gap:10px; align-items:center; text-align:center">
-          <script async src="https://js.stripe.com/v3/buy-button.js"></script>
-          <stripe-buy-button
-            buy-button-id="buy_btn_1SOkhQLn5kad5UesyeRE6jOx"
-            publishable-key="pk_live_51Q1Q6xLn5kad5Uesy2Ir9KJYnGpZ2lDKpSi9TZKMyq2BsrtizwzvC2m8Vn1ROPeqD1f5LWQbo3YAhta5ajMvWFM600RC9MN0cq">
-          </stripe-buy-button>
-          <p class="note" style="margin:4px 0 0">Предпочитаете обсудить? <a href="#contact" style="text-decoration:underline">Записаться на звонок</a></p>
+        <div style="margin-top:auto; padding-top:16px; display:flex; flex-wrap:wrap; gap:10px; justify-content:center">
+          <a href="#contact" class="btn btn-primary">Подать заявку Executive Deep</a>
+          <a href="#contact" class="btn btn-outline">Созвон 20 минут</a>
         </div>
       </article>
     </div>
@@ -1252,74 +1226,102 @@
     </div>
     
     <div class="auto">
-      <article class="card">
+      <article class="card faq-item collapsed">
         <h3>Подходит ли мне Интегративный перезапуск?</h3>
-        <p class="note">Разработан для фаундеров/руководителей, которым нужна быстрая 360°-оценка и точный план за 3 сессии.</p>
+        <div class="faq-answer">
+          <p class="note">Разработан для фаундеров/руководителей, которым нужна быстрая 360°-оценка и точный план за 3 сессии.</p>
+        </div>
       </article>
 
-      <article class="card">
+      <article class="card faq-item collapsed">
         <h3>Что происходит на 3 сессиях?</h3>
-        <p class="note">С1: 360°-сбор анамнеза (история, Индивидуализированная Хронология и Матрица, аудит пяти доменов). С2: анализы (по показаниям) + инсайты. С3: установка Operating Code v1.5 и протоколов.</p>
+        <div class="faq-answer">
+          <p class="note">С1: 360°-сбор анамнеза (история, Индивидуализированная Хронология и Матрица, аудит пяти доменов). С2: анализы (по показаниям) + инсайты. С3: установка Operating Code v1.5 и протоколов.</p>
+        </div>
       </article>
 
-      <article class="card">
+      <article class="card faq-item collapsed">
         <h3>Чем Executive Deep отличается от Перезапуска?</h3>
-        <p class="note">Та же методология, намного больший доступ: приоритетный чат/звонки, координация класса «белые перчатки», семейные/партнёрские сессии при необходимости.</p>
+        <div class="faq-answer">
+          <p class="note">Та же методология, намного больший доступ: приоритетный чат/звонки, координация класса «белые перчатки», семейные/партнёрские сессии при необходимости.</p>
+        </div>
       </article>
 
-      <article class="card">
+      <article class="card faq-item collapsed">
         <h3>Чем это отличается от обычной терапии или коучинга?</h3>
-        <p class="note">Это психотерапия с врачом (MD, PhD), а не лайф-коучинг. Мы работаем с измеримыми результатами: архитектура сна, ВСР, клинические шкалы. Метод 360° охватывает физиологию, нервную систему, психику, отношения и смыслы—не только одну сферу. Вы получаете протоколы, основанные на доказательствах, а не общие советы.</p>
+        <div class="faq-answer">
+          <p class="note">Это психотерапия с врачом (MD, PhD), а не лайф-коучинг. Мы работаем с измеримыми результатами: архитектура сна, ВСР, клинические шкалы. Метод 360° охватывает физиологию, нервную систему, психику, отношения и смыслы—не только одну сферу. Вы получаете протоколы, основанные на доказательствах, а не общие советы.</p>
+        </div>
       </article>
 
-      <article class="card">
+      <article class="card faq-item collapsed">
         <h3>Как насчёт конфиденциальности для публичных фигур?</h3>
-        <p class="note">Врачебная тайна абсолютна. Никакого раскрытия информации без вашего письменного согласия, за исключением требований закона (непосредственная угроза). Сессии через защищённые каналы, шифрованное хранение. Я работаю с фаундерами, топ-менеджерами и публичными лидерами—дискретность не обсуждается.</p>
+        <div class="faq-answer">
+          <p class="note">Врачебная тайна абсолютна. Никакого раскрытия информации без вашего письменного согласия, за исключением требований закона (непосредственная угроза). Сессии через защищённые каналы, шифрованное хранение. Я работаю с фаундерами, топ-менеджерами и публичными лидерами—дискретность не обсуждается.</p>
+        </div>
       </article>
 
-      <article class="card">
+      <article class="card faq-item collapsed">
         <h3>Можно ли вписать это в плотный график?</h3>
-        <p class="note">Да. Еженедельные 60-минутные сессии по вашему расписанию (включая вечера/выходные). Межсессионная поддержка — это краткие check-ins, а не длительные звонки. Программа разработана для лидеров с дефицитом времени—эффективность и точность, а не бесконечные разговоры.</p>
+        <div class="faq-answer">
+          <p class="note">Да. Еженедельные 60-минутные сессии по вашему расписанию (включая вечера/выходные). Межсессионная поддержка — это краткие check-ins, а не длительные звонки. Программа разработана для лидеров с дефицитом времени—эффективность и точность, а не бесконечные разговоры.</p>
+        </div>
       </article>
 
-      <article class="card">
+      <article class="card faq-item collapsed">
         <h3>Входят ли анализы в стоимость?</h3>
-        <p class="note">Анализы назначаются только по показаниям и оплачиваются отдельно; интерпретация включена в ваши сессии.</p>
+        <div class="faq-answer">
+          <p class="note">Анализы назначаются только по показаниям и оплачиваются отдельно; интерпретация включена в ваши сессии.</p>
+        </div>
       </article>
 
-      <article class="card">
+      <article class="card faq-item collapsed">
         <h3>Вы назначаете медикаменты?</h3>
-        <p class="note">Я врач, но фокус на психотерапии и оптимизации образа жизни. Если показаны медикаменты, мы обсуждаем варианты, и я могу направить вас к нужному специалисту. Многие клиенты улучшаются без фармакотерапии только через работу с протоколами.</p>
+        <div class="faq-answer">
+          <p class="note">Я врач, но фокус на психотерапии и оптимизации образа жизни. Если показаны медикаменты, мы обсуждаем варианты, и я могу направить вас к нужному специалисту. Многие клиенты улучшаются без фармакотерапии только через работу с протоколами.</p>
+        </div>
       </article>
 
-      <article class="card">
+      <article class="card faq-item collapsed">
         <h3>Что если я пробовал терапию раньше и она не помогла?</h3>
-        <p class="note">Частая проблема: терапия фокусировалась только на разговорах, а не на физиологии или измеримых изменениях. Здесь мы отслеживаем сон, ВСР, клинические шкалы—если что-то не работает, мы корректируем. Метод 360° находит корневые причины, которые другие упускают. Также, подготовка психиатра существенно отличается от консультативных специальностей.</p>
+        <div class="faq-answer">
+          <p class="note">Частая проблема: терапия фокусировалась только на разговорах, а не на физиологии или измеримых изменениях. Здесь мы отслеживаем сон, ВСР, клинические шкалы—если что-то не работает, мы корректируем. Метод 360° находит корневые причины, которые другие упускают. Также, подготовка психиатра существенно отличается от консультативных специальностей.</p>
+        </div>
       </article>
 
-      <article class="card">
+      <article class="card faq-item collapsed">
         <h3>Как быстро я увижу результаты?</h3>
-        <p class="note">Большинство клиентов сообщают о улучшении сна в течение 2–3 недель (протокол CBT-I). Снижение тревожности и ясность решений обычно проявляются к 4–6 неделе. Полная интеграция занимает 10–12 недель. Это не быстрое решение, а систематическое восстановление—консервативные обещания, измеримые результаты.</p>
+        <div class="faq-answer">
+          <p class="note">Большинство клиентов сообщают о улучшении сна в течение 2–3 недель (протокол CBT-I). Снижение тревожности и ясность решений обычно проявляются к 4–6 неделе. Полная интеграция занимает 10–12 недель. Это не быстрое решение, а систематическое восстановление—консервативные обещания, измеримые результаты.</p>
+        </div>
       </article>
 
-      <article class="card">
+      <article class="card faq-item collapsed">
         <h3>Вы координируетесь с моими местными специалистами?</h3>
-        <p class="note">Да - чёткая передача информации и целевые запросы, чтобы все работали в одном направлении.</p>
+        <div class="faq-answer">
+          <p class="note">Да - чёткая передача информации и целевые запросы, чтобы все работали в одном направлении.</p>
+        </div>
       </article>
 
-      <article class="card">
+      <article class="card faq-item collapsed">
         <h3>Вы работаете международно?</h3>
-        <p class="note">Да; объём телемедицины и согласие уточняются до начала работы, с координацией местных анализов/услуг при необходимости.</p>
+        <div class="faq-answer">
+          <p class="note">Да; объём телемедицины и согласие уточняются до начала работы, с координацией местных анализов/услуг при необходимости.</p>
+        </div>
       </article>
 
-      <article class="card">
+      <article class="card faq-item collapsed">
         <h3>Сколько клиентов вы принимаете одновременно?</h3>
-        <p class="note">Ограниченное количество для обеспечения быстрого отклика; Executive Deep — по заявке.</p>
+        <div class="faq-answer">
+          <p class="note">Ограниченное количество для обеспечения быстрого отклика; Executive Deep — по заявке.</p>
+        </div>
       </article>
 
-      <article class="card">
+      <article class="card faq-item collapsed">
         <h3>Это экстренная или медицинская служба по требованию?</h3>
-        <p class="note">Нет - это планируемая помощь, ориентированная на результат. В кризисных случаях немедленно обращайтесь в местные службы экстренной помощи.</p>
+        <div class="faq-answer">
+          <p class="note">Нет - это планируемая помощь, ориентированная на результат. В кризисных случаях немедленно обращайтесь в местные службы экстренной помощи.</p>
+        </div>
       </article>
     </div>
 
@@ -1398,7 +1400,7 @@
 <footer role="contentinfo">
   <div class="container" style="display:flex; flex-wrap:wrap; align-items:center; gap:12px; justify-content:space-between;">
     <div style="display:flex; align-items:center; gap:10px;">
-      <div class="logo" aria-hidden="true" style="width:28px; height:28px;"></div>
+      <img src="/images/logo-black.svg" alt="Dynamic Equilibrium logo" width="28" height="28" style="display:block;" id="footerLogo" data-light="/images/logo-black.svg" data-dark="/images/logo-white.svg"/>
       <span>© <span id="y"></span> Dynamic Equilibrium</span>
     </div>
     <div style="display:flex; flex-wrap:wrap; gap:8px 16px; align-items:center;">
@@ -1463,18 +1465,21 @@
     const root = document.body;
     const metaTheme = document.querySelector('meta[name="theme-color"]');
     const logo = document.getElementById('brandLogo');
+    const footerLogo = document.getElementById('footerLogo');
 
     function swapLogo(mode){
-      if(!logo) return;
-      const light = logo.dataset.light || '';
-      const dark  = logo.dataset.dark  || '';
-      if (mode === 'dark' && dark){
-        logo.src = dark; logo.classList.remove('is-filtered');
-      } else if (mode === 'light' && light){
-        logo.src = light; logo.classList.remove('is-filtered');
-      } else {
-        logo.classList.add('is-filtered');
-      }
+      [logo, footerLogo].forEach(el => {
+        if(!el) return;
+        const light = el.dataset.light || '';
+        const dark  = el.dataset.dark  || '';
+        if (mode === 'dark' && dark){
+          el.src = dark; el.classList.remove('is-filtered');
+        } else if (mode === 'light' && light){
+          el.src = light; el.classList.remove('is-filtered');
+        } else {
+          el.classList.add('is-filtered');
+        }
+      });
     }
     function set(mode){
       root.setAttribute('data-theme', mode);
@@ -1652,6 +1657,18 @@
         .catch(error => console.log('SW registration failed'));
     });
   }
+
+  // FAQ Toggle
+  (function(){
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      item.addEventListener('click', (e) => {
+        // Don't toggle if clicking on a link
+        if(e.target.tagName === 'A') return;
+        item.classList.toggle('collapsed');
+      });
+    });
+  })();
 </script>
 </body>
 </html>
