@@ -4,13 +4,13 @@
     <loc>https://dynamicequilibrium.org/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <lastmod>2025-01-16</lastmod>
+    <lastmod>2025-01-13</lastmod>
   </url>
   <url>
     <loc>https://dynamicequilibrium.org/ru/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <lastmod>2025-01-16</lastmod>
+    <lastmod>2025-01-13</lastmod>
   </url>
   <url>
     <loc>https://dynamicequilibrium.org/privacy.html</loc>
@@ -47,5 +47,29 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <lastmod>2025-01-16</lastmod>
+  </url>
+  <url>
+    <loc>https://dynamicequilibrium.org/en/tests/gad7.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-13</lastmod>
+  </url>
+  <url>
+    <loc>https://dynamicequilibrium.org/en/tests/phq9.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-13</lastmod>
+  </url>
+  <url>
+    <loc>https://dynamicequilibrium.org/ru/tests/gad7.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-13</lastmod>
+  </url>
+  <url>
+    <loc>https://dynamicequilibrium.org/ru/tests/phq9.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-13</lastmod>
   </url>
 </urlset>
