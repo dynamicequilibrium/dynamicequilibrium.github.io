@@ -1,0 +1,102 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Проверка на выгорание — 2-минутная самооценка</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 1) Intro screen -->
+  <div id="intro-screen" class="screen">
+    <div class="container">
+      <h1 class="main-title">Проверка на выгорание</h1>
+      <p class="subtitle">2-минутная самооценка</p>
+      <p class="description">Быстрый, основанный на доказательствах снимок вашей энергии и нагрузки на работе.</p>
+      <p class="note">Это не диагноз. Если вы обеспокоены, обратитесь к квалифицированному специалисту.</p>
+      <div class="instructions">
+        <p>Ответьте на все 19 утверждений, выбрав вариант, который лучше всего описывает ваше состояние в последнее время.</p>
+        <p>Нет правильных или неправильных ответов. Будьте честны.</p>
+        <p>Вы увидите общий балл и три области с простыми объяснениями.</p>
+        <p>По желанию: PDF и возможность получать рекомендации по электронной почте.</p>
+      </div>
+      <div class="buttons">
+        <button id="start-btn" class="btn-primary">Начать</button>
+        <button id="method-btn" class="btn-secondary">Узнать о методе</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2) Method popover (hidden by default) -->
+  <div id="method-popover" class="popover" style="display:none;">
+    <div class="popover-content">
+      <h2>О Копенгагенском опроснике выгорания (CBI-19)</h2>
+      <p>Мы используем Копенгагенский опросник выгорания (CBI-19) с тремя областями: Личное, Работа, Связанное с клиентами выгорание. Баллы от 0 до 100 (выше = больше выгорания).</p>
+      <button id="close-method-btn" class="btn-close">Закрыть</button>
+    </div>
+  </div>
+
+  <!-- 3) Questionnaire screen -->
+  <div id="questionnaire-screen" class="screen" style="display:none;">
+    <div class="container">
+      <div id="progress" class="progress">1/19 отвечено</div>
+      <div id="terminology-toggle" class="toggle">
+        <label for="terminology">Терминология: </label>
+        <select id="terminology">
+          <option value="patients">пациенты</option>
+          <option value="clients" selected>клиенты</option>
+          <option value="customers">покупатели</option>
+        </select>
+      </div>
+      <div id="question-container" class="question-container"></div>
+      <div class="nav-buttons">
+        <button id="prev-btn" class="btn-secondary" disabled>Назад</button>
+        <button id="next-btn" class="btn-primary">Далее</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4) Results screen -->
+  <div id="results-screen" class="screen" style="display:none;">
+    <div class="container">
+      <div id="gauges-container" class="gauges-container"></div>
+      <div id="results-content" class="results-content"></div>
+      <div class="buttons">
+        <button id="pdf-btn" class="btn-primary">Получить мой PDF с советами</button>
+        <button id="retake-btn" class="btn-secondary">Пройти заново</button>
+        <button id="share-btn" class="btn-secondary">Поделиться</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5) Email capture screen -->
+  <div id="email-screen" class="screen" style="display:none;">
+    <div class="container">
+      <h2>Получите ваш персонализированный PDF-отчет</h2>
+      <p>Введите email, чтобы получить подробный PDF с вашими баллами, интерпретациями и персональными советами по восстановлению.</p>
+      <form id="email-form">
+        <input type="email" id="email-input" placeholder="your.email@example.com" required>
+        <label for="consent">
+          <input type="checkbox" id="consent" required>
+          Я хочу скачать мой персонализированный PDF и согласен получать периодические научно-обоснованные советы по психическому здоровью и благополучию.
+        </label>
+        <button type="submit" class="btn-primary">Отправить PDF</button>
+      </form>
+      <div id="email-msg"></div>
+      <button id="back-to-results-btn" class="btn-secondary">Вернуться к результатам</button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+  <script src="i18n.js"></script>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+  <script src="tests.js"></script>
+</body>
+</html>
+
+
