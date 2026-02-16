@@ -1,8 +1,10 @@
 // Basic Service Worker for PWA functionality
-const CACHE_NAME = 'dynamic-equilibrium-v1';
+const CACHE_NAME = 'dynamic-equilibrium-v2';
 const urlsToCache = [
   '/',
   '/ru/',
+  '/methodology/',
+  '/ru/methodology/',
   '/images/logo-black.svg',
   '/images/logo-white.svg',
   '/images/Alexander.webp',
