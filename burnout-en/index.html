@@ -1,0 +1,100 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Burnout Check — 2-minute self-assessment</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 1) Intro screen -->
+  <div id="intro-screen" class="screen">
+    <div class="container">
+      <h1 class="main-title">Burnout Check</h1>
+      <p class="subtitle">2-minute self-assessment</p>
+      <p class="description">A quick, evidence-based snapshot of your energy and work strain.</p>
+      <p class="note">This is not a diagnosis. If you're concerned, speak with a qualified professional.</p>
+      <div class="instructions">
+        <p>Answer all 19 statements by choosing what fits you recently.</p>
+        <p>There are no right/wrong answers. Be honest.</p>
+        <p>You'll see your overall score and three domains with simple explanations.</p>
+        <p>Optionally, get a PDF + tips via email.</p>
+      </div>
+      <div class="buttons">
+        <button id="start-btn" class="btn-primary">Start</button>
+        <button id="method-btn" class="btn-secondary">Learn about the method</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2) Method popover (hidden by default) -->
+  <div id="method-popover" class="popover" style="display:none;">
+    <div class="popover-content">
+      <h2>About the Copenhagen Burnout Inventory (CBI-19)</h2>
+      <p>We use the Copenhagen Burnout Inventory (CBI-19) with three domains: Personal, Work, Patient-related burnout. Scores range 0–100 (higher = more burnout).</p>
+      <button id="close-method-btn" class="btn-close">Close</button>
+    </div>
+  </div>
+
+  <!-- 3) Questionnaire screen -->
+  <div id="questionnaire-screen" class="screen" style="display:none;">
+    <div class="container">
+      <div id="progress" class="progress">1/19 answered</div>
+      <div id="terminology-toggle" class="toggle">
+        <label for="terminology">Terminology: </label>
+        <select id="terminology">
+          <option value="patients">patients</option>
+          <option value="clients" selected>clients</option>
+          <option value="customers">customers</option>
+        </select>
+      </div>
+      <div id="question-container" class="question-container"></div>
+      <div class="nav-buttons">
+        <button id="prev-btn" class="btn-secondary" disabled>Previous</button>
+        <button id="next-btn" class="btn-primary">Next</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4) Results screen -->
+  <div id="results-screen" class="screen" style="display:none;">
+    <div class="container">
+      <div id="gauges-container" class="gauges-container"></div>
+      <div id="results-content" class="results-content"></div>
+      <div class="buttons">
+        <button id="pdf-btn" class="btn-primary">Get my PDF + tips</button>
+        <button id="retake-btn" class="btn-secondary">Retake</button>
+        <button id="share-btn" class="btn-secondary">Share</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5) Email capture screen -->
+  <div id="email-screen" class="screen" style="display:none;">
+    <div class="container">
+      <h2>Get Your Personalized PDF Report</h2>
+      <p>Enter your email to receive a detailed PDF with your scores, interpretations, and tailored recovery tips.</p>
+      <form id="email-form">
+        <input type="email" id="email-input" placeholder="your.email@example.com" required>
+        <label for="consent">
+          <input type="checkbox" id="consent" required>
+          I want to download my personalized PDF booklet and agree to receive occasional research-based tips on mental health and wellbeing.
+        </label>
+        <button type="submit" class="btn-primary">Send PDF</button>
+      </form>
+      <div id="email-msg"></div>
+      <button id="back-to-results-btn" class="btn-secondary">Back to Results</button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="i18n.js"></script>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+  <script src="tests.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,390 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+:root {
+  /* Color tokens */
+  --bg: #0d0d0d;
+  --fg: #eeeeee;
+  --card-bg: #1a1a1a;
+  --accent: #FFD700;
+  --muted: #999999;
+  --button-bg: #1a1a1a;
+  --button-hover-bg: #2a2a2a;
+  --transition: 0.3s ease;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  line-height: 1.5;
+}
+
+.screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  width: 100%;
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-align: center;
+  color: var(--accent);
+}
+
+.main-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-align: center;
+  color: var(--accent);
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 16px;
+  text-align: center;
+  color: var(--fg);
+}
+
+.description {
+  font-size: 1rem;
+  margin-bottom: 16px;
+  text-align: center;
+  color: var(--muted);
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+h4 {
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+p {
+  margin-bottom: 16px;
+  color: var(--fg);
+}
+
+.note {
+  font-style: italic;
+  color: #EF4444;
+}
+
+.instructions {
+  background: var(--card-bg);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+  border: 1px solid #374151;
+}
+
+.instructions p {
+  margin-bottom: 8px;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--bg);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+
+.btn-primary:hover {
+  background: #E6B800;
+}
+
+.btn-secondary {
+  background: var(--button-bg);
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+
+.btn-secondary:hover {
+  background: var(--button-hover-bg);
+}
+
+.btn-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: var(--fg);
+}
+
+.popover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.popover-content {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 32px;
+  max-width: 500px;
+  position: relative;
+  border: 1px solid #374151;
+}
+
+.progress {
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 24px;
+  color: var(--accent);
+}
+
+.question {
+  margin-bottom: 32px;
+}
+
+.question p {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 16px;
+  text-align: center;
+  color: var(--fg);
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border: 2px solid #374151;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color var(--transition);
+  background: var(--button-bg);
+}
+
+.option:hover {
+  border-color: var(--accent);
+}
+
+.option input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--accent);
+}
+
+.option input[type="radio"]:checked + span {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+}
+
+.gauges-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.overall-gauge {
+  margin-bottom: 32px;
+}
+
+.sub-gauges {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.radial-gauge {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 8px;
+}
+
+.radial-gauge.mini {
+  width: 80px;
+  height: 80px;
+}
+
+.radial-gauge svg {
+  width: 100%;
+  height: 100%;
+}
+
+.progress {
+  transition: stroke-dashoffset 0.8s ease;
+}
+
+.gauge p {
+  text-align: center;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.results-content {
+  text-align: center;
+}
+
+.results-content ul {
+  list-style: none;
+  margin: 16px 0;
+}
+
+.results-content li {
+  margin-bottom: 8px;
+  color: var(--fg);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+input[type="email"] {
+  padding: 12px;
+  border: 1px solid #374151;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: var(--button-bg);
+  color: var(--fg);
+}
+
+input[type="email"]:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+label {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+input[type="checkbox"] {
+  margin-top: 2px;
+  accent-color: var(--accent);
+}
+
+#email-msg {
+  text-align: center;
+  font-weight: 500;
+  color: #22C55E;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.toggle label {
+  white-space: nowrap;
+}
+
+@media (min-width: 769px) {
+  .progress {
+    text-align: center;
+    margin: 0 auto 24px;
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 24px;
+  }
+
+  .sub-gauges {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+}
