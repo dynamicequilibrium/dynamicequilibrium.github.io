@@ -3,554 +3,190 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Dynamic Equilibrium — Клинический метод и принципы</title>
-  <meta name="description" content="Врачебная методология восстановления устойчивости при длительном стрессе: системная карта, процесс, метрики, границы и ожидаемая динамика."/>
+  <title>Как я работаю — Динамическое равновесие</title>
+  <meta name="description" content="Подход, на котором держатся консультации: на что я смотрю, как выбираются приоритеты, как составляется и пересматривается план и где заканчивается моя роль."/>
   <meta name="theme-color" content="#F5F4F0"/>
   <meta name="color-scheme" content="light dark"/>
+  <meta name="robots" content="index,follow"/>
+
   <link rel="canonical" href="https://dynamicequilibrium.org/ru/methodology/"/>
-  <link rel="alternate" hreflang="ru" href="https://dynamicequilibrium.org/ru/methodology/"/>
   <link rel="alternate" hreflang="en" href="https://dynamicequilibrium.org/methodology/"/>
+  <link rel="alternate" hreflang="ru" href="https://dynamicequilibrium.org/ru/methodology/"/>
   <link rel="alternate" hreflang="x-default" href="https://dynamicequilibrium.org/methodology/"/>
-  
-  <!-- Open Graph -->
+
   <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Dynamic Equilibrium"/>
   <meta property="og:locale" content="ru_RU"/>
   <meta property="og:locale:alternate" content="en_US"/>
-  <meta property="og:title" content="Dynamic Equilibrium — Метод и Принципы"/>
-  <meta property="og:description" content="Научно обоснованная методология адаптивной устойчивости. Четыре концентрических слоя: организм, ритм, смыслы, среда."/>
+  <meta property="og:title" content="Как я работаю — Динамическое равновесие"/>
+  <meta property="og:description" content="Подход, на котором держатся консультации: на что я смотрю, как выбираются приоритеты, как составляется и пересматривается план и где заканчивается моя роль."/>
   <meta property="og:url" content="https://dynamicequilibrium.org/ru/methodology/"/>
-  <meta property="og:image" content="https://dynamicequilibrium.org/og/dynamic_equilibrium_scheme_ru.png"/>
-  <meta property="og:image:alt" content="Динамическое равновесие — диаграмма четырёхслойной модели"/>
+  <meta property="og:image" content="https://dynamicequilibrium.org/og/dynamic-equilibrium.jpg"/>
+  <meta property="og:image:alt" content="Динамическое равновесие — как я работаю"/>
   <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:image" content="https://dynamicequilibrium.org/og/dynamic_equilibrium_scheme_ru.png"/>
+  <meta name="twitter:title" content="Как я работаю — Динамическое равновесие"/>
+  <meta name="twitter:description" content="Подход, на котором держатся консультации: на что я смотрю, как выбираются приоритеты, как составляется и пересматривается план и где заканчивается моя роль."/>
+  <meta name="twitter:image" content="https://dynamicequilibrium.org/og/dynamic-equilibrium.jpg"/>
 
-  <!-- Fonts (match main site) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,600;6..72,800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'; this.onload=null;">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,600;6..72,800&family=Inter:wght@400;600;700&display=swap"></noscript>
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+  <link rel="manifest" href="/site.webmanifest"/>
 
-  <style>
-    :root{
-      --bg:#0C0F10; --layer:#111517; --ink:#EDEFE8; --muted:#A7B0A8; --line:#1A2122;
-      --accent:#86A68B; --accent-2:#CBBBA0; --danger:#E27C6C; --ok:#8BC3A3;
-      --radius:16px; --radius-lg:22px; --shadow:0 18px 56px rgba(0,0,0,.28);
-      --maxw:1100px; --speed:.28s;
-    }
-    [data-theme="light"]{ --bg:#F5F4F0; --layer:#FFFFFF; --ink:#0E1314; --muted:#5C6862; --line:#E6E8E4; --shadow:0 20px 60px rgba(20,30,24,.08); }
-    :root{ --safe: env(safe-area-inset-top, 0px); }
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Literata:opsz,wght@7..72,500;7..72,600&amp;family=Newsreader:opsz,wght@6..72,500;6..72,600&amp;display=swap"/>
+  <link rel="stylesheet" href="/assets/site.css"/>
+  <script defer src="/assets/site.js"></script>
 
-    *{ box-sizing:border-box; }
-    html, body{ width:100%; overflow-x:hidden; }
-    body{
-      margin:0; color:var(--ink);
-      background:
-        radial-gradient(1100px 620px at 88% -10%, rgba(134,166,139,.12), transparent 52%),
-        linear-gradient(180deg, rgba(203,187,160,.06), transparent 22%),
-        var(--bg);
-      font:400 16px/1.65 'Inter', sans-serif; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; letter-spacing:.2px;
-    }
-    h1,h2{ font-family:'Newsreader', serif; letter-spacing:.2px; margin:0 0 .5em; }
-    h1{ font-weight:800; font-size:clamp(34px, 4.6vw, 56px); line-height:1.06; }
-    h2{ font-weight:800; font-size:clamp(24px, 3vw, 36px); line-height:1.12; }
-    h3{ font:700 18px/1.2 'Inter', sans-serif; margin:0 0 .5em; }
-    h4{ font:700 13px/1.1 'Inter', sans-serif; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin:.4em 0 .4em; }
-    p{ margin:0 0 1em; }
-    a{ color:var(--accent); text-decoration:none; } a:hover{ text-decoration:underline; }
-    .container{ max-width:var(--maxw); margin:0 auto; padding-left:max(22px, calc(16px + env(safe-area-inset-left,0))); padding-right:max(22px, calc(16px + env(safe-area-inset-right,0))); }
-    .sub{ color:var(--muted); max-width:78ch; }
-    .page{ position:relative; isolation:isolate; }
-    .page::before{
-      content:""; position:absolute; inset:0; z-index:-1; opacity:.08;
-      background-image:linear-gradient(to right, var(--line) 1px, transparent 1px), linear-gradient(to bottom, var(--line) 1px, transparent 1px);
-      background-size:28px 28px; mask-image: linear-gradient(180deg, #000 12%, transparent 80%);
-    }
-
-    /* Header */
-    .nav{ position:sticky; top:0; z-index:1000; backdrop-filter:saturate(160%) blur(10px);
-      background: color-mix(in oklab, var(--bg), transparent 10%);
-      border-bottom:1px solid color-mix(in oklab, var(--accent), transparent 82%);
-    }
-    .nav-inner{ display:flex; align-items:center; justify-content:space-between; gap:16px; padding:max(10px, calc(12px + var(--safe))) 22px 12px; }
-    .brand{ display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.3px; }
-    .brand .logo{ width:36px; height:36px; border-radius:50%; background:
-      radial-gradient(50% 50% at 50% 50%, var(--accent) 0 50%, transparent 52%) center/100% 100% no-repeat,
-      conic-gradient(from 180deg, var(--accent) 0 22%, var(--accent-2) 22% 45%, #88938B 45% 70%, #7E6E5A 70% 100%);
-      box-shadow: inset 0 0 0 2px color-mix(in oklab, var(--accent-2), transparent 70%);
-    }
-    .nav-ctrls{ display:flex; gap:8px; align-items:center; }
-    .btn{ display:inline-flex; align-items:center; justify-content:center; gap:10px; padding:10px 16px; border-radius:999px; border:1.4px solid transparent; font-weight:700; cursor:pointer; text-decoration:none !important; transition: transform var(--speed), background var(--speed), color var(--speed), border var(--speed), box-shadow var(--speed); }
-    .btn-ghost{ background:transparent; color:var(--ink); border-color: color-mix(in oklab, var(--accent), transparent 68%); }
-    .btn-primary{ background:var(--accent); color:#0C0F10; border-color:var(--accent); }
-    .theme{ width:42px; height:42px; display:grid; place-items:center; border-radius:12px; border:1.4px solid color-mix(in oklab, var(--accent), transparent 60%); background:transparent; }
-    .hero{ position:relative; padding:88px 0 34px; overflow:hidden; }
-    .divider{ height:1px; background:linear-gradient(90deg, transparent, color-mix(in oklab, var(--accent-2), transparent 40%), transparent); margin:10px 0 0; width:160px; }
-
-    .section{ padding:58px 0; }
-    .section-head{ display:flex; align-items:flex-end; justify-content:space-between; gap:18px; margin-bottom:18px; }
-    .grid-3{ display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; }
-    .grid-2{ display:grid; grid-template-columns:repeat(2, 1fr); gap:18px; }
-    .auto{ display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap:16px; }
-    .card{ background:var(--layer); border:1px solid var(--line); border-radius:16px; padding:18px; transition: transform var(--speed), border var(--speed), box-shadow var(--speed); }
-    .card:hover{ transform:translateY(-2px); border-color:color-mix(in oklab, var(--accent), transparent 60%); box-shadow:var(--shadow); }
-    .check{ list-style:none; padding:0; margin:0; display:grid; gap:8px; }
-    .check li{ position:relative; padding-left:20px; }
-    .check li::before{ content:""; position:absolute; left:0; top:.55em; width:9px; height:9px; border-radius:50%; background:radial-gradient(circle at 30% 30%, var(--accent) 0 40%, transparent 42%), radial-gradient(circle at 70% 70%, var(--accent-2) 0 40%, transparent 42%); border:1px solid color-mix(in oklab, var(--accent), transparent 40%); }
-
-    /* Illustrations */
-    .figure{ border:1px solid var(--line); background:var(--layer); border-radius:16px; padding:20px; box-shadow:var(--shadow); }
-    .figure svg{ display:block; margin:0 auto; max-width:100%; height:auto; }
-    .figure figcaption{ color:var(--muted); margin-top:12px; font-size:14px; text-align:center; }
-
-    /* Timeline */
-    .timeline{ display:grid; grid-template-columns:1fr; gap:12px; }
-    .milestone{ display:grid; grid-template-columns:110px 1fr; gap:12px; align-items:start; padding:14px; border:1px solid var(--line); border-radius:14px; background:var(--layer); }
-    .milestone > div:first-child{ display:flex; align-items:center; gap:8px; white-space:nowrap; }
-    .dot{ width:18px; height:18px; border-radius:50%; background:var(--accent); box-shadow:0 0 0 4px color-mix(in oklab, var(--accent), transparent 85%); flex-shrink:0; }
-
-    /* Mobile */
-    @media (max-width:1040px){ .grid-3{ grid-template-columns:1fr 1fr; } }
-    @media (max-width:680px){
-      .grid-3, .grid-2{ grid-template-columns:1fr; }
-      .hero{ padding:64px 0 24px; }
-      .section-head{ flex-direction:column; align-items:flex-start; gap:8px; }
-    }
-    @media (prefers-reduced-motion: reduce){
-      *{ animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; }
-    }
-  </style>
+  <!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HEBPPBGBBX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-HEBPPBGBBX');
+</script>
 </head>
-<body class="page" data-theme="light">
-  <header class="nav" role="navigation" aria-label="Основная навигация">
-    <div class="nav-inner container">
-      <a class="brand" href="/ru/" aria-label="Вернуться на главную">
-        <span class="logo" aria-hidden="true"></span>
-        <span>Dynamic Equilibrium</span>
-      </a>
-      <div class="nav-ctrls">
-        <a class="btn btn-ghost" href="/ru/">Главная</a>
-        <button id="themeToggle" class="theme" aria-label="Переключить тему" title="Тема">🌓</button>
-      </div>
+<body data-theme="light">
+<a class="skip" href="#main">Перейти к содержанию</a>
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="/ru/" aria-label="Dynamic Equilibrium">
+      <img data-logo src="/images/logo-black.svg" alt="" width="40" height="40"/>
+      <span>Dynamic Equilibrium</span>
+    </a>
+    <nav class="nav-links" aria-label="Разделы"><a href="/ru/#who">Для кого</a><a href="/ru/#how">Как работаем</a><a href="/ru/#fees">Стоимость</a><a href="/ru/#about">Обо мне</a><a href="/ru/#faq">Вопросы</a><a class="btn btn-outline btn-sm" href="/ru/#contact">Оставить запрос</a></nav>
+    <div class="nav-ctrls">
+      <div class="lang-switch" role="group" aria-label="Язык"><a href="/ru/" hreflang="ru" lang="ru" aria-current="true">RU</a><a href="/" hreflang="en" lang="en">EN</a></div>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Сменить тему" title="Сменить тему">◐</button>
+      <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="Меню" aria-controls="drawer" aria-expanded="false"><span class="burger" aria-hidden="true"></span></button>
     </div>
-  </header>
+  </div>
+</header>
 
-  <main id="content">
-    <!-- Hero -->
-    <section class="hero">
-      <div class="container">
-        <h1>Клинический метод и принципы</h1>
-        <div class="divider" aria-hidden="true"></div>
-        <p class="sub" style="margin-top:10px; max-width:80ch">
-          Dynamic Equilibrium — врачебная система для людей с высокой нагрузкой и сниженным восстановлением.
-          На практике метод стабилизирует сон, снижает автономный стресс и повышает качество решений через измеримый клинический цикл.
-        </p>
-      </div>
-    </section>
+<aside id="drawer" class="drawer" role="dialog" aria-modal="true" aria-label="Меню">
+  <button class="drawer-backdrop" type="button" data-drawer-close aria-label="Закрыть"></button>
+  <div class="drawer-panel">
+    <button class="icon-btn drawer-close" type="button" data-drawer-close aria-label="Закрыть">✕</button>
+    <nav class="drawer-links" aria-label="Разделы"><a href="/ru/#who">Для кого</a><a href="/ru/#how">Как работаем</a><a href="/ru/#fees">Стоимость</a><a href="/ru/#about">Обо мне</a><a href="/ru/#faq">Вопросы</a><a href="/ru/methodology/">Как я работаю</a><a class="btn btn-primary" href="/ru/#contact">Запросить консультацию</a></nav>
+    <div class="drawer-foot"><div class="lang-switch" style="display:flex" role="group" aria-label="Язык"><a href="/ru/" hreflang="ru" lang="ru" aria-current="true">RU</a><a href="/" hreflang="en" lang="en">EN</a></div>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Сменить тему">◐</button></div>
+  </div>
+</aside>
 
-    <!-- For Whom -->
-    <section class="section" id="for-whom">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <h2>Кому подходит метод</h2>
-            <div class="divider" aria-hidden="true"></div>
-          </div>
-          <p class="sub">Для людей высокой ответственности: фаундеров, инвесторов, топ-менеджеров и публичных лидеров. Для тех, у кого результативность сохранена, а восстановление уже проседает.</p>
-        </div>
-        <div class="card">
-          <h3>Типовые формулировки запроса:</h3>
-          <ul class="check">
-            <li>«Я продолжаю справляться, но сон и восстановление стали нестабильными».</li>
-            <li>«Мне нужна устойчивость под давлением без потери темпа».</li>
-            <li>«Хочу яснее мыслить и не жить за счёт постоянного усилия».</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+<main id="main">
+<div class="container">
+  <div class="page-head">
+    <span class="eyebrow">Подход</span>
+    <h1>Как я работаю</h1>
+    <p class="lede">Коротко о том, как устроены консультации: на что я смотрю, как решаю, что важно, и где заканчивается моя роль.</p>
+  </div>
 
-    <!-- The Map: Hardware/Firmware/Software -->
-    <section class="section" id="map">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <h2>Клиническая карта системы: тело, регуляция, когниция/смысл, среда</h2>
-            <div class="divider" aria-hidden="true"></div>
-          </div>
-          <p class="sub">Устойчивость определяется не одной функцией, а согласованной работой четырёх слоёв.</p>
-        </div>
+  <div class="prose">
+    <h2>С чего я начинаю</h2>
+    <p>С того, что уже есть: ваша история, ваши записи, лекарства и добавки, которые вы принимаете, то, что вы уже пробовали. Новые анализы появляются позже, и только если результат может изменить наши действия.</p>
 
-        <div class="auto">
-          <article class="card">
-            <h3>Тело ("железо") — производство и доступность энергии</h3>
-            <ul class="check">
-              <li>клеточная энергетика (митохондрии, кислород, топливо).</li>
-              <li>сон и восстановление.</li>
-              <li>свет, движение, питание, дефициты.</li>
-              <li>то, что определяет базовый "КПД" системы.</li>
-            </ul>
-          </article>
+    <h2>Принципы</h2>
+    <ul>
+      <li><strong>Одна система, а не отдельные жалобы.</strong> Сон, энергия, настроение, гормоны, отношения и смысл влияют друг на друга. Я ищу нить, с которой стоит начать, чтобы ослабли остальные.</li>
+      <li><strong>Меньше, но хорошо.</strong> План из трёх шагов, которые вы выполняете, лучше плана из тридцати, который вы бросили. Шаги я ранжирую по ожидаемой пользе и по тому, что реально в вашей жизни.</li>
+      <li><strong>Доказательства и их пределы.</strong> Я опираюсь на опубликованные исследования и говорю, насколько прочны данные за каждой рекомендацией, а где они слабые.</li>
+      <li><strong>Анализы — когда они меняют решение.</strong> Я стараюсь обходиться без длинных панелей и списков добавок, которые прибавляют расходы, а ясности не прибавляют.</li>
+      <li><strong>Лекарства остаются за назначившим врачом.</strong> Если вопрос касается рецепта, я помогаю задать его врачу, который этот рецепт выписал.</li>
+      <li><strong>Честно о границах.</strong> Если что-то выходит за пределы моей помощи, скажу об этом и подскажу, куда обратиться.</li>
+    </ul>
 
-          <article class="card">
-            <h3>Регуляция ("прошивка") — распределение энергии и контроль стресса</h3>
-            <ul class="check">
-              <li>вегетативная нервная система (газ/тормоз).</li>
-              <li>циркадные ритмы.</li>
-              <li>гормональные оси.</li>
-              <li>воспаление как "тихий пожар" и утечки ресурса.</li>
-              <li>микро-восстановления и переключение режимов.</li>
-            </ul>
-          </article>
+    <h2>Консультация по шагам</h2>
+    <h3>1. Понять вашу ситуацию</h3>
+    <p>Обычно до встречи вы заполняете анкету об истории, сне, настроении, стрессе и привычках и присылаете то, что уже есть: выписки, анализы, список всех лекарств и добавок. Затем мы всё это обсуждаем.</p>
+    <h3>2. Выбрать приоритеты</h3>
+    <p>Симптомы, диагнозы, результаты и историю я читаю как картину, а не как список цифр. Как врач я перебираю возможные объяснения, включая те, что требуют внимания врача, и говорю, какие выглядят вероятными, какие маловероятными, а для каких нужны осмотр или анализ. Стараюсь отделить хорошо установленное от предполагаемого и от неясного, и мы выбираем, чему стоит отдать силы в первую очередь, а что спокойно подождёт.</p>
+    <h3>3. Составить индивидуальный план</h3>
+    <p>Вы получаете письменный план с небольшим числом действий, расставленных по ожидаемой пользе. Он начинается с основ — сон, свет, движение, еда, стресс — и только потом доходит до добавок. В нём отмечено, что стоит обсудить с вашими врачами и какие признаки значат, что к врачу надо идти без промедления.</p>
+    <h3>4. Пересмотреть и скорректировать</h3>
+    <p>Смотрим, что произошло. Если повторный анализ нужен, заранее решаем, на какой вопрос он отвечает. План меняется вместе с вашей ситуацией.</p>
 
-          <article class="card">
-            <h3>Когниция/смысл ("ПО") — цели, правила и управление вниманием</h3>
-            <ul class="check">
-              <li>ментальный шум и когнитивная гигиена.</li>
-              <li>смысл и ясность "ради чего".</li>
-              <li>границы, отношения, решения в условиях нагрузки.</li>
-            </ul>
-          </article>
+    <h2>Как мы следим за динамикой</h2>
+    <p>Заранее договариваемся, за чем наблюдать: сон, энергия, настроение, конкретные симптомы и, если это разумно, повторные лабораторные показатели. Иногда я использую короткие опросники вроде PHQ-9 и GAD-7, чтобы видеть изменения во времени. Диагностическими инструментами они не являются.</p>
 
-          <article class="card">
-            <h3>Среда (оператор системы)</h3>
-            <ul class="check">
-              <li>график, информационный шум, социальное поле.</li>
-              <li>пространство, в котором система либо стабилизируется, либо перегружается.</li>
-            </ul>
-          </article>
-        </div>
+    <h2>Где заканчивается моя роль</h2>
+    <p>Это консультационная поддержка, а не медицинская услуга. Она идёт рядом с вашей медицинской помощью. Консультация может дать врачебное прочтение вашей истории, диагнозов и результатов и план дальнейших шагов. Она не заменяет официальную диагностику, лечение, назначение лекарств и экстренную помощь, которые оказывают ваши лечащие врачи. Это не психотерапия. Назначенное другими врачами лечение я не меняю: вопросы о лекарствах адресованы врачу, который их назначил, и я помогу сформулировать их чётко.</p>
+    <p>Бывают ситуации, где сначала нужна другая помощь: новые или сильные симптомы, мысли о самоповреждении, острый кризис. Я скажу об этом прямо и могу попросить вас обратиться за помощью, прежде чем мы продолжим. В экстренной ситуации звоните в местные службы экстренной помощи (112 в ЕС, 911 в США).</p>
+  </div>
 
-        <div class="card" style="margin-top:16px; background: linear-gradient(135deg, rgba(134,166,139,.08), transparent 60%); border-color: color-mix(in oklab, var(--accent), transparent 50%);">
-          <p style="margin:0"><strong>Энергия — это поток:</strong> производство → распределение → использование → восстановление.<br/>
-          Мы двигаемся снизу вверх: сначала убираем утечки и стабилизируем базу, затем повышаем гибкость и возвращаем динамическое равновесие.</p>
-        </div>
-      </div>
-    </section>
+  <div class="card" style="margin:36px 0 70px; display:flex; flex-wrap:wrap; gap:16px; align-items:center; justify-content:space-between">
+    <div><h3 style="margin-bottom:.2em">Подойдёт ли это вам?</h3><p class="muted" style="margin:0">Опишите ситуацию коротко, и я отвечу лично.</p></div>
+    <a class="btn btn-primary" href="/ru/#contact">Запросить консультацию</a>
+  </div>
+</div>
+</main>
 
-    <div class="container" style="padding-bottom:24px">
-      <div class="card" style="background: linear-gradient(135deg, rgba(134,166,139,.08), transparent 60%); border-color: color-mix(in oklab, var(--accent), transparent 50%);">
-        <p style="margin:0">От работы на пределе к движению в ритме — устойчивое тело, ясный ум и работа, которая движется вперёд, не отнимая сон, здоровье и отношения, под руководством врачебно-интегративной системы, уважающей человеческие пределы, восстанавливающей ритм и переводящей науку в гуманную практику.</p>
-      </div>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://dynamicequilibrium.org/#org",
+      "name": "Dynamic Equilibrium",
+      "url": "https://dynamicequilibrium.org/",
+      "logo": "https://dynamicequilibrium.org/images/logo-black.svg",
+      "founder": {
+        "@id": "https://dynamicequilibrium.org/#person"
+      },
+      "sameAs": [
+        "https://www.instagram.com/dr_alexander_lebedev",
+        "https://www.linkedin.com/in/alexandervlebedev/"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://dynamicequilibrium.org/#person",
+      "name": "Alexander Lebedev",
+      "honorificSuffix": "MD, PhD",
+      "jobTitle": "Врач, нейробиолог",
+      "url": "https://dynamicequilibrium.org/",
+      "image": "https://dynamicequilibrium.org/images/Alexander.jpg",
+      "worksFor": {
+        "@id": "https://dynamicequilibrium.org/#org"
+      },
+      "sameAs": [
+        "https://scholar.google.com/citations?user=Byz4FqoAAAAJ"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "url": "https://dynamicequilibrium.org/ru/methodology/",
+      "name": "Как я работаю — Динамическое равновесие",
+      "description": "Подход, на котором держатся консультации: на что я смотрю, как выбираются приоритеты, как составляется и пересматривается план и где заканчивается моя роль.",
+      "inLanguage": "ru",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Dynamic Equilibrium",
+        "url": "https://dynamicequilibrium.org/"
+      },
+      "about": {
+        "@id": "https://dynamicequilibrium.org/#person"
+      }
+    }
+  ]
+}
+</script>
+<footer class="site">
+  <div class="container foot">
+    <div>© <span id="y">2026</span> Dynamic Equilibrium · Alexander Lebedev, MD, PhD</div>
+    <div class="links">
+      <a href="/ru/methodology/">Как я работаю</a>
+      <a href="/ru/privacy.html">Конфиденциальность</a>
+      <a href="/ru/terms.html">Условия</a>
+      <a href="https://www.instagram.com/dr_alexander_lebedev" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.linkedin.com/in/alexandervlebedev/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
-
-    <!-- Principles -->
-    <section class="section" id="principles">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <h2>Принципы</h2>
-            <div class="divider" aria-hidden="true"></div>
-          </div>
-          <p class="sub">Оценка → Регуляция → Переориентация → Интеграция</p>
-        </div>
-
-        <div class="grid-2">
-          <article class="card">
-            <ul class="check">
-              <li><strong>Регуляция до решения.</strong> Сначала успокойте систему — затем решайте.</li>
-              <li><strong>Меньше силы, больше выравнивания.</strong> Выравнивание превосходит усиленный контроль.</li>
-              <li><strong>Организм ведёт.</strong> Сигналы тела — это первичные данные, а не шум.</li>
-              <li><strong>Ритм вместо всплеска.</strong> Малые ежедневные практики &gt; эпизодические крайности.</li>
-            </ul>
-          </article>
-          <article class="card">
-            <ul class="check">
-              <li><strong>Смысл организует.</strong> Цель проясняет выборы и снижает шум.</li>
-              <li><strong>Среда формирует поведение.</strong> Проектируйте окружение, которое стабилизирует вас.</li>
-              <li><strong>Честные пределы.</strong> Ясная этика, никаких чудесных обещаний, своевременные направления к специалистам.</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Model / Map with visual schema (inline SVG) -->
-    <section class="section" id="model">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <h2>Модель / Карта</h2>
-            <div class="divider" aria-hidden="true"></div>
-          </div>
-          <p class="sub">Четыре слоя живой системы; для каждого определяем цель → инструменты → измеримые признаки прогресса.</p>
-        </div>
-
-        <figure class="figure">
-          <img src="/og/dynamic_equilibrium_scheme_ru.png"
-               alt="Динамическое равновесие — четырёхслойная модель: организм, ритм, смыслы, среда с центральным принципом О↔Р↔Я"
-               style="width:100%; height:auto; display:block; border-radius:12px;"
-               loading="lazy"/>
-          <figcaption>Четыре концентрических слоя с принципом интеграции в центре.</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <!-- Process with flow illustration -->
-    <section class="section" id="process">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <h2>Как это работает на практике</h2>
-            <div class="divider" aria-hidden="true"></div>
-          </div>
-          <p class="sub">Четырёхэтапный протокол (6–12 недель за цикл). Формат: еженедельные/раз в две недели сессии + ежедневные микропрактики (10–20 мин).</p>
-        </div>
-
-        <div class="grid-2">
-          <article class="card">
-            <h3>1) Assess (диагностика)</h3>
-            <p>360° карта по уровням H/F/S: симптомы, нагрузка, сон, триггеры, привычки, контекст. При необходимости — целевые анализы и интеграция данных носимых устройств.</p>
-          </article>
-
-          <article class="card">
-            <h3>2) Regulate (стабилизация базы)</h3>
-            <p>Сон, свет, дыхание, движение, питание — минимум, который даёт непропорциональный эффект, потому что повышает КПД системы и снижает утечки.</p>
-          </article>
-
-          <article class="card">
-            <h3>3) Reorient (калибровка смысла и правил)</h3>
-            <p>Уточняем приоритеты, уменьшаем когнитивный шум, выстраиваем границы и ритм. Чтобы мозг перестал жить в постоянном "боевом режиме" даже на диване.</p>
-          </article>
-
-          <article class="card">
-            <h3>4) Integrate (Operating Code + внедрение)</h3>
-            <p>Вы получаете Operating Code v1.5 — личный "код эксплуатации": протокол, метрики и правила, которые держат вас в устойчивости. Дальше — мониторинг и калибровка под реальную жизнь.</p>
-          </article>
-        </div>
-
-        <figure class="figure" style="margin-top:24px">
-          <svg viewBox="0 0 960 140" role="img" aria-label="Поток четырёхэтапного протокола" style="width:100%; height:auto; display:block;">
-            <defs>
-              <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-                <polygon points="0 0, 10 3.5, 0 7" fill="currentColor" fill-opacity=".5"/>
-              </marker>
-            </defs>
-            
-            <!-- Step boxes -->
-            <g font-family="Inter" font-size="12" fill="currentColor">
-              <rect x="20"  y="35" width="210" height="70" rx="14" fill="var(--layer)" stroke="currentColor" stroke-opacity=".18" stroke-width="1.5"/>
-              <rect x="250" y="35" width="210" height="70" rx="14" fill="var(--layer)" stroke="currentColor" stroke-opacity=".18" stroke-width="1.5"/>
-              <rect x="480" y="35" width="210" height="70" rx="14" fill="var(--layer)" stroke="currentColor" stroke-opacity=".18" stroke-width="1.5"/>
-              <rect x="710" y="35" width="210" height="70" rx="14" fill="var(--layer)" stroke="currentColor" stroke-opacity=".18" stroke-width="1.5"/>
-
-              <!-- Text content - more compact -->
-              <text x="40"  y="60"><tspan font-weight="700" font-size="13">1. Оценка</tspan></text>
-              <text x="40"  y="78" fill-opacity=".75">Карта симптомов, нагрузок,</text>
-              <text x="40"  y="93" fill-opacity=".75">анализов, сна, триггеров</text>
-
-              <text x="270" y="60"><tspan font-weight="700" font-size="13">2. Регуляция</tspan></text>
-              <text x="270" y="78" fill-opacity=".75">Восстановление базовой</text>
-              <text x="270" y="93" fill-opacity=".75">линии: сон, дыхание, свет</text>
-
-              <text x="500" y="60"><tspan font-weight="700" font-size="13">3. Переориентация</tspan></text>
-              <text x="500" y="78" fill-opacity=".75">Прояснение смыслов и</text>
-              <text x="500" y="93" fill-opacity=".75">приоритетов; дневной ритм</text>
-
-              <text x="730" y="60"><tspan font-weight="700" font-size="13">4. Интеграция</tspan></text>
-              <text x="730" y="78" fill-opacity=".75">Установка практик,</text>
-              <text x="730" y="93" fill-opacity=".75">коррекция контекста</text>
-            </g>
-            
-            <!-- Arrows -->
-            <g stroke="currentColor" stroke-opacity=".35" stroke-width="2" fill="none">
-              <line x1="230" y1="70" x2="250" y2="70" marker-end="url(#arrow)"/>
-              <line x1="460" y1="70" x2="480" y2="70" marker-end="url(#arrow)"/>
-              <line x1="690" y1="70" x2="710" y2="70" marker-end="url(#arrow)"/>
-            </g>
-          </svg>
-          <figcaption>Четырёхэтапный протокол с повтором в циклах 6–12 недель.</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <!-- Measurement & feedback loop -->
-    <section class="section" id="measurement">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <h2>Измерения и контур обратной связи</h2>
-            <div class="divider" aria-hidden="true"></div>
-          </div>
-          <p class="sub">Мы не "верим", мы проверяем. Прогресс — это не сдвиг настроения на один день, а кривая восстановления: насколько быстро вы возвращаетесь в рабочую зону.</p>
-        </div>
-
-        <div class="card">
-          <h3>Типовые метрики</h3>
-          <ul class="check">
-            <li>сон (качество/время/динамика).</li>
-            <li>HRV (если используете).</li>
-            <li>субъективные шкалы спокойствия/энергии/фокуса.</li>
-            <li>"focused hours" и цена переключений.</li>
-            <li>практики и их эффект (что дало +1 к энергии).</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Scientific Foundation -->
-    <section class="section" id="science">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <h2>Научная основа</h2>
-            <div class="divider" aria-hidden="true"></div>
-          </div>
-          <p class="sub">Нейронауки, физиология, теория систем: аллостаз, гормезис, адаптивные циклы и гибкость, индексированная по ВСР.</p>
-        </div>
-
-        <div class="auto">
-          <article class="card">
-            <h3>Аллостаз и нагрузка</h3>
-            <p>Устойчивость зависит от гибкой адаптации к стрессорам, а не подавления. Хроническая активация → метаболический, сердечно-сосудистый и когнитивный износ; тренировка снижает нагрузку.</p>
-          </article>
-          <article class="card">
-            <h3>Гормезис</h3>
-            <p>Малые, хорошо дозированные стрессоры укрепляют регуляцию; хроническая перегрузка её разрушает. Мы держим клиентов в адаптивной зоне.</p>
-          </article>
-          <article class="card">
-            <h3>Системы и разнообразие</h3>
-            <p>Адаптивные циклы Холлинга и необходимое разнообразие Эшби: множественные пути регуляции (физический, эмоциональный, когнитивный, социальный) предотвращают коллапс.</p>
-          </article>
-          <article class="card">
-            <h3>Измерение</h3>
-            <p>Валидированные маркеры: ВСР, сон/энергия/фокус и кривые восстановления (скорость возврата к базовой линии) отслеживают прогресс.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- 7 Modules -->
-    <section class="section" id="modules">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <h2>Архитектура вмешательств (7 модулей)</h2>
-            <div class="divider" aria-hidden="true"></div>
-          </div>
-          <p class="sub">Модули выбираются по показаниям и последовательности, а не запускаются одновременно.</p>
-        </div>
-        <div class="auto">
-          <article class="card"><h3>Сон</h3><p>Восстановление ночи как базового регулятора.</p></article>
-          <article class="card"><h3>Свет и движение</h3><p>Настройка циркадного тайминга и дневной активации.</p></article>
-          <article class="card"><h3>Питание</h3><p>Стабилизация энергии без выраженных колебаний.</p></article>
-          <article class="card"><h3>Добавки (по показаниям)</h3><p>Только при клинической целесообразности и с контролем безопасности.</p></article>
-          <article class="card"><h3>Когнитивная гигиена</h3><p>Снижение стоимости переключений и возврат фокуса.</p></article>
-          <article class="card"><h3>Отношения и границы</h3><p>Ко-регуляция и микрограницы под нагрузкой.</p></article>
-          <article class="card"><h3>Глубокий отдых</h3><p>Надёжное восстановление, не сводимое только к длительности сна.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Timeline of change -->
-    <section class="section" id="timeline">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <h2>Типичный график изменений</h2>
-            <div class="divider" aria-hidden="true"></div>
-          </div>
-          <p class="sub">Вехи отражают, когда большинство клиентов начинают замечать измеримые улучшения.</p>
-        </div>
-
-        <figure class="figure">
-          <svg viewBox="0 0 1000 200" role="img" aria-label="График изменений" style="width:100%; height:auto; display:block;">
-            <defs>
-              <linearGradient id="grad" x1="0" x2="1">
-                <stop offset="0" stop-color="currentColor" stop-opacity=".12"/>
-                <stop offset="1" stop-color="currentColor" stop-opacity=".04"/>
-              </linearGradient>
-            </defs>
-            
-            <!-- Timeline bar -->
-            <g fill="none" stroke="currentColor" stroke-opacity=".22">
-              <rect x="40" y="60" width="920" height="50" rx="12" fill="url(#grad)" stroke-width="1.5"/>
-              <line x1="40" y1="85" x2="960" y2="85" stroke-width="2"/>
-            </g>
-            
-            <!-- Milestone dots -->
-            <g>
-              <circle cx="180" cy="85" r="9" fill="currentColor" fill-opacity=".85" stroke="currentColor" stroke-width="2"/>
-              <circle cx="500" cy="85" r="9" fill="currentColor" fill-opacity=".85" stroke="currentColor" stroke-width="2"/>
-              <circle cx="820" cy="85" r="9" fill="currentColor" fill-opacity=".85" stroke="currentColor" stroke-width="2"/>
-            </g>
-            
-            <!-- Labels -->
-            <g font-family="Inter" font-size="13" fill="currentColor">
-              <!-- Week 1 -->
-              <text x="180" y="40" text-anchor="middle" font-weight="700" font-size="14">Неделя 1</text>
-              <text x="180" y="135" text-anchor="middle" font-size="12" fill-opacity=".8">Лучшее засыпание, меньше</text>
-              <text x="180" y="151" text-anchor="middle" font-size="12" fill-opacity=".8">мент. спиралей, 1–2 практики</text>
-
-              <!-- Month 1 -->
-              <text x="500" y="40" text-anchor="middle" font-weight="700" font-size="14">Месяц 1</text>
-              <text x="500" y="135" text-anchor="middle" font-size="12" fill-opacity=".8">Стабильнее энергия, спокойнее</text>
-              <text x="500" y="151" text-anchor="middle" font-size="12" fill-opacity=".8">тело, яснее приоритеты</text>
-
-              <!-- Month 3 -->
-              <text x="820" y="40" text-anchor="middle" font-weight="700" font-size="14">Месяц 3</text>
-              <text x="820" y="135" text-anchor="middle" font-size="12" fill-opacity=".8">Устойчивый ритм; прочная</text>
-              <text x="820" y="151" text-anchor="middle" font-size="12" fill-opacity=".8">ясность; решения без паники</text>
-            </g>
-          </svg>
-          <figcaption>Отслеживание: еженедельные шкалы спокойствия/энергии/ясности, метрики сна, серии практик, часы сфокусированной работы.</figcaption>
-        </figure>
-
-        <div class="timeline" aria-label="Список вех">
-          <div class="milestone"><div><span class="dot"></span><strong>Неделя 1</strong></div><div>Лучшее засыпание, меньше мыслительных спиралей, первое облегчение; установлены 1–2 микропрактики.</div></div>
-          <div class="milestone"><div><span class="dot"></span><strong>Месяц 1</strong></div><div>Стабильнее энергия; спокойнее тело; яснее приоритеты; снижена реактивность в отношениях.</div></div>
-          <div class="milestone"><div><span class="dot"></span><strong>Месяц 3</strong></div><div>Устойчивый ритм; прочная ясность под давлением; решения без паники/перемалывания; измеримый прогресс по сну, ВСР и самооценке спокойствия/фокуса.</div></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Boundaries & Ethics -->
-    <section class="section" id="ethics">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <h2>Границы и этика</h2>
-            <div class="divider" aria-hidden="true"></div>
-          </div>
-          <p class="sub">Безопасность на первом месте, доказательства над идеологией, прозрачность ограничений; направление к специалистам при необходимости.</p>
-        </div>
-        <div class="card">
-          <p><strong>Примечание:</strong> Динамическое равновесие не является заменой медицинскому лечению при тяжёлых состояниях. Клиенты с медицинскими или психиатрическими потребностями направляются к соответствующей помощи.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="section" id="cta">
-      <div class="container">
-        <div class="card" style="display:flex; flex-wrap:wrap; align-items:center; gap:12px; justify-content:space-between">
-          <div>
-            <h3 style="margin:0 0 6px">Готовы оценить, подходит ли вам этот метод?</h3>
-            <p class="sub" style="margin:0">Начните с оценки — один разговор определит вашу базовую линию, паттерны стресса и следующие шаги.</p>
-          </div>
-          <a class="btn btn-primary" href="/ru/#contact">Запросить конфиденциальную консультацию</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="container" style="padding:36px 0; border-top:1px solid var(--line); color:var(--muted); font-size:14px;">
-    © Dynamic Equilibrium — Научно обоснованная методология адаптивной устойчивости.
-  </footer>
-
-  <script>
-    // Simple theme toggle matching main site
-    (function(){
-      const root = document.body;
-      const btns = [document.getElementById('themeToggle')].filter(Boolean);
-      const preferred = localStorage.getItem('de_theme') || 'light';
-      root.setAttribute('data-theme', preferred);
-      btns.forEach(b => b.addEventListener('click', () => {
-        const next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-        root.setAttribute('data-theme', next);
-        localStorage.setItem('de_theme', next);
-      }));
-    })();
-  </script>
+    <p class="legal">«Динамическое равновесие» — консультационная и информационная поддержка врача. Это не медицинская услуга: она не заменяет официальную диагностику, лечение и экстренную помощь, которые оказывают ваши лечащие врачи. В экстренной ситуации обращайтесь в местные службы экстренной помощи.</p>
+  </div>
+</footer>
 </body>
 </html>

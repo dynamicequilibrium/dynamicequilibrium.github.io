@@ -17,11 +17,11 @@
   <meta name="twitter:card" content="/og/dynamic-equilibrium.jpg"/>
   
   <!-- Favicons / PWA -->
-  <link rel="icon" href="/favicon/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-  <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
-  <link rel="manifest" href="/favicon/site.webmanifest">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <meta name="msapplication-TileColor" content="#F5F4F0">
   
   <!-- Fonts -->
@@ -553,16 +553,16 @@
 <body class="page" data-theme="light">
 <header class="nav" role="navigation" aria-label="Главная навигация">
   <div class="nav-inner container">
-    <a class="brand" href="/" aria-label="Dynamic Equilibrium">
+    <a class="brand" href="/ru/" aria-label="Dynamic Equilibrium">
       <div class="logo" aria-hidden="true"></div>
       <span>Dynamic Equilibrium</span>
     </a>
     
     <!-- Desktop links -->
     <nav class="nav-links" aria-label="Разделы">
-    <a href="/index.html">Главная</a>
-    <a href="/index.html#about">Об авторе</a>
-    <a href="/index.html#contact">Контакты</a>
+    <a href="/ru/">Главная</a>
+    <a href="/ru/#about">Обо мне</a>
+    <a href="/ru/#contact">Запросить консультацию</a>
     </nav>
     
     <!-- Controls on the right -->
@@ -598,6 +598,7 @@
         Это самоадминистрируемый опросник, используемый для скрининга тревожных расстройств и измерения их тяжести. 
         Пожалуйста, ответьте на каждый вопрос, основываясь на том, как вы себя чувствовали за последние две недели.
       </p>
+      <p class="note" style="margin-top:12px">При отправке ваши ответы — и адрес почты, если вы его укажете, — передаются этой практике через Google Forms. Адрес почты можно не указывать. Это скрининговый опросник, а не диагноз и не медицинская рекомендация.</p>
     </div>
   </div>
 </section>
@@ -626,7 +627,7 @@
         <div class="question-title">Email (необязательно)</div>
         <input type="email" name="entry.835008330" placeholder="Ваш email (необязательно)"
                style="width: 100%; padding: 12px; margin-bottom: 16px;">
-        <div class="note">Предоставление вашего email позволит нам отправить вам результаты.</div>
+        <div class="note">Необязательно. Если вы укажете адрес почты, он будет отправлен вместе с ответами.</div>
       </div>
 
       <!-- 1 -->
@@ -832,7 +833,7 @@
         if (total <= 4)      { sev = 'Минимальная тревожность';          txt = 'Ваши ответы указывают на минимальные симптомы тревожности.';          cls = 'result-minimal'; }
         else if (total <= 9) { sev = 'Легкая тревожность';             txt = 'Ваши ответы указывают на легкие симптомы тревожности.';            cls = 'result-mild'; }
         else if (total <=14) { sev = 'Умеренная тревожность';         txt = 'Ваши ответы указывают на умеренные симптомы тревожности.';        cls = 'result-moderate'; }
-        else                 { sev = 'Тяжелая тревожность';           txt = 'Ваши ответы указывают на тяжелые симптомы тревожности.';          cls = 'result-severe'; }
+        else                 { sev = 'Тяжелая тревожность';           txt = 'Ваши ответы указывают на умеренно тяжёлые симптомы тревожности.';          cls = 'result-severe'; }
 
         sevEl.innerHTML = '<h4>' + sev + '</h4>';
         interpEl.innerHTML = '<p>' + txt + '</p>';
@@ -992,7 +993,7 @@
     if (total <= 4)      { sev = 'Минимальная тревожность';          txt = 'Ваши ответы указывают на минимальные симптомы тревожности.';          cls = 'result-minimal'; }
     else if (total <= 9) { sev = 'Легкая тревожность';             txt = 'Ваши ответы указывают на легкие симптомы тревожности.';            cls = 'result-mild'; }
     else if (total <=14) { sev = 'Умеренная тревожность';         txt = 'Ваши ответы указывают на умеренные симптомы тревожности.';        cls = 'result-moderate'; }
-    else                 { sev = 'Тяжелая тревожность';           txt = 'Ваши ответы указывают на тяжелые симптомы тревожности.';          cls = 'result-severe'; }
+    else                 { sev = 'Тяжелая тревожность';           txt = 'Ваши ответы указывают на умеренно тяжёлые симптомы тревожности.';          cls = 'result-severe'; }
     sevEl.innerHTML = '<h4>' + sev + '</h4>';
     interpEl.innerHTML = '<p>' + txt + '</p>';
     resultEl.className = 'result show ' + cls;
