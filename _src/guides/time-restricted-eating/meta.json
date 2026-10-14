@@ -1,0 +1,30 @@
+{
+  "slug": "time-restricted-eating",
+  "category": "nutrition",
+  "grade": "B",
+  "order": 30,
+  "published": "2026-10-14",
+  "updated": "2026-10-14",
+  "source_note": "10-work/practice/evidence-base/nutrition/time-restricted-eating.md",
+  "source_reviewed": "2026-07-05",
+  "related": ["resistance-training", "sleep-regularity"],
+  "figtext": {
+    "h0": {"en": "00", "ru": "00"}, "h6": {"en": "06", "ru": "06"}, "h12": {"en": "12", "ru": "12"}, "h18": {"en": "18", "ru": "18"},
+    "eat": {"en": "Eating window (10 h)", "ru": "Окно питания (10 ч)"},
+    "fast": {"en": "Water, plain tea, black coffee", "ru": "Вода, чай без добавок, чёрный кофе"},
+    "last": {"en": "Last meal at least 3 h before bed", "ru": "Последний приём пищи минимум за 3 ч до сна"},
+    "example": {"en": "Example: first meal 08:00, last meal 18:00", "ru": "Пример: первый приём 08:00, последний 18:00"}
+  },
+  "sources": [
+    {"id": "semnani2025", "type": "meta", "cite": "Semnani-Azad Z, et al. Intermittent fasting strategies and their effects on body weight and other cardiometabolic risk factors: systematic review and network meta-analysis of randomised clinical trials. BMJ 2025.", "pmid": "40533200", "doi": "10.1136/bmj-2024-082007",
+     "note_en": "99 trials, 6,582 adults: time-restricted eating was no better than ordinary calorie reduction, and effects were small and faded after about six months.", "note_ru": "99 исследований, 6582 взрослых: питание в ограниченном окне не лучше обычного снижения калорийности, эффекты небольшие и слабели примерно через полгода."},
+    {"id": "lowe2020", "type": "rct", "cite": "Lowe DA, et al. Effects of time-restricted eating on weight loss and other metabolic parameters in women and men with overweight and obesity: the TREAT randomized clinical trial. JAMA Intern Med 2020.", "pmid": "32986097", "doi": "10.1001/jamainternmed.2020.4153",
+     "note_en": "A 12-week 16:8 trial with no other changes: no advantage over three regular meals, and a drop in lean mass.", "note_ru": "12 недель 16:8 без других изменений: преимущества перед тремя обычными приёмами пищи нет, а мышечная масса снизилась."},
+    {"id": "fernandes2026", "type": "meta", "cite": "Fernandes-Alves D, et al. Systematic review and meta-analysis of randomized clinical trials comparing time-restricted eating with and without caloric restriction for weight loss. Nutr Rev 2026.", "pmid": "40298934", "doi": "10.1093/nutrit/nuaf053",
+     "note_en": "Most of the benefit comes from eating less, not from the clock.", "note_ru": "Основная польза идёт от того, что человек ест меньше, а не от часов."},
+    {"id": "manoogian2024", "type": "rct", "cite": "Manoogian ENC, et al. Time-restricted eating in adults with metabolic syndrome: a randomized controlled trial. Ann Intern Med 2024.", "pmid": "39348690", "doi": "10.7326/M24-0859",
+     "note_en": "108 adults with metabolic syndrome on standard care: a modest improvement in HbA1c, without loss of lean mass.", "note_ru": "108 взрослых с метаболическим синдромом на стандартной терапии: HbA1c улучшился умеренно, мышечная масса не снизилась."},
+    {"id": "panagiotou2024", "type": "meta", "cite": "Panagiotou K, et al. The effect of time-restricted eating on cardiometabolic risk factors: a systematic review and meta-analysis. Nutrients 2024.", "pmid": "39519533", "doi": "10.3390/nu16213700",
+     "note_en": "26 trials: modest gains in weight, waist, fasting insulin and cholesterol.", "note_ru": "26 исследований: умеренное улучшение веса, окружности талии, инсулина натощак и холестерина."}
+  ]
+}

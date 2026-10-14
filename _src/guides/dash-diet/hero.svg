@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 260" preserveAspectRatio="xMidYMid slice">
+<rect class="p" width="1120" height="260"/>
+<circle class="a" cx="860" cy="60" r="190" opacity=".12"/>
+<circle class="b" cx="140" cy="260" r="150" opacity=".16"/>
+<g opacity=".95">
+<circle class="a" cx="300" cy="150" r="46"/><circle class="b" cx="372" cy="170" r="38"/><circle class="a" cx="436" cy="140" r="30" opacity=".6"/>
+<circle class="b" cx="500" cy="168" r="44" opacity=".8"/><circle class="a" cx="574" cy="146" r="34"/><circle class="b" cx="636" cy="172" r="26"/>
+</g>
+<path class="sa" d="M40 120 H250 l22 -44 l30 92 l26 -70 l16 22 H1080" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" opacity=".85"/>
+</svg>

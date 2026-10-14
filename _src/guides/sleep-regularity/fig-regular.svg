@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400">
+<g font-size="15.2" class="m">
+<text x="150" y="22" text-anchor="middle">{{t:t22}}</text><text x="310" y="22" text-anchor="middle">{{t:t02}}</text><text x="470" y="22" text-anchor="middle">{{t:t06}}</text><text x="600" y="22" text-anchor="middle">{{t:t10}}</text>
+</g>
+<g class="sl" stroke-dasharray="3 5"><path d="M150 30 V372"/><path d="M310 30 V372"/><path d="M470 30 V372"/><path d="M600 30 V372"/></g>
+<text class="t" x="20" y="52" font-size="17.1" font-weight="700">{{t:reg}}</text>
+<g class="a">
+<rect x="150" y="62" width="320" height="14" rx="7"/><rect x="150" y="82" width="320" height="14" rx="7"/><rect x="150" y="102" width="320" height="14" rx="7"/><rect x="150" y="122" width="320" height="14" rx="7"/>
+<rect x="150" y="142" width="320" height="14" rx="7"/><rect x="150" y="162" width="320" height="14" rx="7" opacity=".85"/><rect x="150" y="182" width="320" height="14" rx="7" opacity=".85"/>
+</g>
+<text class="t" x="20" y="226" font-size="17.1" font-weight="700">{{t:irr}}</text>
+<g class="b">
+<rect x="130" y="236" width="300" height="14" rx="7"/><rect x="190" y="256" width="320" height="14" rx="7"/><rect x="120" y="276" width="270" height="14" rx="7"/><rect x="210" y="296" width="330" height="14" rx="7"/>
+<rect x="165" y="316" width="260" height="14" rx="7"/><rect x="230" y="336" width="360" height="14" rx="7"/><rect x="110" y="356" width="280" height="14" rx="7"/>
+</g>
+<g font-size="14.6" class="m"><text x="20" y="74">{{t:mon}}</text><text x="20" y="94">{{t:tue}}</text><text x="20" y="114">{{t:wed}}</text><text x="20" y="134">{{t:thu}}</text><text x="20" y="154">{{t:fri}}</text><text x="20" y="174">{{t:sat}}</text><text x="20" y="194">{{t:sun}}</text></g>
+<text class="m" x="620" y="394" font-size="14.6" text-anchor="end">{{t:schem}}</text>
+</svg>

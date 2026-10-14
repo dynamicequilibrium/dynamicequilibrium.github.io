@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 260" preserveAspectRatio="xMidYMid slice">
+<rect class="p" width="1120" height="260"/>
+<circle class="b" cx="250" cy="120" r="56"/>
+<circle class="p" cx="276" cy="104" r="50"/>
+<g class="a"><circle cx="420" cy="60" r="4"/><circle cx="480" cy="110" r="3"/><circle cx="560" cy="48" r="5" opacity=".7"/><circle cx="640" cy="92" r="3"/><circle cx="760" cy="56" r="4"/><circle cx="860" cy="100" r="3"/><circle cx="960" cy="44" r="5" opacity=".7"/></g>
+<g class="a" opacity=".8"><rect x="420" y="170" width="520" height="12" rx="6"/><rect x="420" y="196" width="520" height="12" rx="6" opacity=".6"/><rect x="420" y="222" width="520" height="12" rx="6" opacity=".35"/></g>
+</svg>

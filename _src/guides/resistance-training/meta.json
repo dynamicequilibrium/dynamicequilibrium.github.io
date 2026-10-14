@@ -1,0 +1,24 @@
+{
+  "slug": "resistance-training",
+  "category": "movement",
+  "grade": "A",
+  "order": 20,
+  "published": "2026-10-14",
+  "updated": "2026-10-14",
+  "source_note": "10-work/practice/evidence-base/lifestyle/resistance-training.md",
+  "source_reviewed": "2026-07-05",
+  "related": ["daily-steps", "time-restricted-eating"],
+  "figtext": {
+    "y": {"en": "Lower risk", "ru": "Ниже риск"},
+    "x": {"en": "Minutes of strength training per week", "ru": "Минут силовых в неделю"},
+    "m0": {"en": "0", "ru": "0"}, "m30": {"en": "30", "ru": "30"}, "m60": {"en": "60", "ru": "60"}, "m120": {"en": "120", "ru": "120"},
+    "peak": {"en": "Most of the benefit at 30–60 min", "ru": "Основная польза при 30–60 минутах"},
+    "schem": {"en": "Schematic of the pattern in the studies, not measured values", "ru": "Схема закономерности из исследований, не измеренные значения"}
+  },
+  "sources": [
+    {"id": "momma2022", "type": "meta", "cite": "Momma H, et al. Muscle-strengthening activities are associated with lower risk and mortality in major non-communicable diseases: a systematic review and meta-analysis of cohort studies. Br J Sports Med 2022.", "pmid": "35228201", "doi": "10.1136/bjsports-2021-105061",
+     "note_en": "About 10–17% lower risk of death, heart disease, cancer and diabetes; the benefit peaked at 30–60 minutes a week.", "note_ru": "Риск смерти, болезней сердца, рака и диабета ниже примерно на 10–17%; максимум пользы приходился на 30–60 минут в неделю."},
+    {"id": "shailendra2022", "type": "meta", "cite": "Shailendra P, et al. Resistance training and mortality risk: a systematic review and meta-analysis. Am J Prev Med 2022.", "pmid": "35599175", "doi": "10.1016/j.amepre.2022.03.020",
+     "note_en": "About 15% lower risk of death; combined with aerobic activity the reduction was largest.", "note_ru": "Риск смерти ниже примерно на 15%; в сочетании с аэробной нагрузкой снижение было наибольшим."}
+  ]
+}

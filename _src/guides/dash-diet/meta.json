@@ -1,0 +1,34 @@
+{
+  "slug": "dash-diet",
+  "category": "nutrition",
+  "grade": "A",
+  "order": 10,
+  "published": "2026-10-14",
+  "updated": "2026-10-14",
+  "source_note": "10-work/practice/evidence-base/nutrition/dash-diet.md",
+  "source_reviewed": "2026-07-05",
+  "related": ["mediterranean-diet", "daily-steps"],
+  "figtext": {
+    "axis": {"en": "Fall in systolic blood pressure, mmHg", "ru": "Снижение систолического давления, мм рт. ст."},
+    "r1": {"en": "DASH + low sodium, with hypertension (feeding trial)", "ru": "DASH + мало соли, при гипертонии (исследование с выдачей еды)"},
+    "r2": {"en": "DASH + low sodium, normal pressure (feeding trial)", "ru": "DASH + мало соли, давление в норме (исследование с выдачей еды)"},
+    "r3": {"en": "DASH alone, pooled trials, 20 RCTs", "ru": "Только DASH, объединённые данные 20 РКИ"},
+    "r4": {"en": "DASH alone, pooled trials, 30 RCTs", "ru": "Только DASH, объединённые данные 30 РКИ"}
+  },
+  "sources": [
+    {"id": "appel1997", "type": "rct", "cite": "Appel LJ, et al. A clinical trial of the effects of dietary patterns on blood pressure (DASH). N Engl J Med 1997.", "pmid": "9099655", "doi": "10.1056/NEJM199704173361601",
+     "note_en": "The original feeding trial (459 adults): the DASH pattern lowered blood pressure within weeks.", "note_ru": "Исходное исследование с выдачей еды (459 взрослых): питание DASH снизило давление за несколько недель."},
+    {"id": "sacks2001", "type": "rct", "cite": "Sacks FM, et al. Effects on blood pressure of reduced dietary sodium and the DASH diet. N Engl J Med 2001.", "pmid": "11136953", "doi": "10.1056/NEJM200101043440101",
+     "note_en": "DASH plus the lowest sodium level lowered systolic pressure by up to about 11.5 mmHg in people with hypertension.", "note_ru": "DASH вместе с самым низким уровнем соли снижал систолическое давление при гипертонии примерно на 11,5 мм рт. ст."},
+    {"id": "chiavaroli2019", "type": "umbrella", "cite": "Chiavaroli L, et al. DASH dietary pattern and cardiometabolic outcomes: an umbrella review of systematic reviews and meta-analyses. Nutrients 2019.", "pmid": "30764511", "doi": "10.3390/nu11020338",
+     "note_en": "Summary of earlier reviews: lower blood pressure and, in cohorts, about 20% fewer cardiovascular events.", "note_ru": "Сводка прежних обзоров: давление ниже, а в когортах примерно на 20% меньше сердечно-сосудистых событий."},
+    {"id": "filippou2020", "type": "meta", "cite": "Filippou CD, et al. DASH diet and blood pressure reduction in adults with and without hypertension: a systematic review and meta-analysis of randomized controlled trials. Adv Nutr 2020.", "pmid": "32330233", "doi": "10.1093/advances/nmaa041",
+     "note_en": "30 trials, 5,545 people: about 3 mmHg lower systolic pressure, with or without hypertension.", "note_ru": "30 исследований, 5545 человек: систолическое давление ниже примерно на 3 мм рт. ст., с гипертонией и без неё."},
+    {"id": "siervo2015", "type": "meta", "cite": "Siervo M, et al. Effects of the Dietary Approach to Stop Hypertension (DASH) diet on cardiovascular risk factors: a systematic review and meta-analysis. Br J Nutr 2015.", "pmid": "25430608", "doi": "10.1017/S0007114514003341",
+     "note_en": "20 trials: systolic pressure about 5 mmHg lower, with small improvements in cholesterol.", "note_ru": "20 исследований: систолическое давление ниже примерно на 5 мм рт. ст., холестерин улучшается немного."},
+    {"id": "soltani2020", "type": "meta", "cite": "Soltani S, et al. Adherence to the DASH diet and all-cause and cause-specific mortality: dose-response meta-analysis of prospective cohorts. Nutr J 2020.", "pmid": "32321528", "doi": "10.1186/s12937-020-00554-8",
+     "note_en": "Observational support: closer adherence goes with lower mortality. This shows association, not proof.", "note_ru": "Наблюдательные данные: чем точнее соблюдение, тем ниже смертность. Это связь, а не доказательство причины."},
+    {"id": "whelton2018", "type": "guideline", "cite": "Whelton PK, et al. 2017 ACC/AHA guideline for the prevention, detection, evaluation, and management of high blood pressure in adults. Hypertension 2018.", "pmid": "29133356", "doi": "10.1161/HYP.0000000000000065",
+     "note_en": "The US hypertension guideline recommends a DASH-type pattern as first-line lifestyle treatment.", "note_ru": "Американские рекомендации по гипертонии называют питание типа DASH первой линией немедикаментозного лечения."}
+  ]
+}

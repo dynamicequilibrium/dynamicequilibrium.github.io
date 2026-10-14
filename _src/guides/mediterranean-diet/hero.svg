@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 260" preserveAspectRatio="xMidYMid slice">
+<rect class="p" width="1120" height="260"/>
+<circle class="b" cx="880" cy="90" r="64" opacity=".55"/>
+<circle class="b" cx="880" cy="90" r="96" opacity=".18"/>
+<path class="sa" d="M0 200 q70 -26 140 0 t140 0 t140 0 t140 0 t140 0 t140 0 t140 0 t140 0" stroke-width="3" opacity=".7"/>
+<path class="sa" d="M0 226 q70 -26 140 0 t140 0 t140 0 t140 0 t140 0 t140 0 t140 0 t140 0" stroke-width="3" opacity=".4"/>
+<path class="sa" d="M160 190 C 260 120, 380 90, 520 70" stroke-width="3.5" stroke-linecap="round"/>
+<g class="a"><ellipse cx="215" cy="150" rx="34" ry="12" transform="rotate(-35 215 150)"/><ellipse cx="262" cy="118" rx="34" ry="12" transform="rotate(-20 262 118)"/>
+<ellipse cx="318" cy="130" rx="34" ry="12" transform="rotate(35 318 130)"/><ellipse cx="352" cy="96" rx="34" ry="12" transform="rotate(-18 352 96)"/>
+<ellipse cx="410" cy="106" rx="34" ry="12" transform="rotate(32 410 106)"/><ellipse cx="448" cy="76" rx="32" ry="11" transform="rotate(-12 448 76)"/></g>
+<circle class="t" cx="300" cy="150" r="9" opacity=".75"/><circle class="t" cx="392" cy="128" r="9" opacity=".75"/>
+</svg>

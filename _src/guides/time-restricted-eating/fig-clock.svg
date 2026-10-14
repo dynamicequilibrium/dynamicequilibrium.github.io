@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 250">
+<rect class="l" x="30" y="86" width="580" height="46" rx="10"/>
+<rect class="a" x="30" y="86" width="241.7" height="46" rx="10" />
+<rect class="a" x="30" y="86" width="40" height="46" />
+<rect class="b" x="271.7" y="86" width="338.3" height="46" rx="10" opacity=".5"/>
+<rect class="b" x="271.7" y="86" width="30" height="46" opacity=".5"/>
+<text style="fill:var(--accent-fill-ink)" x="48" y="115" font-size="17.1" font-weight="700">{{t:eat}}</text>
+<text class="t" x="296" y="115" font-size="16.5">{{t:fast}}</text>
+<g font-size="15.9" class="m"><text x="30" y="156" text-anchor="middle" class="m">08</text><text x="271" y="156" text-anchor="middle" class="m">18</text><text x="610" y="156" text-anchor="middle" class="m">08</text></g>
+<path class="st" d="M271.7 70 V86" stroke-width="2"/>
+<text class="t" x="271.7" y="60" text-anchor="middle" font-size="16.5" font-weight="600">{{t:last}}</text>
+<text class="m" x="30" y="210" font-size="16.5">{{t:example}}</text>
+</svg>

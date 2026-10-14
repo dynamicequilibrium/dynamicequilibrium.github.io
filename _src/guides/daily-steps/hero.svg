@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 260" preserveAspectRatio="xMidYMid slice">
+<rect class="p" width="1120" height="260"/>
+<circle class="b" cx="940" cy="70" r="70" opacity=".4"/>
+<path class="a" d="M0 260 V190 C 200 170, 330 120, 520 130 C 700 140, 820 90, 1120 80 V260 Z" opacity=".16"/>
+<path class="a" d="M0 260 V220 C 240 210, 420 170, 640 180 C 840 190, 960 150, 1120 140 V260 Z" opacity=".18"/>
+<g class="a">
+<ellipse cx="150" cy="200" rx="12" ry="19" transform="rotate(-70 150 200)"/><ellipse cx="206" cy="187" rx="12" ry="19" transform="rotate(-62 206 187)"/>
+<ellipse cx="270" cy="188" rx="12" ry="19" transform="rotate(-70 270 188)"/><ellipse cx="332" cy="170" rx="12" ry="19" transform="rotate(-60 332 170)"/>
+<ellipse cx="400" cy="168" rx="12" ry="19" transform="rotate(-72 400 168)"/><ellipse cx="466" cy="150" rx="12" ry="19" transform="rotate(-58 466 150)"/>
+<ellipse cx="540" cy="150" rx="12" ry="19" transform="rotate(-75 540 150)"/><ellipse cx="610" cy="132" rx="12" ry="19" transform="rotate(-58 610 132)"/>
+<ellipse cx="690" cy="128" rx="12" ry="19" transform="rotate(-76 690 128)"/><ellipse cx="764" cy="108" rx="12" ry="19" transform="rotate(-56 764 108)"/>
+</g>
+</svg>

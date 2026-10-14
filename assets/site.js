@@ -76,6 +76,11 @@
     });
   }
 
+  // PRINT button (guides)
+  document.querySelectorAll('[data-print]').forEach(function (b) {
+    b.addEventListener('click', function () { window.print(); });
+  });
+
   // YEAR
   var y = document.getElementById('y');
   if (y) y.textContent = new Date().getFullYear();

@@ -1,0 +1,29 @@
+{
+  "slug": "daily-steps",
+  "category": "movement",
+  "grade": "A",
+  "order": 10,
+  "published": "2026-10-14",
+  "updated": "2026-10-14",
+  "source_note": "10-work/practice/evidence-base/lifestyle/daily-steps.md",
+  "source_reviewed": "2026-07-05",
+  "related": ["resistance-training", "sleep-regularity"],
+  "figtext": {
+    "y": {"en": "Lower risk", "ru": "Ниже риск"},
+    "x": {"en": "Steps per day", "ru": "Шагов в день"},
+    "s2": {"en": "2,000", "ru": "2000"}, "s4": {"en": "4,000", "ru": "4000"}, "s7": {"en": "7,000", "ru": "7000"}, "s10": {"en": "10,000", "ru": "10 000"},
+    "big": {"en": "Biggest gains from a low start", "ru": "Больше всего пользы при низком старте"},
+    "flat": {"en": "Curve flattens", "ru": "Кривая выравнивается"},
+    "schem": {"en": "Schematic of the pattern in the studies, not measured values", "ru": "Схема закономерности из исследований, не измеренные значения"}
+  },
+  "sources": [
+    {"id": "ding2025", "type": "meta", "cite": "Ding D, et al. Daily steps and health outcomes in adults: a systematic review and dose-response meta-analysis. Lancet Public Health 2025.", "pmid": "40713949", "doi": "10.1016/S2468-2667(25)00164-1",
+     "note_en": "About 7,000 versus 2,000 steps a day went with roughly half the risk of death, and lower risk of heart disease, diabetes, dementia, depression and falls.", "note_ru": "Около 7000 шагов в день против 2000 связаны примерно с вдвое меньшим риском смерти и с меньшим риском болезней сердца, диабета, деменции, депрессии и падений."},
+    {"id": "paluch2022", "type": "meta", "cite": "Paluch AE, et al. Daily steps and all-cause mortality: a meta-analysis of 15 international cohorts. Lancet Public Health 2022.", "pmid": "35247352", "doi": "10.1016/S2468-2667(21)00302-9",
+     "note_en": "47,471 adults: the benefit levels off around 6,000–8,000 steps from age 60 and 8,000–10,000 below 60.", "note_ru": "47 471 взрослый: польза выходит на плато примерно на 6000–8000 шагов с 60 лет и на 8000–10 000 до 60."},
+    {"id": "delpozo2022", "type": "cohort", "cite": "Del Pozo Cruz B, et al. Prospective associations of daily step counts and intensity with cancer and cardiovascular disease incidence and mortality and all-cause mortality. JAMA Intern Med 2022.", "pmid": "36094529", "doi": "10.1001/jamainternmed.2022.4000",
+     "note_en": "About 78,500 people in the UK Biobank: faster walking added benefit beyond the number of steps.", "note_ru": "Около 78 500 человек в UK Biobank: более быстрый шаг давал пользу сверх числа шагов."},
+    {"id": "piercy2018", "type": "guideline", "cite": "Piercy KL, et al. The Physical Activity Guidelines for Americans. JAMA 2018.", "pmid": "30418471", "doi": "10.1001/jama.2018.14854",
+     "note_en": "150–300 minutes a week of moderate activity such as brisk walking; short bouts count.", "note_ru": "150–300 минут в неделю умеренной нагрузки, например быстрой ходьбы; короткие отрезки тоже засчитываются."}
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "slug": "sleep-regularity",
+  "category": "sleep",
+  "grade": "A",
+  "order": 10,
+  "published": "2026-10-14",
+  "updated": "2026-10-14",
+  "source_note": "10-work/practice/evidence-base/lifestyle/sleep-regularity.md",
+  "source_reviewed": "2026-07-05",
+  "related": ["daily-steps", "time-restricted-eating"],
+  "figtext": {
+    "reg": {"en": "Regular", "ru": "Регулярно"},
+    "irr": {"en": "Irregular", "ru": "Нерегулярно"},
+    "mon": {"en": "Mon", "ru": "Пн"}, "tue": {"en": "Tue", "ru": "Вт"}, "wed": {"en": "Wed", "ru": "Ср"}, "thu": {"en": "Thu", "ru": "Чт"},
+    "fri": {"en": "Fri", "ru": "Пт"}, "sat": {"en": "Sat", "ru": "Сб"}, "sun": {"en": "Sun", "ru": "Вс"},
+    "t22": {"en": "22:00", "ru": "22:00"}, "t02": {"en": "02:00", "ru": "02:00"}, "t06": {"en": "06:00", "ru": "06:00"}, "t10": {"en": "10:00", "ru": "10:00"},
+    "schem": {"en": "Schematic: same hours of sleep, very different regularity", "ru": "Схема: одинаковые часы сна, но очень разная регулярность"}
+  },
+  "sources": [
+    {"id": "windred2024", "type": "cohort", "cite": "Windred DP, et al. Sleep regularity is a stronger predictor of mortality risk than sleep duration: a prospective cohort study. Sleep 2024.", "pmid": "37738616", "doi": "10.1093/sleep/zsad253",
+     "note_en": "60,977 UK adults with wearable sleep tracking: the most regular sleepers had 20–48% lower mortality, and regularity predicted it better than duration.", "note_ru": "60 977 жителей Великобритании с трекерами сна: у самых регулярных смертность на 20–48% ниже, и регулярность предсказывала её лучше, чем длительность."},
+    {"id": "yin2017", "type": "meta", "cite": "Yin J, et al. Relationship of sleep duration with all-cause mortality and cardiovascular events: a systematic review and dose-response meta-analysis of prospective cohort studies. J Am Heart Assoc 2017.", "pmid": "28889101", "doi": "10.1161/JAHA.117.005947",
+     "note_en": "Risk follows a U-shape: higher with less than 7 hours and also with much more than 7.", "note_ru": "Риск имеет U-образную форму: он выше и при сне меньше 7 часов, и при заметно большем."},
+    {"id": "watson2015", "type": "guideline", "cite": "Watson NF, et al. Recommended amount of sleep for a healthy adult: a joint consensus statement of the American Academy of Sleep Medicine and Sleep Research Society. J Clin Sleep Med 2015.", "pmid": "25979105", "doi": "10.5664/jcsm.4758",
+     "note_en": "Consensus statement: adults should sleep at least 7 hours on a regular basis.", "note_ru": "Согласованное заключение: взрослым нужно регулярно спать не менее 7 часов."},
+    {"id": "tasali2022", "type": "rct", "cite": "Tasali E, et al. Effect of sleep extension on objectively assessed energy intake among adults with overweight in real-life settings: a randomized clinical trial. JAMA Intern Med 2022.", "pmid": "35129580", "doi": "10.1001/jamainternmed.2021.8098",
+     "note_en": "Short sleepers who slept about 1.2 hours longer ate roughly 270 kcal a day less over two weeks.", "note_ru": "Недосыпающие, которые стали спать примерно на 1,2 часа дольше, за две недели ели примерно на 270 ккал в день меньше."},
+    {"id": "hartescu2022", "type": "rct", "cite": "Hartescu I, et al. Sleep extension and metabolic health in male overweight/obese short sleepers: a randomised controlled trial. J Sleep Res 2022.", "pmid": "34459060", "doi": "10.1111/jsr.13469",
+     "note_en": "Very small trial (18 men): about 79 more minutes of sleep improved insulin sensitivity and blood pressure. Treat as a hint, not a result.", "note_ru": "Очень небольшое исследование (18 мужчин): примерно на 79 минут больше сна улучшили чувствительность к инсулину и давление. Это намёк, а не итог."}
+  ]
+}

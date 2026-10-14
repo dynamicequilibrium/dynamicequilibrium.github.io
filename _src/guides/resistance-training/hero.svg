@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 260" preserveAspectRatio="xMidYMid slice">
+<rect class="p" width="1120" height="260"/>
+<circle class="a" cx="260" cy="40" r="170" opacity=".1"/>
+<g transform="translate(300 130)">
+<rect class="t" x="-190" y="-8" width="380" height="16" rx="8" opacity=".85"/>
+<rect class="a" x="-190" y="-58" width="26" height="116" rx="8"/><rect class="a" x="-158" y="-42" width="22" height="84" rx="7" opacity=".75"/>
+<rect class="a" x="164" y="-58" width="26" height="116" rx="8"/><rect class="a" x="136" y="-42" width="22" height="84" rx="7" opacity=".75"/>
+</g>
+<g transform="translate(790 130)" opacity=".9">
+<rect class="b" x="-110" y="-10" width="220" height="20" rx="10"/>
+<rect class="b" x="-110" y="-44" width="30" height="88" rx="9" opacity=".7"/><rect class="b" x="80" y="-44" width="30" height="88" rx="9" opacity=".7"/>
+</g>
+<path class="sa" d="M60 232 H1060" stroke-width="3" stroke-linecap="round" opacity=".5"/>
+</svg>
