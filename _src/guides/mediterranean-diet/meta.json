@@ -7,23 +7,75 @@
   "updated": "2026-10-14",
   "source_note": "10-work/practice/evidence-base/nutrition/mediterranean-diet.md",
   "source_reviewed": "2026-07-05",
-  "related": ["dash-diet", "daily-steps"],
+  "related": [
+    "dash-diet",
+    "daily-steps"
+  ],
   "figtext": {
-    "daily": {"en": "Every day", "ru": "Каждый день"},
-    "daily_items": {"en": "Olive oil · vegetables · fruit · whole grains · a handful of nuts", "ru": "Оливковое масло · овощи · фрукты · цельные злаки · горсть орехов"},
-    "weekly": {"en": "At least 3 times a week", "ru": "Не реже 3 раз в неделю"},
-    "weekly_items": {"en": "Legumes · fish and seafood", "ru": "Бобовые · рыба и морепродукты"},
-    "some": {"en": "Some of the week", "ru": "Время от времени"},
-    "some_items": {"en": "Eggs · poultry · yoghurt and cheese", "ru": "Яйца · птица · йогурт и сыр"},
-    "rare": {"en": "Rarely", "ru": "Редко"},
-    "rare_items": {"en": "Red and processed meat · sweets · sugary drinks · refined bread", "ru": "Красное и переработанное мясо · сладости · сладкие напитки · белый хлеб"}
+    "daily": {
+      "en": "Every day",
+      "ru": "Каждый день"
+    },
+    "daily_items": {
+      "en": "Olive oil · vegetables · fruit · whole grains · a handful of nuts",
+      "ru": "Оливковое масло · овощи · фрукты · цельные злаки · горсть орехов"
+    },
+    "weekly": {
+      "en": "At least 3 times a week",
+      "ru": "Не реже 3 раз в неделю"
+    },
+    "weekly_items": {
+      "en": "Legumes · fish and seafood",
+      "ru": "Бобовые · рыба и морепродукты"
+    },
+    "some": {
+      "en": "Some of the week",
+      "ru": "Время от времени"
+    },
+    "some_items": {
+      "en": "Eggs · poultry · yoghurt and cheese",
+      "ru": "Яйца · птица · йогурт и сыр"
+    },
+    "rare": {
+      "en": "Rarely",
+      "ru": "Редко"
+    },
+    "rare_items": {
+      "en": "Red and processed meat · sweets",
+      "ru": "Красное и переработанное мясо · сладости"
+    },
+    "rare_items2": {
+      "en": "Sugary drinks · refined bread",
+      "ru": "Сладкие напитки · белый хлеб"
+    }
   },
   "sources": [
-    {"id": "estruch2018", "type": "rct", "cite": "Estruch R, et al. Primary prevention of cardiovascular disease with a Mediterranean diet supplemented with extra-virgin olive oil or nuts. N Engl J Med 2018 (PREDIMED, republished).", "pmid": "29897866", "doi": "10.1056/NEJMoa1800389",
-     "note_en": "The main trial (7,447 people at high cardiovascular risk): about 30% fewer heart attacks, strokes and cardiovascular deaths.", "note_ru": "Главное исследование (7447 человек с высоким сердечно-сосудистым риском): примерно на 30% меньше инфарктов, инсультов и смертей от сердечно-сосудистых причин."},
-    {"id": "nejm2018retraction", "type": "review", "no_author": true, "cite": "Retraction and republication: Primary prevention of cardiovascular disease with a Mediterranean diet. N Engl J Med 2018.", "pmid": "29897867",
-     "note_en": "Why the 2013 paper was withdrawn, re-analysed and republished in 2018.", "note_ru": "Почему статью 2013 года отозвали, пересчитали и в 2018 году опубликовали заново."},
-    {"id": "rees2019", "type": "review", "cite": "Rees K, et al. Mediterranean-style diet for the primary and secondary prevention of cardiovascular disease. Cochrane Database Syst Rev 2019.", "pmid": "30864165", "doi": "10.1002/14651858.CD009825.pub3",
-     "note_en": "Cochrane review: low-to-moderate certainty for prevention, which is why this guide is graded B and not A.", "note_ru": "Кокрейновский обзор: достоверность низкая или умеренная, поэтому оценка здесь B, а не A."}
+    {
+      "id": "estruch2018",
+      "type": "rct",
+      "cite": "Estruch R, et al. Primary prevention of cardiovascular disease with a Mediterranean diet supplemented with extra-virgin olive oil or nuts. N Engl J Med 2018 (PREDIMED, republished).",
+      "pmid": "29897866",
+      "doi": "10.1056/NEJMoa1800389",
+      "note_en": "The main trial (7,447 people at high cardiovascular risk): about 30% fewer heart attacks, strokes and cardiovascular deaths.",
+      "note_ru": "Главное исследование (7447 человек с высоким сердечно-сосудистым риском): примерно на 30% меньше инфарктов, инсультов и смертей от сердечно-сосудистых причин."
+    },
+    {
+      "id": "nejm2018retraction",
+      "type": "review",
+      "no_author": true,
+      "cite": "Retraction and republication: Primary prevention of cardiovascular disease with a Mediterranean diet. N Engl J Med 2018.",
+      "pmid": "29897867",
+      "note_en": "Why the 2013 paper was withdrawn, re-analysed and republished in 2018.",
+      "note_ru": "Почему статью 2013 года отозвали, пересчитали и в 2018 году опубликовали заново."
+    },
+    {
+      "id": "rees2019",
+      "type": "review",
+      "cite": "Rees K, et al. Mediterranean-style diet for the primary and secondary prevention of cardiovascular disease. Cochrane Database Syst Rev 2019.",
+      "pmid": "30864165",
+      "doi": "10.1002/14651858.CD009825.pub3",
+      "note_en": "Cochrane review: low-to-moderate certainty for prevention, which is why this guide is graded B and not A.",
+      "note_ru": "Кокрейновский обзор: достоверность низкая или умеренная, поэтому оценка здесь B, а не A."
+    }
   ]
 }

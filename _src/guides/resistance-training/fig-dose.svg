@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 330">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 352">
 <path class="sl" d="M60 40 V270 H620" stroke-width="1.5"/>
 <path class="sa" d="M60 262 C 120 160, 170 96, 230 76 C 290 60, 380 66, 470 82 C 530 92, 580 104, 610 114" stroke-width="4" stroke-linecap="round"/>
 <rect class="a" x="140" y="42" width="170" height="228" opacity=".12"/>
 <g font-size="15.9" text-anchor="middle" class="m"><text x="60" y="290">{{t:m0}}</text><text x="140" y="290">{{t:m30}}</text><text x="310" y="290">{{t:m60}}</text><text x="540" y="290">{{t:m120}}</text></g>
-<text class="m" x="340" y="312" font-size="15.9" text-anchor="middle">{{t:x}}</text>
+<text class="m" x="340" y="316" font-size="15.9" text-anchor="middle">{{t:x}}</text>
 <text class="m" x="60" y="26" font-size="15.9">{{t:y}}</text>
-<text class="t" x="225" y="150" font-size="16.5" font-weight="600" text-anchor="middle">{{t:peak}}</text>
-<text class="m" x="620" y="326" font-size="14.6" text-anchor="end">{{t:schem}}</text>
+<text class="t" x="150" y="236" font-size="16.5" font-weight="600">{{t:peak}}</text>
+<text class="m" x="620" y="344" font-size="14.6" text-anchor="end">{{t:schem}}</text>
 </svg>

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 330">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 358">
 <rect class="a" x="20" y="16" width="600" height="68" rx="12"/>
 <text style="fill:var(--accent-fill-ink)" x="40" y="44" font-size="19.5" font-weight="700">{{t:daily}}</text>
 <text style="fill:var(--accent-fill-ink)" x="40" y="68" font-size="16.5">{{t:daily_items}}</text>
@@ -8,7 +8,8 @@
 <rect class="b" x="20" y="176" width="600" height="68" rx="12" opacity=".55"/>
 <text class="t" x="40" y="204" font-size="19.5" font-weight="700">{{t:some}}</text>
 <text class="t" x="40" y="228" font-size="16.5">{{t:some_items}}</text>
-<rect class="p" x="20" y="256" width="600" height="58" rx="12" stroke-width="1.5" style="stroke:var(--muted)"/>
-<text class="t" x="40" y="282" font-size="19.5" font-weight="700">{{t:rare}}</text>
-<text class="m" x="40" y="303" font-size="16.5">{{t:rare_items}}</text>
+<rect class="p" x="20" y="256" width="600" height="86" rx="12" stroke-width="1.5" style="stroke:var(--muted)"/>
+<text class="t" x="40" y="283" font-size="19.5" font-weight="700">{{t:rare}}</text>
+<text class="m" x="40" y="308" font-size="16.5">{{t:rare_items}}</text>
+<text class="m" x="40" y="330" font-size="16.5">{{t:rare_items2}}</text>
 </svg>
