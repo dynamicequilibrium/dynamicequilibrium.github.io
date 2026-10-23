@@ -87,4 +87,4 @@ Measure your blood pressure at home, at the same time of day, a few mornings a w
 
 ## How strong is the evidence
 
-**Grade A.** The evidence is unusually strong: controlled feeding trials, pooled analyses of many trials, an umbrella review and a place in the US hypertension guideline.[^whelton2018] The main caveat is that most trials were short (weeks to a few months), so the long-term benefit for heart attacks and strokes rests on observational data. Real-world effects are smaller than the best trial result, because in everyday life it is harder to follow the pattern exactly.
+**Grade A.** The evidence is unusually strong: controlled feeding trials, pooled analyses of many trials, an umbrella review and a place in the US hypertension guideline.[^jones2025] The main caveat is that most trials were short (weeks to a few months), so the long-term benefit for heart attacks and strokes rests on observational data. Real-world effects are smaller than the best trial result, because in everyday life it is harder to follow the pattern exactly.

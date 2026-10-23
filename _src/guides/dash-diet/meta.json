@@ -4,9 +4,9 @@
   "grade": "A",
   "order": 10,
   "published": "2026-10-14",
-  "updated": "2026-10-14",
+  "updated": "2026-10-23",
   "source_note": "10-work/practice/evidence-base/nutrition/dash-diet.md",
-  "source_reviewed": "2026-07-05",
+  "source_reviewed": "2026-10-23",
   "related": ["mediterranean-diet", "daily-steps"],
   "figtext": {
     "axis": {"en": "Fall in systolic blood pressure, mmHg", "ru": "Снижение систолического давления, мм рт. ст."},
@@ -28,7 +28,7 @@
      "note_en": "20 trials: systolic pressure about 5 mmHg lower, with small improvements in cholesterol.", "note_ru": "20 исследований: систолическое давление ниже примерно на 5 мм рт. ст., холестерин улучшается немного."},
     {"id": "soltani2020", "type": "meta", "cite": "Soltani S, et al. Adherence to the DASH diet and all-cause and cause-specific mortality: dose-response meta-analysis of prospective cohorts. Nutr J 2020.", "pmid": "32321528", "doi": "10.1186/s12937-020-00554-8",
      "note_en": "Observational support: closer adherence goes with lower mortality. This shows association, not proof.", "note_ru": "Наблюдательные данные: чем точнее соблюдение, тем ниже смертность. Это связь, а не доказательство причины."},
-    {"id": "whelton2018", "type": "guideline", "cite": "Whelton PK, et al. 2017 ACC/AHA guideline for the prevention, detection, evaluation, and management of high blood pressure in adults. Hypertension 2018.", "pmid": "29133356", "doi": "10.1161/HYP.0000000000000065",
-     "note_en": "The US hypertension guideline recommends a DASH-type pattern as first-line lifestyle treatment.", "note_ru": "Американские рекомендации по гипертонии называют питание типа DASH первой линией немедикаментозного лечения."}
+    {"id": "jones2025", "type": "guideline", "cite": "Jones DW, et al. 2025 AHA/ACC guideline for the prevention, detection, evaluation and management of high blood pressure in adults. Hypertension 2025.", "pmid": "40811516", "doi": "10.1161/HYP.0000000000000249",
+     "note_en": "The current US hypertension guideline (it replaced the 2017 version) recommends a DASH-type pattern, and sodium under 2,300 mg a day, moving towards 1,500 mg.", "note_ru": "Действующие американские рекомендации по гипертонии (они заменили версию 2017 года) советуют питание типа DASH и менее 2300 мг натрия в день, а в идеале около 1500 мг."}
   ]
 }
