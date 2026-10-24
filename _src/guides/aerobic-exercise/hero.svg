@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 260" preserveAspectRatio="xMidYMid slice">
+<rect class="p" width="1120" height="260"/>
+<circle class="a" cx="880" cy="60" r="170" opacity=".1"/>
+<path class="sa" d="M40 190 C 180 190, 220 80, 340 80 C 460 80, 480 190, 600 190 C 720 190, 760 80, 880 80 C 980 80, 1010 150, 1080 160" stroke-width="5" stroke-linecap="round" opacity=".85"/>
+<path class="sb" d="M40 220 H1080" stroke-width="3" stroke-linecap="round" opacity=".5"/>
+<g class="a"><circle cx="340" cy="80" r="9"/><circle cx="880" cy="80" r="9"/></g>
+<g class="b"><circle cx="600" cy="190" r="9" opacity=".8"/></g>
+</svg>

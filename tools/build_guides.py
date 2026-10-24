@@ -25,7 +25,7 @@ SRC = ROOT / "_src" / "guides"
 SITE = "https://dynamicequilibrium.org"
 LANGS = ("en", "ru")
 GRADES = ("A", "B", "C")
-CATEGORIES = ("nutrition", "movement", "sleep")
+CATEGORIES = ("nutrition", "movement", "sleep", "habits")
 SOURCE_TYPES = ("rct", "meta", "review", "umbrella", "cohort", "guideline")
 
 # --------------------------------------------------------------------------- UI strings
@@ -40,11 +40,12 @@ T = {
         "privacy": "Privacy", "terms": "Terms", "privacy_url": "/privacy.html", "terms_url": "/terms.html",
         "legal": "Dynamic Equilibrium offers consultative and educational support by a physician. It is not a medical service and does not replace formal diagnosis, treatment or emergency care from your own doctors. In an emergency, contact your local emergency services.",
         "breadcrumb": "Breadcrumb", "home_label": "Home",
-        "cat": {"nutrition": "Nutrition", "movement": "Movement", "sleep": "Sleep"},
+        "cat": {"nutrition": "Nutrition", "movement": "Movement", "sleep": "Sleep", "habits": "Habits"},
         "cat_blurb": {
             "nutrition": "Eating patterns with example days, swaps and shopping lists.",
             "movement": "How much, how often and how to start, without a gym membership.",
             "sleep": "Timing and routine: the cheapest health intervention there is.",
+            "habits": "Cutting back on what costs you health: realistic steps and honest limits.",
         },
         "grade_word": "Evidence", "grade_names": {"A": "Strong", "B": "Moderate", "C": "Limited but plausible"},
         "grade_plain": {
@@ -67,7 +68,7 @@ T = {
         "hub_eyebrow": "Guides", "hub_h": "Evidence-graded guides",
         "hub_lede": "Practical how-to guides built on published research: what to do, how to start, what an example day or week looks like, and exactly how strong the evidence is. Free to read, print and share.",
         "hub_title": "Evidence-graded guides — Dynamic Equilibrium",
-        "hub_desc": "Practical guides to eating, movement and sleep, each with an example plan, safety notes and graded references to the research.",
+        "hub_desc": "Practical guides to eating, movement, sleep and habits, each with an example plan, safety notes and graded references to the research.",
         "grade_filter": "Grade",
         "sticky": "Request a consultation",
     },
@@ -81,11 +82,12 @@ T = {
         "privacy": "Конфиденциальность", "terms": "Условия", "privacy_url": "/ru/privacy.html", "terms_url": "/ru/terms.html",
         "legal": "Dynamic Equilibrium — это консультационная и образовательная поддержка врача. Это не медицинская услуга, она не заменяет диагностику, лечение и неотложную помощь у ваших лечащих врачей. В экстренной ситуации звоните в местную службу экстренной помощи.",
         "breadcrumb": "Навигация", "home_label": "Главная",
-        "cat": {"nutrition": "Питание", "movement": "Движение", "sleep": "Сон"},
+        "cat": {"nutrition": "Питание", "movement": "Движение", "sleep": "Сон", "habits": "Привычки"},
         "cat_blurb": {
             "nutrition": "Модели питания с примерами дней, заменами и списками покупок.",
             "movement": "Сколько, как часто и с чего начать, без абонемента в зал.",
             "sleep": "Режим и ритуалы: самое дешёвое вмешательство для здоровья.",
+            "habits": "Как сократить то, что вредит здоровью: реальные шаги и честные пределы.",
         },
         "grade_word": "Доказательность", "grade_names": {"A": "Сильная", "B": "Умеренная", "C": "Ограниченная, но правдоподобная"},
         "grade_plain": {
@@ -108,7 +110,7 @@ T = {
         "hub_eyebrow": "Руководства", "hub_h": "Руководства с оценкой доказательности",
         "hub_lede": "Практические руководства на основе опубликованных исследований: что делать, с чего начать, как выглядит примерный день или неделя и насколько сильны данные. Можно читать, печатать и пересылать бесплатно.",
         "hub_title": "Руководства с оценкой доказательности — Dynamic Equilibrium",
-        "hub_desc": "Практические руководства по питанию, движению и сну: примерный план, меры предосторожности и источники с оценкой доказательности.",
+        "hub_desc": "Практические руководства по питанию, движению, сну и привычкам: примерный план, меры предосторожности и источники с оценкой доказательности.",
         "grade_filter": "Оценка",
         "sticky": "Оставить запрос",
     },

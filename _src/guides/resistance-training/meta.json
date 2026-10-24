@@ -7,7 +7,7 @@
   "updated": "2026-10-14",
   "source_note": "10-work/practice/evidence-base/lifestyle/resistance-training.md",
   "source_reviewed": "2026-07-05",
-  "related": ["daily-steps", "time-restricted-eating"],
+  "related": ["daily-steps", "aerobic-exercise", "time-restricted-eating", "high-protein"],
   "figtext": {
     "y": {"en": "Lower risk", "ru": "Ниже риск"},
     "x": {"en": "Minutes of strength training per week", "ru": "Минут силовых в неделю"},

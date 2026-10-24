@@ -7,7 +7,7 @@
   "updated": "2026-10-23",
   "source_note": "10-work/practice/evidence-base/nutrition/dash-diet.md",
   "source_reviewed": "2026-10-23",
-  "related": ["mediterranean-diet", "daily-steps"],
+  "related": ["mediterranean-diet", "daily-steps", "aerobic-exercise", "alcohol-reduction"],
   "figtext": {
     "axis": {"en": "Fall in systolic blood pressure, mmHg", "ru": "Снижение систолического давления, мм рт. ст."},
     "r1": {"en": "DASH + low sodium, with hypertension (feeding trial)", "ru": "DASH + мало соли, при гипертонии (исследование с выдачей еды)"},

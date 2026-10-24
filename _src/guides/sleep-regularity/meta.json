@@ -7,7 +7,7 @@
   "updated": "2026-10-14",
   "source_note": "10-work/practice/evidence-base/lifestyle/sleep-regularity.md",
   "source_reviewed": "2026-07-05",
-  "related": ["daily-steps", "time-restricted-eating"],
+  "related": ["cbt-i", "daily-steps", "time-restricted-eating", "alcohol-reduction"],
   "figtext": {
     "reg": {"en": "Regular", "ru": "Регулярно"},
     "irr": {"en": "Irregular", "ru": "Нерегулярно"},

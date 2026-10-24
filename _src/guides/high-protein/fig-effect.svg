@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320">
+<text class="m" x="20" y="26" font-size="15.9">{{t:axis}}</text>
+<g class="sl" stroke-dasharray="3 5"><path d="M300 48 V236"/><path d="M387.5 48 V236"/><path d="M475 48 V236"/><path d="M562.5 48 V236"/></g>
+<g font-size="15.2" class="m" text-anchor="middle"><text x="300" y="258">{{t:k0}}</text><text x="387.5" y="258">{{t:k05}}</text><text x="475" y="258">{{t:k1}}</text><text x="562.5" y="258">{{t:k15}}</text></g>
+<text class="t" x="285" y="94" font-size="15.9" text-anchor="end">{{t:r1}}</text>
+<path class="sa" d="M314 88 H562" stroke-width="4" stroke-linecap="round"/>
+<circle class="a" cx="438" cy="88" r="9"/>
+<text class="t" x="438" y="68" font-size="16.5" font-weight="700" text-anchor="middle">{{t:v1}}</text>
+<text class="t" x="285" y="164" font-size="15.9" text-anchor="end">{{t:r2}}</text>
+<path class="sa" d="M384 158 H520" stroke-width="4" stroke-linecap="round"/>
+<circle class="a" cx="452" cy="158" r="9"/>
+<text class="t" x="452" y="138" font-size="16.5" font-weight="700" text-anchor="middle">{{t:v2}}</text>
+<text class="t" x="285" y="234" font-size="15.9" text-anchor="end">{{t:r3}}</text>
+<path class="sa" d="M316 228 H436" stroke-width="4" stroke-linecap="round"/>
+<circle class="a" cx="375" cy="228" r="9"/>
+<text class="t" x="375" y="208" font-size="16.5" font-weight="700" text-anchor="middle">{{t:v3}}</text>
+<text class="m" x="620" y="302" font-size="14.6" text-anchor="end">{{t:src}}</text>
+</svg>

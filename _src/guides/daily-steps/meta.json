@@ -7,7 +7,7 @@
   "updated": "2026-10-14",
   "source_note": "10-work/practice/evidence-base/lifestyle/daily-steps.md",
   "source_reviewed": "2026-07-05",
-  "related": ["resistance-training", "sleep-regularity"],
+  "related": ["resistance-training", "sleep-regularity", "cbt-i"],
   "figtext": {
     "y": {"en": "Lower risk", "ru": "Ниже риск"},
     "x": {"en": "Steps per day", "ru": "Шагов в день"},

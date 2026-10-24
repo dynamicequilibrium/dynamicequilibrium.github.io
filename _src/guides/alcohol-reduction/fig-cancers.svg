@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300">
+<text class="m" x="20" y="26" font-size="15.9">{{t:axis}}</text>
+<path class="sl" d="M250 44 V230" stroke-width="1.5"/>
+<text class="t" x="240" y="87" font-size="15.2" text-anchor="end">{{t:r1}}</text>
+<rect class="b" x="250" y="62" width="290" height="38" rx="6"/>
+<text class="t" x="550" y="88" font-size="17.1" font-weight="700">{{t:v1}}</text>
+<text class="t" x="240" y="147" font-size="15.2" text-anchor="end">{{t:r2}}</text>
+<rect class="b" x="250" y="122" width="244" height="38" rx="6" opacity=".8"/>
+<text class="t" x="504" y="148" font-size="17.1" font-weight="700">{{t:v2}}</text>
+<text class="t" x="240" y="207" font-size="15.2" text-anchor="end">{{t:r3}}</text>
+<rect class="a" x="250" y="182" width="86" height="38" rx="6"/>
+<text class="t" x="346" y="208" font-size="17.1" font-weight="700">{{t:v3}}</text>
+<text class="m" x="620" y="284" font-size="14.6" text-anchor="end">{{t:src}}</text>
+</svg>

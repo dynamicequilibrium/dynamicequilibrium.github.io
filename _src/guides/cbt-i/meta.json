@@ -1,0 +1,90 @@
+{
+  "slug": "cbt-i",
+  "category": "sleep",
+  "grade": "A",
+  "order": 20,
+  "published": "2026-10-24",
+  "updated": "2026-10-24",
+  "source_note": "10-work/practice/evidence-base/lifestyle/cbt-i-self-directed.md",
+  "source_reviewed": "2026-10-24",
+  "related": [
+    "sleep-regularity",
+    "daily-steps",
+    "resistance-training"
+  ],
+  "figtext": {
+    "before": {
+      "en": "Before: long time in bed, broken sleep",
+      "ru": "До: долго в постели, сон дроблёный"
+    },
+    "tight": {
+      "en": "First weeks: shorter window, same wake time",
+      "ru": "Первые недели: окно короче, подъём в то же время"
+    },
+    "wide": {
+      "en": "Later: window widened by 15–20 min a week",
+      "ru": "Позже: окно шире на 15–20 минут в неделю"
+    },
+    "wake": {
+      "en": "Fixed wake time",
+      "ru": "Постоянное время подъёма"
+    },
+    "t22": {
+      "en": "22:00",
+      "ru": "22:00"
+    },
+    "t00": {
+      "en": "00:00",
+      "ru": "00:00"
+    },
+    "t02": {
+      "en": "02:00",
+      "ru": "02:00"
+    },
+    "t04": {
+      "en": "04:00",
+      "ru": "04:00"
+    },
+    "t06": {
+      "en": "06:00",
+      "ru": "06:00"
+    },
+    "t08": {
+      "en": "08:00",
+      "ru": "08:00"
+    },
+    "schem": {
+      "en": "Schematic of the method, not measured values",
+      "ru": "Схема метода, не измеренные значения"
+    }
+  },
+  "sources": [
+    {
+      "id": "edinger2021",
+      "type": "guideline",
+      "cite": "Edinger JD, et al. Behavioral and psychological treatments for chronic insomnia disorder in adults: an American Academy of Sleep Medicine clinical practice guideline. J Clin Sleep Med 2021.",
+      "pmid": "33164742",
+      "doi": "10.5664/jcsm.8986",
+      "note_en": "Strong recommendation for multicomponent CBT-I as the first-line treatment for chronic insomnia; it conditionally suggests against using sleep hygiene advice on its own.",
+      "note_ru": "Сильная рекомендация многокомпонентной КПТ-И как лечения первой линии при хронической бессоннице; условно предлагает не использовать одни советы по гигиене сна."
+    },
+    {
+      "id": "vanstraten2018",
+      "type": "meta",
+      "cite": "van Straten A, et al. Cognitive and behavioral therapies in the treatment of insomnia: a meta-analysis. Sleep Med Rev 2018.",
+      "pmid": "28392168",
+      "doi": "10.1016/j.smrv.2017.02.001",
+      "note_en": "87 trials (3,724 patients) compared with no treatment: a large effect on insomnia severity but the smallest effect on total sleep time; face-to-face treatment of four or more sessions beat self-help.",
+      "note_ru": "87 исследований (3724 пациента) в сравнении с отсутствием лечения: большой эффект на выраженность бессонницы, но самый малый — на общую длительность сна; очная терапия из четырёх и более встреч оказалась сильнее самопомощи."
+    },
+    {
+      "id": "zachariae2016",
+      "type": "meta",
+      "cite": "Zachariae R, et al. Efficacy of internet-delivered cognitive-behavioral therapy for insomnia: a systematic review and meta-analysis of randomized controlled trials. Sleep Med Rev 2016.",
+      "pmid": "26615572",
+      "doi": "10.1016/j.smrv.2015.10.004",
+      "note_en": "11 trials (1,460 people): online CBT-I worked about as well as face-to-face treatment, and more personal support went with bigger effects.",
+      "note_ru": "11 исследований (1460 человек): онлайн-КПТ-И работала примерно так же, как очная, а больший личный контакт сопровождался большим эффектом."
+    }
+  ]
+}

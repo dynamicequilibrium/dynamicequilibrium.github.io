@@ -89,13 +89,49 @@
     <loc>https://dynamicequilibrium.org/guides/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
     <loc>https://dynamicequilibrium.org/ru/guides/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>2026-10-24</lastmod>
+  </url>
+  <url>
+    <loc>https://dynamicequilibrium.org/guides/aerobic-exercise/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-10-24</lastmod>
+  </url>
+  <url>
+    <loc>https://dynamicequilibrium.org/ru/guides/aerobic-exercise/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-10-24</lastmod>
+  </url>
+  <url>
+    <loc>https://dynamicequilibrium.org/guides/alcohol-reduction/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-10-24</lastmod>
+  </url>
+  <url>
+    <loc>https://dynamicequilibrium.org/ru/guides/alcohol-reduction/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-10-24</lastmod>
+  </url>
+  <url>
+    <loc>https://dynamicequilibrium.org/guides/cbt-i/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-10-24</lastmod>
+  </url>
+  <url>
+    <loc>https://dynamicequilibrium.org/ru/guides/cbt-i/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
     <loc>https://dynamicequilibrium.org/guides/daily-steps/</loc>
@@ -120,6 +156,18 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://dynamicequilibrium.org/guides/high-protein/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-10-24</lastmod>
+  </url>
+  <url>
+    <loc>https://dynamicequilibrium.org/ru/guides/high-protein/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
     <loc>https://dynamicequilibrium.org/guides/mediterranean-diet/</loc>

@@ -1,0 +1,34 @@
+{
+  "slug": "high-protein",
+  "category": "nutrition",
+  "grade": "A",
+  "order": 40,
+  "published": "2026-10-24",
+  "updated": "2026-10-24",
+  "source_note": "10-work/practice/evidence-base/nutrition/high-protein-diet.md",
+  "source_reviewed": "2026-10-24",
+  "related": ["resistance-training", "time-restricted-eating", "mediterranean-diet"],
+  "figtext": {
+    "axis": {"en": "Extra effect of a high-protein diet over a standard-protein diet, kg", "ru": "Дополнительный эффект высокобелковой диеты по сравнению со стандартной, кг"},
+    "r1": {"en": "More weight lost", "ru": "Больше потеряно веса"},
+    "r2": {"en": "More fat lost", "ru": "Больше потеряно жира"},
+    "r3": {"en": "Less fat-free mass lost", "ru": "Меньше потеряно безжировой массы"},
+    "v1": {"en": "0.79", "ru": "0,79"},
+    "v2": {"en": "0.87", "ru": "0,87"},
+    "v3": {"en": "0.43", "ru": "0,43"},
+    "k0": {"en": "0", "ru": "0"}, "k05": {"en": "0.5", "ru": "0,5"}, "k1": {"en": "1.0", "ru": "1,0"}, "k15": {"en": "1.5", "ru": "1,5"},
+    "src": {"en": "Points with 95% intervals; 24 trials, about 12 weeks (Wycherley 2012)", "ru": "Точки с 95% интервалами; 24 исследования, около 12 недель (Wycherley, 2012)"}
+  },
+  "sources": [
+    {"id": "morton2018", "type": "meta", "cite": "Morton RW, et al. A systematic review, meta-analysis and meta-regression of the effect of protein supplementation on resistance training-induced gains in muscle mass and strength in healthy adults. Br J Sports Med 2018.", "pmid": "28698222", "doi": "10.1136/bjsports-2017-097608",
+     "note_en": "49 trials (1,863 people) of protein supplements added to resistance training: about 0.3 kg more fat-free mass and 2.5 kg more strength, with no further gain beyond a total intake of about 1.6 g per kg a day.", "note_ru": "49 исследований (1863 человека) с добавлением белковых добавок к силовым тренировкам: примерно на 0,3 кг больше безжировой массы и на 2,5 кг больше силы, без дальнейшего прироста при общем приёме выше примерно 1,6 г на кг в день."},
+    {"id": "kim2016", "type": "meta", "cite": "Kim JE, et al. Effects of dietary protein intake on body composition changes after weight loss in older adults: a systematic review and meta-analysis. Nutr Rev 2016.", "pmid": "26883880", "doi": "10.1093/nutrit/nuv065",
+     "note_en": "20 trials in adults over 50 who lost weight: those eating more protein kept more lean mass (about 0.8 kg more at 1.0 g/kg a day or more, about 0.5 kg more at 25% of energy or more) and lost somewhat more fat.", "note_ru": "20 исследований у взрослых старше 50 лет, которые худели: те, кто ел больше белка, сохранили больше безжировой массы (примерно на 0,8 кг больше при 1,0 г/кг в день и выше, примерно на 0,5 кг больше при 25% энергии и выше) и потеряли несколько больше жира."},
+    {"id": "wycherley2012", "type": "meta", "cite": "Wycherley TP, et al. Effects of energy-restricted high-protein, low-fat compared with standard-protein, low-fat diets: a meta-analysis of randomized controlled trials. Am J Clin Nutr 2012.", "pmid": "23097268", "doi": "10.3945/ajcn.112.044321",
+     "note_en": "24 trials (1,063 adults, about 12 weeks): compared with a standard-protein diet, high protein gave about 0.8 kg more weight loss, 0.9 kg more fat loss and 0.4 kg less fat-free mass lost; greater fullness was reported in 3 of 5 studies.", "note_ru": "24 исследования (1063 взрослых, около 12 недель): по сравнению со стандартной белковой диетой высокобелковая давала примерно на 0,8 кг больше потери веса, на 0,9 кг больше потери жира и на 0,4 кг меньше потери безжировой массы; большая сытость отмечена в 3 из 5 исследований."},
+    {"id": "devries2018", "type": "meta", "cite": "Devries MC, et al. Changes in kidney function do not differ between healthy adults consuming higher- compared with lower- or normal-protein diets: a systematic review and meta-analysis. J Nutr 2018.", "pmid": "30383278", "doi": "10.1093/jn/nxy197",
+     "note_en": "28 trials (1,358 healthy adults without kidney disease): higher protein did not change kidney filtration rate (GFR); this does not apply to people who already have kidney disease.", "note_ru": "28 исследований (1358 здоровых взрослых без болезни почек): повышенный белок не менял скорость клубочковой фильтрации (СКФ); это не относится к людям, у которых уже есть болезнь почек."},
+    {"id": "bauer2013", "type": "guideline", "cite": "Bauer J, et al. Evidence-based recommendations for optimal dietary protein intake in older people: a position paper from the PROT-AGE Study Group. J Am Med Dir Assoc 2013.", "pmid": "23867520", "doi": "10.1016/j.jamda.2013.05.021",
+     "note_en": "Expert position paper: at least 1.0–1.2 g per kg a day for adults over 65, 1.2 or more with exercise, 1.2–1.5 with acute or chronic disease; people with severe kidney disease are the exception.", "note_ru": "Позиция экспертов: не менее 1,0–1,2 г на кг в день для взрослых старше 65, 1,2 и больше при занятиях спортом, 1,2–1,5 при острой или хронической болезни; люди с тяжёлой болезнью почек — исключение."}
+  ]
+}

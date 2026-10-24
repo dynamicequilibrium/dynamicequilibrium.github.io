@@ -1,0 +1,39 @@
+{
+  "slug": "aerobic-exercise",
+  "category": "movement",
+  "grade": "A",
+  "order": 30,
+  "published": "2026-10-24",
+  "updated": "2026-10-24",
+  "source_note": "10-work/practice/evidence-base/lifestyle/aerobic-exercise.md",
+  "source_reviewed": "2026-10-24",
+  "related": ["daily-steps", "resistance-training", "sleep-regularity"],
+  "figtext": {
+    "axis": {"en": "Relative risk of death, any cause (lowest fitness = 1.00)", "ru": "Относительный риск смерти (самая низкая форма = 1,00)"},
+    "r1": {"en": "Lowest fitness", "ru": "Самая низкая форма"},
+    "r2": {"en": "Intermediate fitness", "ru": "Средняя форма"},
+    "r3": {"en": "Highest fitness", "ru": "Самая высокая форма"},
+    "v1": {"en": "1.00", "ru": "1,00"},
+    "v2": {"en": "0.67", "ru": "0,67"},
+    "v3": {"en": "0.47", "ru": "0,47"},
+    "src": {"en": "34 cohort studies pooled (Han 2022); an association", "ru": "34 когорты вместе (Han, 2022); связь, не причина"}
+  },
+  "sources": [
+    {"id": "bull2020", "type": "guideline", "cite": "Bull FC, et al. World Health Organization 2020 guidelines on physical activity and sedentary behaviour. Br J Sports Med 2020.", "pmid": "33239350", "doi": "10.1136/bjsports-2020-102955",
+     "note_en": "The WHO guideline: adults should do 150–300 minutes of moderate or 75–150 minutes of vigorous activity a week, plus regular muscle-strengthening; some activity is better than none.", "note_ru": "Рекомендации ВОЗ: взрослым нужно 150–300 минут умеренной или 75–150 минут интенсивной активности в неделю плюс регулярные силовые упражнения; любая активность лучше, чем никакой."},
+    {"id": "garcia2023", "type": "meta", "cite": "Garcia L, et al. Non-occupational physical activity and risk of cardiovascular disease, cancer and mortality outcomes: a dose-response meta-analysis of large prospective studies. Br J Sports Med 2023.", "pmid": "36854652", "doi": "10.1136/bjsports-2022-105669",
+     "note_en": "94 cohorts (over 30 million people): at about 150 minutes a week of moderate-to-vigorous activity, all-cause mortality was 31% lower than in the least active; the biggest gains were from zero up to that level.", "note_ru": "94 когорты (более 30 млн человек): при примерно 150 минутах умеренной или интенсивной активности в неделю смертность от всех причин была на 31% ниже, чем у наименее активных; самые большие выигрыши приходились на путь от нуля до этого уровня."},
+    {"id": "han2022", "type": "meta", "cite": "Han M, et al. Cardiorespiratory fitness and mortality from all causes, cardiovascular disease and cancer: dose-response meta-analysis of cohort studies. Br J Sports Med 2022.", "pmid": "35022163", "doi": "10.1136/bjsports-2021-104876",
+     "note_en": "34 cohorts: each one-MET higher fitness went with 12% lower all-cause mortality; the highest fitness group had about half the risk of the lowest, and the intermediate group about two-thirds.", "note_ru": "34 когорты: каждая лишняя единица MET в форме сопровождалась снижением смертности от всех причин на 12%; у группы с самой высокой формой риск был примерно вдвое ниже, чем у самой низкой, у средней группы — примерно две трети."},
+    {"id": "lang2024", "type": "umbrella", "cite": "Lang JJ, et al. Cardiorespiratory fitness is a strong and consistent predictor of morbidity and mortality among adults: an overview of meta-analyses representing over 20.9 million observations from 199 unique cohort studies. Br J Sports Med 2024.", "pmid": "38599681", "doi": "10.1136/bjsports-2023-107849",
+     "note_en": "An overview of 26 systematic reviews: high fitness went with about half the all-cause mortality risk of low fitness (HR 0.47), but certainty of the evidence ranged from very low to moderate.", "note_ru": "Обзор 26 систематических обзоров: высокая форма сопровождалась примерно вдвое меньшим риском смерти от всех причин, чем низкая (HR 0,47), но достоверность данных — от очень низкой до умеренной."},
+    {"id": "edwards2023", "type": "meta", "cite": "Edwards JJ, et al. Exercise training and resting blood pressure: a large-scale pairwise and network meta-analysis of randomised controlled trials. Br J Sports Med 2023.", "pmid": "37491419", "doi": "10.1136/bjsports-2022-106503",
+     "note_en": "270 trials (15,827 people): aerobic training lowered blood pressure by about 4.5/2.5 mmHg; combined aerobic and resistance training by about 6/2.5 mmHg.", "note_ru": "270 исследований (15 827 человек): аэробные тренировки снижали давление примерно на 4,5/2,5 мм рт. ст.; сочетание аэробных и силовых — примерно на 6/2,5."},
+    {"id": "umpierre2011", "type": "meta", "cite": "Umpierre D, et al. Physical activity advice only or structured exercise training and association with HbA1c levels in type 2 diabetes: a systematic review and meta-analysis. JAMA 2011.", "pmid": "21540423", "doi": "10.1001/jama.2011.576",
+     "note_en": "In type 2 diabetes, structured aerobic exercise lowered HbA1c by about 0.7 percentage points, and more than 150 minutes a week did better than 150 or less.", "note_ru": "При диабете 2 типа структурированные аэробные тренировки снижали HbA1c примерно на 0,7 процентного пункта, а более 150 минут в неделю давали больше, чем 150 и меньше."},
+    {"id": "noetel2024", "type": "meta", "cite": "Noetel M, et al. Effect of exercise for depression: systematic review and network meta-analysis of randomised controlled trials. BMJ 2024.", "pmid": "38355154", "doi": "10.1136/bmj-2023-075847",
+     "note_en": "218 trials in people with depression: walking or jogging gave a moderate benefit compared with active control conditions (such as usual care or a placebo tablet), larger at higher intensity, but confidence in the results was low or very low.", "note_ru": "218 исследований у людей с депрессией: ходьба и бег давали умеренную пользу по сравнению с активными контрольными условиями (например, обычной помощью или таблеткой-пустышкой), тем большую, чем выше интенсивность, но уверенность в результатах была низкой или очень низкой."},
+    {"id": "dibben2026", "type": "review", "cite": "Dibben G, et al. Exercise-based cardiac rehabilitation for coronary heart disease. Cochrane Database Syst Rev 2026.", "pmid": "42754260", "doi": "10.1002/14651858.CD001800.pub5",
+     "note_en": "107 trials (26,886 adults with coronary heart disease): exercise-based cardiac rehabilitation cut heart attacks by about 28% over 6–12 months (high-certainty evidence).", "note_ru": "107 исследований (26 886 взрослых с ишемической болезнью сердца): кардиореабилитация с физическими упражнениями снижала число инфарктов примерно на 28% за 6–12 месяцев (данные высокой достоверности)."}
+  ]
+}

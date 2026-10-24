@@ -1,0 +1,35 @@
+{
+  "slug": "alcohol-reduction",
+  "category": "habits",
+  "grade": "A",
+  "order": 10,
+  "published": "2026-10-24",
+  "updated": "2026-10-24",
+  "source_note": "10-work/practice/evidence-base/lifestyle/alcohol-reduction.md",
+  "source_reviewed": "2026-10-24",
+  "related": ["sleep-regularity", "dash-diet", "cbt-i"],
+  "figtext": {
+    "axis": {"en": "New cancer cases in 2020 attributable to alcohol, by drinking level", "ru": "Новые случаи рака в 2020 году из-за алкоголя, по уровню употребления"},
+    "r1": {"en": "Heavy (over 60 g/day)", "ru": "Тяжёлое (больше 60 г/день)"},
+    "r2": {"en": "Risky (20–60 g/day)", "ru": "Рискованное (20–60 г/день)"},
+    "r3": {"en": "Moderate (under 20 g/day)", "ru": "Умеренное (меньше 20 г/день)"},
+    "v1": {"en": "346,400", "ru": "346 400"},
+    "v2": {"en": "291,800", "ru": "291 800"},
+    "v3": {"en": "103,100", "ru": "103 100"},
+    "src": {"en": "Worldwide modelled estimates (Rumgay 2021)", "ru": "Расчётные оценки по миру (Rumgay, 2021)"}
+  },
+  "sources": [
+    {"id": "anderson2023", "type": "guideline", "cite": "Anderson BO, et al. Health and cancer risks associated with low levels of alcohol consumption. Lancet Public Health 2023.", "pmid": "36603913", "doi": "10.1016/S2468-2667(22)00317-6",
+     "note_en": "A one-page WHO staff statement (a position, not a systematic review): alcohol is a Group 1 carcinogen and the evidence shows no threshold below which its cancer effect disappears, so no safe amount can be established.", "note_ru": "Однастраничное заявление сотрудников ВОЗ (позиция, а не систематический обзор): алкоголь — канцероген группы 1, и данные не показывают порога, ниже которого его влияние на рак исчезает, поэтому безопасное количество установить нельзя."},
+    {"id": "rumgay2021", "type": "review", "cite": "Rumgay H, et al. Global burden of cancer in 2020 attributable to alcohol consumption: a population-based study. Lancet Oncol 2021.", "pmid": "34270924", "doi": "10.1016/S1470-2045(21)00279-5",
+     "note_en": "A modelling estimate: about 741,300 new cancers in 2020 (4.1% of all cases) were attributable to alcohol, most from heavy and risky drinking, and 103,100 from moderate drinking under 20 g a day.", "note_ru": "Расчётная оценка: около 741 300 новых случаев рака в 2020 году (4,1% всех) были связаны с алкоголем, большинство при тяжёлом и рискованном употреблении, а 103 100 — при умеренном, меньше 20 г в день."},
+    {"id": "gbd2016", "type": "review", "cite": "GBD 2016 Alcohol Collaborators. Alcohol use and burden for 195 countries and territories, 1990-2016: a systematic analysis for the Global Burden of Disease Study 2016. Lancet 2018.", "pmid": "30146330", "doi": "10.1016/S0140-6736(18)31310-2", "no_author": true,
+     "note_en": "A global analysis found that the level of drinking that minimises overall health loss is zero, with risk of death and of cancer rising as intake rises.", "note_ru": "Глобальный анализ показал, что уровень употребления, при котором потери здоровья минимальны, равен нулю, а риск смерти и рака растёт вместе с количеством выпитого."},
+    {"id": "gbd2020", "type": "review", "cite": "GBD 2020 Alcohol Collaborators. Population-level risks of alcohol consumption by amount, geography, age, sex, and year: a systematic analysis for the Global Burden of Disease Study 2020. Lancet 2022.", "pmid": "35843246", "doi": "10.1016/S0140-6736(22)00847-9", "no_author": true,
+     "note_en": "Risk depends on age and region: in people aged 15–39 the lowest-risk intake was zero to about 0.6 drinks a day, and in people 40 and over the curve was J-shaped, with a lowest-risk intake between about 0.1 and 1.9 drinks a day by region.", "note_ru": "Риск зависит от возраста и региона: у людей 15–39 лет наименее рискованный уровень — от нуля до примерно 0,6 порции в день, а у людей от 40 лет кривая J-образная, с наименее рискованным уровнем от примерно 0,1 до 1,9 порции в день в зависимости от региона."},
+    {"id": "roerecke2017", "type": "meta", "cite": "Roerecke M, et al. The effect of a reduction in alcohol consumption on blood pressure: a systematic review and meta-analysis. Lancet Public Health 2017.", "pmid": "29253389", "doi": "10.1016/S2468-2667(17)30003-8",
+     "note_en": "36 trials (2,865 people): cutting down lowered blood pressure, with no significant effect at two drinks a day or fewer and the largest drop (systolic about 5.5 mmHg) in people drinking six or more a day who halved their intake.", "note_ru": "36 исследований (2865 человек): сокращение снижало давление, при двух порциях в день и меньше значимого эффекта не было, а наибольшее падение (систолическое около 5,5 мм рт. ст.) — у тех, кто пил шесть и более порций в день и сократил приём вдвое."},
+    {"id": "biddinger2022", "type": "cohort", "cite": "Biddinger KJ, et al. Association of habitual alcohol intake with risk of cardiovascular disease. JAMA Netw Open 2022.", "pmid": "35333364", "doi": "10.1001/jamanetworkopen.2022.3849",
+     "note_en": "In 371,463 UK adults, healthier lifestyles in light drinkers explained part of the apparent heart benefit, and genetic (Mendelian randomisation) analyses linked higher intake to more hypertension and coronary disease, steeply at heavier intake.", "note_ru": "У 371 463 британцев более здоровый образ жизни у лёгких потребителей объяснял часть кажущейся пользы для сердца, а генетические анализы (менделевская рандомизация) связывали больший приём с более частой гипертонией и ишемической болезнью сердца, резко при тяжёлом употреблении."}
+  ]
+}

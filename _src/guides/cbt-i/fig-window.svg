@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340">
+<g font-size="15.2" class="m" text-anchor="middle"><text x="120" y="24">{{t:t22}}</text><text x="216" y="24">{{t:t00}}</text><text x="312" y="24">{{t:t02}}</text><text x="408" y="24">{{t:t04}}</text><text x="504" y="24">{{t:t06}}</text><text x="600" y="24">{{t:t08}}</text></g>
+<g class="sl" stroke-dasharray="3 5"><path d="M120 32 V300"/><path d="M216 32 V300"/><path d="M312 32 V300"/><path d="M408 32 V300"/><path d="M504 32 V300"/><path d="M600 32 V300"/></g>
+<text class="t" x="120" y="64" font-size="16.5" font-weight="600">{{t:before}}</text>
+<rect class="l" x="168" y="74" width="432" height="26" rx="8" opacity=".55"/>
+<g class="b"><rect x="190" y="78" width="70" height="18" rx="6"/><rect x="290" y="78" width="40" height="18" rx="6"/><rect x="362" y="78" width="36" height="18" rx="6"/><rect x="430" y="78" width="30" height="18" rx="6"/><rect x="518" y="78" width="26" height="18" rx="6"/></g>
+<text class="t" x="120" y="144" font-size="16.5" font-weight="600">{{t:tight}}</text>
+<rect class="l" x="240" y="154" width="288" height="26" rx="8" opacity=".55"/>
+<rect class="a" x="246" y="158" width="276" height="18" rx="6"/>
+<text class="t" x="120" y="224" font-size="16.5" font-weight="600">{{t:wide}}</text>
+<rect class="l" x="192" y="234" width="336" height="26" rx="8" opacity=".55"/>
+<rect class="a" x="198" y="238" width="324" height="18" rx="6"/>
+<path class="sa" d="M528 112 V290" stroke-width="2.5" stroke-dasharray="6 5"/>
+<text class="t" x="528" y="312" font-size="15.9" font-weight="600" text-anchor="middle">{{t:wake}}</text>
+<text class="m" x="620" y="334" font-size="14.6" text-anchor="end">{{t:schem}}</text>
+</svg>
